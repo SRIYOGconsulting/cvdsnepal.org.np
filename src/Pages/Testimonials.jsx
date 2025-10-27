@@ -5,7 +5,7 @@ import img2 from "../assets/male.png";
 const Testimonials = () => {
   const testimonials = [
     {
-      fullName: "Full Name",
+      fullName: "Yub Raj Thapa",
       description:
         "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. I’m forever grateful.",
       image: img1,
@@ -13,7 +13,7 @@ const Testimonials = () => {
       testimony: "A Mother from Sankhu",
     },
     {
-      fullName: "Full Name",
+      fullName: "Sita Rai",
       description:
         "When I visited CVDS, I saw not just an organization, but a family. The children are cared for with love, and the dedication of the staff is truly inspiring. This is where hope lives.",
       image: img1,
@@ -21,7 +21,7 @@ const Testimonials = () => {
       testimony: "Kriti Sharma, Donor from Kathmandu",
     },
     {
-      fullName: "Full Name",
+      fullName: "Anil Gurung",
       description:
         "I was abandoned as a child and had nowhere to go. CVDS gave me food, education, and a home. Today, I work as a computer technician. Without CVDS, I wouldn’t be here.",
       image: img2,
@@ -29,7 +29,7 @@ const Testimonials = () => {
       testimony: "Former Beneficiary",
     },
     {
-      fullName: "Full Name",
+      fullName: "Maya KC",
       description:
         "The physiotherapy sessions at CVDS have made a huge difference in my daughter’s mobility. She couldn’t even sit before, and now she can stand with support. The team is a blessing.",
       image: img1,
@@ -37,7 +37,7 @@ const Testimonials = () => {
       testimony: "Parent of a Child with Cerebral Palsy",
     },
     {
-      fullName: "Full Name",
+      fullName: "Rita Sharma",
       description:
         "Volunteering at CVDS changed my life. These children have faced so much yet remain full of joy and resilience. It was an honor to be part of their journey, even for a short time.",
       image: img1,
@@ -45,7 +45,7 @@ const Testimonials = () => {
       testimony: "Nina Patel, Volunteer from UK",
     },
     {
-      fullName: "Full Name",
+      fullName: "Bikram Rana",
       description:
         "I’ve donated to many organizations, but CVDS stands out. They are transparent, accountable, and truly passionate about their mission. I trust them completely with my support.",
       image: img2,
@@ -53,7 +53,7 @@ const Testimonials = () => {
       testimony: "Ramesh Adhikari, Supporter",
     },
     {
-      fullName: "Full Name",
+      fullName: "Sita KC",
       description:
         "My brother, who has a disability, was always left behind. At CVDS, he was treated with dignity and given the chance to learn and grow. It changed our entire family’s life.",
       image: img1,
@@ -61,7 +61,7 @@ const Testimonials = () => {
       testimony: "Sibling of a Beneficiary",
     },
     {
-      fullName: "Full Name",
+      fullName: "Ramesh Shrestha",
       description:
         "I met the founder, Yub Raj Thapa, and was moved by his personal story. He turned his pain into purpose. That spirit flows through every corner of CVDS.",
       image: img2,
@@ -69,7 +69,7 @@ const Testimonials = () => {
       testimony: "Michael Lee, International NGO Representative",
     },
     {
-      fullName: "Full Name",
+      fullName: "Pooja Sharma",
       description:
         "As a doctor, I’ve worked with many organizations, but CVDS is special. They don’t just treat medical issues—they restore self-worth and dignity to children who need it most.",
       image: img1,
@@ -80,7 +80,7 @@ const Testimonials = () => {
 
   return (
     <div className="min-h-screen bg-white text-black max-w-6xl mx-auto px-4">
-      {/* ✅ Keep original heading and paragraphs */}
+      {/*  Keep original heading and paragraphs */}
       <section className="max-w-5xl mx-auto px-6 text-center py-12">
         <h2 className="text-xl font-semibold mb-4">{"CVDS Nepal"} Testimonials</h2>
         <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
@@ -102,7 +102,7 @@ const Testimonials = () => {
         </p>
       </section>
 
-      {/* ✅ Gallery-style grid layout */}
+      {/*  Gallery-style grid layout */}
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto pb-20">
         {testimonials.map((item, index) => (
           <div
@@ -118,13 +118,7 @@ const Testimonials = () => {
               <h3 className="font-semibold text-lg mb-1 text-blue-800 text-center">
                 {item.fullName}
               </h3>
-              <p className="text-xs text-gray-500 mb-2 text-center">
-                {new Date().toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "long",
-                  year: "numeric",
-                })}
-              </p>
+              
               <p className="text-sm text-gray-700 text-justify">
                 {item.description}
               </p>

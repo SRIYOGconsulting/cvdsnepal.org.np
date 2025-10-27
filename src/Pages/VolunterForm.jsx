@@ -6,7 +6,7 @@ const VolunteerForm = () => {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <h1 className="text-3xl font-bold text-center mb-10 border-b-2 border-black pb-3">
-          VOLUNTEER APPLICATION FORM
+          VOLUNTER APPLICATION FORM
         </h1>
 
         {/* PERSONAL INFORMATION */}

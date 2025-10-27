@@ -15,7 +15,7 @@ import image11 from "../assets/slide3.jpg";
 const casestudies = [
   {
     id: 1,
-    title: "Case Study",
+    title: "Child Rights",
     image: image11,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
@@ -27,7 +27,7 @@ const casestudies = [
   },
   {
     id: 2,
-    title: "Case Study",
+    title: "Governance",
     image: image10,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
@@ -38,7 +38,7 @@ const casestudies = [
   },
   {
     id: 3,
-    title: "Case Study",
+    title: "Enterpreneurship",
     image: image3,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
@@ -50,7 +50,7 @@ const casestudies = [
   },
   {
     id: 4,
-    title: "Case Study",
+    title: "Education",
     image: image4,
     startDate: "Jan 2024",
     endDate: "Ongoing",
@@ -61,7 +61,7 @@ const casestudies = [
   },
   {
     id: 5,
-    title: "Case Study",
+    title: "Gender Equality",
     image: image5,
     startDate: "Mar 2024",
     endDate: "Ongoing",
@@ -73,7 +73,7 @@ const casestudies = [
   },
   {
     id: 6,
-    title: "Case Study",
+    title: "Environment",
     image: image7,
     startDate: "May 2024",
     endDate: "Ongoing",
@@ -84,7 +84,7 @@ const casestudies = [
   },
   {
     id: 7,
-    title: "Case Study",
+    title: "Health",
     image: earlyLifeImage,
     startDate: "Apr 2024",
     endDate: "Ongoing",
@@ -95,7 +95,7 @@ const casestudies = [
   },
   {
     id: 8,
-    title: "Case Study",
+    title: "Enterpreneurship",
     image: image6,
     startDate: "Jun 2024",
     endDate: "Ongoing",
@@ -106,7 +106,7 @@ const casestudies = [
   },
   {
     id: 9,
-    title: "Case Study",
+    title: "Agriculture",
     image: image9,
     startDate: "Jul 2024",
     endDate: "Ongoing",

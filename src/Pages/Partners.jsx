@@ -19,7 +19,8 @@ const Partners = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Top Section - BroadPress */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-16">
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         {/* Text Section */}
         <div>
           <h2 className="font-bold text-lg text-black mb-4">
@@ -50,7 +51,8 @@ const Partners = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {partners.map((partner, index) => (
           <div key={index} className="text-center">
-            <div className="w-full h-40 bg-gray-300 rounded-md mb-4"></div>
+            {/* changed h-40 to h-52 */}
+            <div className="w-full h-52 bg-gray-300 rounded-md mb-4"></div>
             <h3 className="text-gray-800 text-sm mb-3">{partner.name}</h3>
             <a
               href={partner.link}

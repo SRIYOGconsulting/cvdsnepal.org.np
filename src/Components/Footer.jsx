@@ -57,7 +57,7 @@ const Footer = () => {
               <li><Link to="/faq">FAQs</Link></li>
               <li><Link to="/testimonials">Testimonials</Link></li>
               <li><Link to="/feedback">Feedback</Link></li>
-              <li><Link to="/Gallery">Gallery</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
             {/* removed news page */}
               <li><Link to="/notice">Notice</Link></li>
             </ul>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li><Link to="/partners">Partners</Link></li>
               <li><Link to="/messages">Message</Link></li>
               <li><Link to="/payment">Payment</Link></li>
-              <li><Link to="/QR">QR</Link></li>
+              <li><Link to="/qr">QR</Link></li>
             </ul>
           </div>
 
@@ -86,9 +86,10 @@ const Footer = () => {
             {/* removed docs and community */}
             
               <li><Link to="/calendar">Calendar</Link></li>
-              <li><Link to ="/Blog">Blog</Link></li>
-              <li>Trello Board</li>
+              <li><Link to ="/blog">Blog</Link></li>
+              <li> <Link to ="/trelloboard">TrelloBoard</Link></li>
               <li><Link to="/impact">Social Impact</Link></li>
+              <li><Link to="/activities">Activities</Link></li>
             </ul>
           </div>
 
@@ -98,10 +99,10 @@ const Footer = () => {
               Organisation
             </h3>
             <ul className="space-y-[12px] text-[15px]">
-              <li>Donate Now</li>
+              <li><Link to="donate">Donate Now</Link></li>
               <li><Link to="/case-studies">Case Studies</Link></li>
-              <li>Our Projects</li>
-              <li>Donors</li>
+              <li><Link to ="/projects">Our Projects</Link></li>
+              <li> <Link to="/donars">Donars</Link></li>
        {/* removed careers */}
               <li><Link to="/volunter">Volunter</Link></li>
             </ul>
