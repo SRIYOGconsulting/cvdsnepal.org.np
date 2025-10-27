@@ -102,7 +102,7 @@ const Footer = () => {
               <li><Link to="donate">Donate Now</Link></li>
               <li><Link to="/case-studies">Case Studies</Link></li>
               <li><Link to ="/projects">Our Projects</Link></li>
-              <li> <Link to="/donars">Donars</Link></li>
+              <li> <Link to="/donars">Donoz rs</Link></li>
        {/* removed careers */}
               <li><Link to="/volunter">Volunter</Link></li>
             </ul>

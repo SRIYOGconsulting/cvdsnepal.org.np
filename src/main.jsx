@@ -9,16 +9,13 @@ import About from "./Pages/About.jsx";
 import Activities from "./Pages/Activities.jsx";
 import Contactus from "./Pages/Contactus.jsx";
 import Donate from "./Pages/Donate.jsx";
-
 import Members from "./Pages/Members.jsx";
 import Messages from "./Pages/Messages.jsx";
 import Objectives from "./Pages/Objectives.jsx";
 import Ourteam from "./Pages/Ourteam.jsx";
 import Partners from "./Pages/Partners.jsx";
 import PastActivities from "./Pages/PastActivities.jsx";
-
 import Projects from "./Pages/Projects.jsx";
-
 import Supportus from "./Pages/Supportus.jsx";
 import UpcomingActivities from "./Pages/UpcomingActivities.jsx";
 import Videos from "./Pages/Videos.jsx";
@@ -32,17 +29,10 @@ import QR from "./Pages/QR.jsx";
 import Calendar from "./Pages/Calendar.jsx";
 import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
-<<<<<<< HEAD
-import Blog from "./Pages/Blog.jsx"
-import Internship from "./Pages/Internship.jsx";
-
-// import { Calendar } from "lucide-react";
-=======
 import Blog from "./Pages/Blog.jsx";
 import Donars from "./Pages/Donars.jsx";
 import TrelloBoard from "./Pages/TrelloBoard.jsx";
 import VolunteerForm from "./Pages/VolunterForm.jsx";
->>>>>>> 002f8e2dae7a85f7fd2ddc6e52b81f098b1b83f9
 
 const router = createBrowserRouter([
   {
@@ -117,15 +107,7 @@ const router = createBrowserRouter([
       },
       { path: "notice", element: <Notice />, handle: { title: "Notice" } },
       { path: "payment", element: <Payment />, handle: { title: "Payment" } },
-<<<<<<< HEAD
-      { path: "QR", element: <QR />, handle: { title: "QR" } },
-      { path: "calendar", element: <Calendar />, handle: { title: "Calendar" } },
-      { path: "impact", element: <SocialImpact />, handle: { title: "Social Impact" } },
-      { path: "case-studies", element: <CaseStudies />, handle: { title: "Case Studies" } },
-      { path: "blog", element: <Blog />, handle: { title: "Blog" } },
-      { path: "internship", element: <Internship />, handle: { title: "Internship" } },
-    ],
-=======
+
       { path: "qr", element: <QR />, handle: { title: "QR" } },
       {
         path: "calendar",
@@ -148,7 +130,6 @@ const router = createBrowserRouter([
         element: <VolunteerForm />,
         handle: { title: "VolunterForm" },
       },
->>>>>>> 002f8e2dae7a85f7fd2ddc6e52b81f098b1b83f9
 
       {
         path: "donars",
