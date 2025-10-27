@@ -32,10 +32,17 @@ import QR from "./Pages/QR.jsx";
 import Calendar from "./Pages/Calendar.jsx";
 import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
+<<<<<<< HEAD
 import Blog from "./Pages/Blog.jsx"
 import Internship from "./Pages/Internship.jsx";
 
 // import { Calendar } from "lucide-react";
+=======
+import Blog from "./Pages/Blog.jsx";
+import Donars from "./Pages/Donars.jsx";
+import TrelloBoard from "./Pages/TrelloBoard.jsx";
+import VolunteerForm from "./Pages/VolunterForm.jsx";
+>>>>>>> 002f8e2dae7a85f7fd2ddc6e52b81f098b1b83f9
 
 const router = createBrowserRouter([
   {
@@ -98,10 +105,19 @@ const router = createBrowserRouter([
       },
       { path: "videos", element: <Videos />, handle: { title: "Videos" } },
       { path: "FAQ", element: <Faq />, handle: { title: "FAQ" } },
-      { path: "testimonials", element: <Testimonials />, handle: { title: "Testimonials" } },
-      { path: "feedback", element: <Feedback />, handle: { title: "Feedback" } },
+      {
+        path: "testimonials",
+        element: <Testimonials />,
+        handle: { title: "Testimonials" },
+      },
+      {
+        path: "feedback",
+        element: <Feedback />,
+        handle: { title: "Feedback" },
+      },
       { path: "notice", element: <Notice />, handle: { title: "Notice" } },
       { path: "payment", element: <Payment />, handle: { title: "Payment" } },
+<<<<<<< HEAD
       { path: "QR", element: <QR />, handle: { title: "QR" } },
       { path: "calendar", element: <Calendar />, handle: { title: "Calendar" } },
       { path: "impact", element: <SocialImpact />, handle: { title: "Social Impact" } },
@@ -109,7 +125,43 @@ const router = createBrowserRouter([
       { path: "blog", element: <Blog />, handle: { title: "Blog" } },
       { path: "internship", element: <Internship />, handle: { title: "Internship" } },
     ],
+=======
+      { path: "qr", element: <QR />, handle: { title: "QR" } },
+      {
+        path: "calendar",
+        element: <Calendar />,
+        handle: { title: "Calendar" },
+      },
+      {
+        path: "impact",
+        element: <SocialImpact />,
+        handle: { title: "Social Impact" },
+      },
+      {
+        path: "case-studies",
+        element: <CaseStudies />,
+        handle: { title: "Case Studies" },
+      },
+      { path: "blog", element: <Blog />, handle: { title: "Blog" } },
+      {
+        path: "volunter",
+        element: <VolunteerForm />,
+        handle: { title: "VolunterForm" },
+      },
+>>>>>>> 002f8e2dae7a85f7fd2ddc6e52b81f098b1b83f9
 
+      {
+        path: "donars",
+        element: <Donars />,
+        handle: { title: "Donars" },
+      },
+
+      {
+        path: "trelloboard",
+        element: <TrelloBoard/>,
+        handle: { title: "TrelloBoard" },
+      },
+    ],
   },
 ]);
 

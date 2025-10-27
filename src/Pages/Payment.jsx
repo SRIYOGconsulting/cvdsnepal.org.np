@@ -19,13 +19,13 @@ const Payment = () => {
 
           <p><strong>Bank Name:</strong> CVDS Nepal</p>
           <p><strong>Account Name:</strong> {appData.organizationName}</p>
-          <p><strong>Account Number:</strong> 00701017502051</p>
+          <p><strong>Account Number:</strong> Account Number</p>
           <p><strong>Branch:</strong> Kathmandu</p>
-          <p><strong>SWIFT CODE:</strong> NARBNPKA</p>
+          <p><strong>SWIFT CODE:</strong> SwiftCode</p>
           <p>
             <strong>Website:</strong>{" "}
             <a
-              href="https://www.cvdsnepal.com"
+              href="#"
               target="_blank"
               rel="noreferrer"
               className="text-black underline"
@@ -35,7 +35,7 @@ const Payment = () => {
           </p>
 
           <p className="pt-8 text-2xl text-gray-900">
-            <strong>PAN Number:</strong> 606683203
+            <strong>PAN Number:</strong> *********
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const Payment = () => {
 
           <div className="text-center text-black font-semibold space-y-2">
             <p className="text-lg">CVDS Nepal</p>
-            <p>Account No: 00701017502051</p>
+            <p>Account No: Account Number</p>
             <p>Branch: Kathmandu</p>
             <p>Bank: CVDS Nepal</p>
 
@@ -69,7 +69,7 @@ const Payment = () => {
             </div>
 
             <a
-              href="https://www.cvdsnepal.com"
+              href="www.cvdsnepal.org.np"
               target="_blank"
               rel="noreferrer"
               className="text-black underline block pt-2 font-medium"

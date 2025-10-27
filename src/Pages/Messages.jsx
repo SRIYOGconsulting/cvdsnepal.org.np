@@ -7,11 +7,13 @@ const Message = () => {
 
       {/* Gray Background Section (no image) */}
       <div className="max-w-5xl mx-auto mt-10">
-        <div className="relative bg-gray-200 w-full h-80 flex justify-center items-center">
-          <div className="absolute bottom-5 right-6 text-right">
-            <h3 className="text-lg font-bold text-black">Name of President</h3>
+        {/* fixed the widht and height of placeholder here  */}
+        <div className="relative bg-gray-300 w-full h-[430px] flex justify-end items-end p-10">
+          <div className="text-right">
+            <h3 className="text-2xl font-bold text-black">Name of President</h3>
             <p className="text-sm text-gray-700">Designation</p>
           </div>
+          
         </div>
 
         {/* Message Text Section */}

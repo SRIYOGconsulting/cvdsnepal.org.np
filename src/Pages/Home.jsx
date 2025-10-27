@@ -17,7 +17,7 @@ import img2 from "../assets/male.png";
 import childM from "../assets/male-child.png";
 import childF from "../assets/female-child.png"
 import Header from "../Components/Header";
-import newHeroImage from "../assets/homepage.jpg";
+import newHeroImage from "../assets/homepageherobanner.jpg";
 import img3 from "../assets/blog1.jpg";
 import img5 from "../assets/home1.jpg";
 import img6 from "../assets/home2.jpg";
@@ -175,51 +175,6 @@ const SponsorSection = () => (
   </div>
 );
 
-// const ConfidenceSection = () => (
-//   <div className="bg-white text-black py-16 px-4">
-//     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-//       <div>
-//         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-//           Give With Confidence
-//         </h2>
-//         <p className="text-sm text-gray-700 mb-6">
-//           With CVDS-Nepal, your support is used wisely to help children and
-//           victims across Nepal.
-//         </p>
-//         {[
-//           {
-//             title: "Secure Donations",
-//             desc: "We use industry-standard encryption to protect your data.",
-//             icon: <Lock />,
-//           },
-//           {
-//             title: "Transparent Impact",
-//             desc: "Every donation is tracked with detailed reports.",
-//             icon: <BarChart3 />,
-//           },
-
-//           {
-//             title: "Trusted Partners",
-//             desc: "We collaborate with verified organizations to maximize impact.",
-//             icon: <Heart />,
-//           },
-//         ].map((item, i) => (
-//           <div
-//             key={i}
-//             className="flex items-start space-x-3 p-3 border border-gray-200 rounded mb-4"
-//           >
-//             <div className="p-2 border rounded-full">{item.icon}</div>
-//             <div>
-//               <h4 className="font-medium">{item.title}</h4>
-//               <p className="text-sm text-gray-700">{item.desc}</p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//       <img src={img2} alt="Confidence" className="rounded-lg" />
-//     </div>
-//   </div>
-// );
 
 
 const ConfidenceSection = () => (

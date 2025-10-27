@@ -1,67 +1,69 @@
 import { useState } from "react";
-import { Search } from "lucide-react";
 
-const partners = [
-  { title: 'Silver Microsoft Partner', image: '../public/assets/images/silver-partnership.jpg' },
-  { title: 'Salesforce', image: '../public/assets/images/salesforce.png' },
-  { title: 'Webmerge', image: '../public/assets/images/webmerge.png' },
-  { title: 'Kentico Bronze Partner', image: '../public/assets/images/kentico.png' },
-  { title: 'Amazon Web Services', image: '../public/assets/images/amazon.png' },
-  { title: 'IBM SI partner', image: '../public/assets/images/ibm.png' },
-  { title: 'DELL Boomi', image: '../public/assets/images/dell.png' },
-  { title: 'Clouddera Connect', image: '../public/assets/images/clouddera.png' },
-  { title: 'Salesforce', image: '../public/assets/images/salesforce.png' },
-];
+
+// designed according to the desin provided in issue
 
 const Partners = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredPartners = partners.filter((partner) =>
-    partner.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const partners = [
+    { name: "SRIYOG Consulting", link: "#" },
+    { name: "Aramex", link: "#" },
+    { name: "WiFi Nepal", link: "https://wifinepal.com.np/" },
+    { name: "Aqua World", link: "#" },
+    { name: "Oho Cake", link: "https://ohocake.com/" },
+    { name: "Daraz", link: "#" },
+    { name: "SNG Solution", link: "#" },
+    { name: "Ghaila Oil", link: "https://www.facebook.com/GhailaOil/" },
+    { name: "BK Masala", link: "https://www.bkmasala.com.np/" },
+  ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 mb-15 py-10">
-      {/* Search Section */}
-      <div className="mb-8 text-center">
-        <h3 className="text-xl font-semibold mb-4 text-black">
-          Search Partners
-        </h3>
-        <div className="relative inline-block w-full max-w-md">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
-          <input
-            type="text"
-            placeholder="Search partners..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-[#1F2B6C] bg-white text-black shadow-sm"
-          />
+    <div className="max-w-7xl mx-auto px-6 py-12">
+      {/* Top Section - BroadPress */}
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        {/* Text Section */}
+        <div>
+          <h2 className="font-bold text-lg text-black mb-4">
+            The CVDS Nepal website is proudly powered by <span className="text-[#1F2B6C]">BroadPress CMS.</span>
+          </h2>
+          <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+            BroadPress was designed with one clear mission: to make managing and publishing
+            website content as intuitive as creating it. Built specifically for businesses,
+            it features a component-based architecture, ready-to-use templates, and performance
+            optimized for dynamic, enterprise-grade websites.
+          </p>
+          <p className="text-gray-700 text-sm leading-relaxed mb-6">
+            By choosing BroadPress, CVDS Nepal benefits from a streamlined content management
+            process, faster website updates, and a consistent digital experience. Like many
+            forward-thinking organizations, CVDS Nepal leverages BroadPress to connect with its
+            audience more efficiently and effectively, on a platform built for scalability and impact.
+          </p>
+          <button className="outline outline-1 outline-gray-400 text-[#1F2B6C] px-6 py-2 rounded-md text-sm hover:bg-gray-200 transition">
+            Browse More
+          </button>
         </div>
+
+        {/* Image Placeholder */}
+        <div className="w-full h-64 bg-gray-300 rounded-md"></div>
       </div>
 
-      {/* Filtered Partners */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {filteredPartners.length > 0 ? (
-          filteredPartners.map((partner, index) => (
-            <div key={index}>
-              <img
-                src={partner.image}
-                alt={partner.title}
-                className="w-full h-60 object-cover outline outline-gray-200 rounded-lg"
-              />
-              <div className="py-3 text-center">
-                <h2 className="text-[20px] text-black py-3">{partner.title}</h2>
-                <button className="outline outline-gray-300 px-4 py-1 rounded-lg mx-auto block hover:bg-gray-300">
-                  Browse more
-                </button>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="col-span-3 text-center text-gray-500">
-            No partners found.
-          </p>
-        )}
+      {/* Partners Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {partners.map((partner, index) => (
+          <div key={index} className="text-center">
+            {/* changed h-40 to h-52 */}
+            <div className="w-full h-52 bg-gray-300 rounded-md mb-4"></div>
+            <h3 className="text-gray-800 text-sm mb-3">{partner.name}</h3>
+            <a
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="outline outline-1 outline-gray-400 text-[#1F2B6C] px-6 py-1 rounded-md text-sm hover:bg-gray-200 transition inline-block"
+            >
+              Browse More
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

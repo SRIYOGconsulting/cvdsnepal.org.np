@@ -1,139 +1,81 @@
 
 import React, { useState } from "react";
-import img1 from "../assets/female.png";
-import img2 from "../assets/male.png";
-import img3 from "../assets/female.png";
-import img4 from "../assets/female.png";
-import img5 from "../assets/female.png";
-import img6 from "../assets/male.png";
+// images from zip folder
+import gallery1 from "../assets/gallery1.jpg";
+import gallery2 from "../assets/gallery2.jpg";
+import gallery3 from "../assets/gallery3.jpg";
+import gallery4 from "../assets/gallery4.jpg";
+import gallery5 from "../assets/gallery5.jpg";
+import gallery6 from "../assets/gallery6.jpg";
+import gallery7 from "../assets/gallery7.jpg";
+import gallery8 from "../assets/gallery8.jpg";
+import gallery9 from "../assets/gallery9.jpg";
+import gallery10 from "../assets/gallery10.jpg";
+import gallery11 from "../assets/gallery11.jpg";
+import gallery12 from "../assets/gallery12.jpg";
+import gallery13 from "../assets/gallery13.jpg";
+import gallery14 from "../assets/gallery14.jpg";
+import gallery15 from "../assets/gallery15.jpg";
+import gallery16 from "../assets/gallery16.jpg";
+import gallery17 from "../assets/gallery17.jpg";
+import gallery18 from "../assets/gallery18.jpg";
+import gallery19 from "../assets/gallery19.jpg";
+import gallery20 from "../assets/gallery20.jpg";
+import gallery21 from "../assets/gallery21.jpg";
+import gallery22 from "../assets/gallery22.jpg";
+import gallery23 from "../assets/gallery23.jpg";
+
+import gallery24 from"../assets/gallery24.jpg";
+import gallery25 from"../assets/gallery25.jpg";
+import gallery26 from"../assets/gallery26.jpg";
+import gallery27 from"../assets/gallery27.jpg";
+import gallery28 from"../assets/gallery28.jpg";
+import gallery29 from"../assets/gallery29.jpg";
+import gallery30 from"../assets/gallery30.jpg";
+
 
 const Gallery = () => {
-    //  Added state to track selected image for lightbox
-  const [selectedImage, setSelectedImage] = useState(null);
-
-
-  const galleryProfiles = [
-    {
-      image: img1,
-      name: "Aarati Lama",
-      location: "Kathmandu, Nepal",
-      description:
-        "Aarati was born with a hearing impairment, but that hasn’t stopped her from expressing herself through art. With CVDs-Nepal’s support, she continues her education and dreams of becoming a painter.",
-    },
-    {
-      image: img2,
-      name: "Bishal Thapa",
-      location: "Pokhara, Nepal",
-      description:
-        "Bishal lost partial mobility in his right leg during childhood, yet he remains active in school and enjoys playing football. CVDs-Nepal helps him access inclusive education and assistive materials.",
-    },
-    {
-      image: img3,
-      name: "Sita Magar",
-      location: "Lalitpur, Nepal",
-      description:
-        "Sita is visually impaired but has an incredible sense of determination. She studies in an inclusive classroom and hopes to become a teacher to inspire other children like her. CVDs-Nepal provides her with learning support and Braille materials.",
-    },
-    {
-      image: img4,
-      name: "Kiran Rai",
-      location: "Dharan, Nepal",
-      description:
-        "Kiran, who lives with a limb difference, loves science and technology. Through the guidance of CVDs-Nepal, he has gained confidence to pursue his dream of becoming an engineer.",
-    },
-    {
-      image: img5,
-      name: "Pooja KC",
-      location: "Chitwan, Nepal",
-      description:
-        "Nabin uses a wheelchair for mobility, yet his passion for learning and storytelling motivates everyone around him. With the continuous support of CVDs-Nepal, he attends school regularly and is thriving.",
-    },
-    {
-      image: img6,
-      name: "Nabin Shrestha",
-      location: "Bhaktapur, Nepal",
-      description:
-        "Nabin uses a wheelchair for mobility, yet his passion for learning and storytelling motivates everyone around him. With the continuous support of CVDs-Nepal, he attends school regularly and is thriving.Nabin is a creative child who enjoys drawing and storytelling.",
-    },
+  
+  const galleryImages = [
+    gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
+    gallery7, gallery8, gallery9, gallery10, gallery11, gallery12,
+    gallery13, gallery14, gallery15, gallery16, gallery17, gallery18,
+    gallery19, gallery20, gallery21, gallery22,gallery23,gallery24,
+    gallery25,gallery26,gallery27, gallery28, gallery29, gallery30,
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black max-w-6xl mx-auto px-4 py-12">
-      <section className="text-center mb-10">
-        <h1 className="text-3xl font-bold mb-2">Our Children Gallery</h1>
-        <p className="text-gray-700">
-          Meet the amazing children whose lives are being transformed through
-          your support.
+    <div className="min-h-screen bg-white text-gray-900 max-w-7xl mx-auto px-6 py-16">
+      {/* ===== Header ===== */}
+      <section className="text-center mb-16">
+        <h1 className="text-4xl font-semibold mb-3">Our Gallery</h1>
+        <p className="text-gray-600 text-lg">
+          A collection of moments that tell our story clear, beautiful, and real.
         </p>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {galleryProfiles.map((child, index) => (
+      {/* ===== Gallery Grid ===== */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {galleryImages.map((image, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"     //Added cursor-pointer for interactivity
-            onClick={() => setSelectedImage(child)} //  Added open lightbox on image click
+            className="relative overflow-hidden rounded-2xl group"
           >
             <img
-              src={child.image}
-              alt={child.name}
-              className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg"
+              src={image}
+              alt={`Gallery ${index + 1}`}
+              className="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-1">{child.name}</h3>
-              <p className="text-sm text-gray-600 mb-2">{child.location}</p>
-              <p className="text-sm text-gray-700 text-justify">{child.description}</p>
+            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span className="text-white text-sm font-medium">
+                Image {index + 1}
+              </span>
             </div>
           </div>
         ))}
       </section>
-
-
- {/* 🔧 Added Lightbox Modal */}
-     {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4" // 🔧 Added: padding to prevent edges cutoff
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className="bg-white p-4 rounded-lg max-w-2xl w-full relative overflow-auto max-h-[90vh]" // 🔧 FIXED: overflow-auto + max-h to avoid overlap
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="absolute top-2 right-3 text-3xl text-gray-600 hover:text-black"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
-
-            <div className="flex flex-col items-center"> {/* 🔧 Added: flex-col center layout */}
-              <img
-                src={selectedImage.image}
-                alt={selectedImage.name}
-                className="w-auto max-w-full h-auto max-h-[60vh] object-contain rounded-md mb-4" // 🔧 FIXED: image scaling to prevent overlap
-              />
-              <h3 className="font-semibold text-lg mb-1">
-                {selectedImage.name}
-              </h3>
-              <p className="text-sm text-gray-600 mb-2">
-                {selectedImage.location}
-              </p>
-              <p className="text-sm text-gray-700 text-justify">
-                {selectedImage.description}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
     </div>
   );
 };
 
 export default Gallery;
-
-
-
-
-
-

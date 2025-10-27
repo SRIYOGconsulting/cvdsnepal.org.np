@@ -64,7 +64,10 @@ const Calendar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-10">
+    // fixed Page Background Wrapper
+    <div className="min-h-screen bg-gray-50 py-10">
+       {/* ===== Page Container (centers content) ===== */}
+       <div className="max-w-6xl mx-auto px-4">
       {/* ===== Header Toolbar ===== */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
         <h2 className="text-2xl font-semibold text-gray-800">
@@ -156,6 +159,7 @@ const Calendar = () => {
             </div>
           );
         })}
+        </div>
       </div>
     </div>
   );
