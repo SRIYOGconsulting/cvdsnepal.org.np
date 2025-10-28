@@ -30,7 +30,7 @@ import Calendar from "./Pages/Calendar.jsx";
 import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
 import Blog from "./Pages/Blog.jsx";
-import Donars from "./Pages/Donars.jsx";
+import Donars from "./Pages/Donors.jsx";
 import TrelloBoard from "./Pages/TrelloBoard.jsx";
 import VolunteerForm from "./Pages/VolunterForm.jsx";
 
