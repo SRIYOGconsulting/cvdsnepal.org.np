@@ -30,10 +30,10 @@ import Calendar from "./Pages/Calendar.jsx";
 import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
 import Blog from "./Pages/Blog.jsx";
-import Donars from "./Pages/Donors.jsx";
+import Donors from "./Pages/Donors.jsx";
 import TrelloBoard from "./Pages/TrelloBoard.jsx";
-import VolunteerForm from "./Pages/VolunterForm.jsx";
-
+import VolunterForm from "./Pages/VolunterForm.jsx";
+import Appeal from "./Pages/Appeal.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -127,20 +127,26 @@ const router = createBrowserRouter([
       { path: "blog", element: <Blog />, handle: { title: "Blog" } },
       {
         path: "volunter",
-        element: <VolunteerForm />,
+        element: <VolunterForm />,
         handle: { title: "VolunterForm" },
       },
 
       {
-        path: "donars",
-        element: <Donars />,
-        handle: { title: "Donars" },
+        path: "donors",
+        element: <Donors />,
+        handle: { title: "Donors" },
       },
 
       {
         path: "trelloboard",
         element: <TrelloBoard/>,
         handle: { title: "TrelloBoard" },
+      },
+
+       {
+        path: "Appeal",
+        element: <Appeal/>,
+        handle: { title: "Appeal" },
       },
     ],
   },

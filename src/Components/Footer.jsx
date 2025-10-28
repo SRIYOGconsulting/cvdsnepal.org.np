@@ -71,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-[12px] text-[15px]">
              {/* removed holidays */}
 
-              <li>Appeal</li>
+              <li><Link to="/appeal">Appeal</Link></li>
               <li><Link to="/partners">Partners</Link></li>
               <li><Link to="/messages">Message</Link></li>
               <li><Link to="/payment">Payment</Link></li>
@@ -102,7 +102,7 @@ const Footer = () => {
               <li><Link to="donate">Donate Now</Link></li>
               <li><Link to="/case-studies">Case Studies</Link></li>
               <li><Link to ="/projects">Our Projects</Link></li>
-              <li> <Link to="/donars">Donoz rs</Link></li>
+              <li> <Link to="/donors">Donors</Link></li>
        {/* removed careers */}
               <li><Link to="/volunter">Volunter</Link></li>
             </ul>
