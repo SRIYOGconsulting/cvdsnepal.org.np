@@ -32,7 +32,7 @@ import CaseStudies from "./Pages/CaseStudies.jsx";
 import Blog from "./Pages/Blog.jsx";
 import Donors from "./Pages/Donors.jsx";
 import TrelloBoard from "./Pages/TrelloBoard.jsx";
-import VolunterForm from "./Pages/VolunterForm.jsx";
+import VolunteerForm from "./Pages/VolunteerForm.jsx";
 import Appeal from "./Pages/Appeal.jsx";
 const router = createBrowserRouter([
   {
@@ -126,9 +126,9 @@ const router = createBrowserRouter([
       },
       { path: "blog", element: <Blog />, handle: { title: "Blog" } },
       {
-        path: "volunter",
-        element: <VolunterForm />,
-        handle: { title: "VolunterForm" },
+        path: "volunteer",
+        element: <VolunteerForm />,
+        handle: { title: "VolunteerForm" },
       },
 
       {

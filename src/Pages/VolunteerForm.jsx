@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Added state to show a submission message like modern forms
-const VolunterForm = () => {
+const VolunteerForm = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -121,7 +121,7 @@ const VolunterForm = () => {
           <header className="text-center mb-8">
             {/* Corrected spelling and modern styling */}
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#1F2B6C]">
-              VOLUNTER APPLICATION FORM
+              VOLUNTEER APPLICATION FORM
             </h1>
 
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -434,4 +434,4 @@ const VolunterForm = () => {
     </div>
   );
 };
-export default VolunterForm;
+export default VolunteerForm;

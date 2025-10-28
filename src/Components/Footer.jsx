@@ -104,7 +104,7 @@ const Footer = () => {
               <li><Link to ="/projects">Our Projects</Link></li>
               <li> <Link to="/donors">Donors</Link></li>
        {/* removed careers */}
-              <li><Link to="/volunter">Volunter</Link></li>
+              <li><Link to="/volunteer">Volunteer</Link></li>
             </ul>
           </div>
         </div>
