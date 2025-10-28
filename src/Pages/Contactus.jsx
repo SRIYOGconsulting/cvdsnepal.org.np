@@ -23,7 +23,7 @@ const Contactus = () => {
         {/* Fixed: Corrected iframe attributes - referrerPolicy & allowFullScreen */}
         <iframe
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.636738758784!2d85.44933267546811!3d27.72850007617052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb052f80a28783%3A0x31997672e2ca2d2d!2sConflict%20victim%20and%20disabled%20society!5e0!3m2!1sen!2snp!4v1760454686904!5m2!1sen!2snp"
-  style={{ width: "990px", height: "500px" }}
+  style={{ width: "100%", height: "500px" }}
   allowFullScreen=""
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"

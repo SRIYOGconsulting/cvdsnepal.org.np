@@ -57,7 +57,7 @@ const HeroSection = () => {
           <br />
         </h1>
         <h3
-          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-20"
+          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-4 sm:px-10 lg:px-20"
           style={{ fontSize: "18px" }}
         >
           Adding the Wheel in Wheelchair, Restoring Dignity

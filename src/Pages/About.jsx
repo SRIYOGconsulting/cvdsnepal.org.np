@@ -1,12 +1,11 @@
-
-import React,  { useEffect } from "react";
+import React, { useEffect } from "react";
 import { appData } from "../constants";
 import img1 from "../assets/vocational.jpg"; 
 import img2 from "../assets/home1.jpg";
 
 const About = () => {
 
-    useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll(".fade-in");
       elements.forEach((el) => {
@@ -16,27 +15,28 @@ const About = () => {
         }
       });
     };
-     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col px-4 sm:px-8 md:px-12">
+
       {/* ========== SECTION About Us ========== */}
-      <section className="flex flex-col lg:flex-row w-full min-h-[90vh]">
+      <section className="flex flex-col lg:flex-row w-full min-h-screen max-w-6xl mx-auto">
         {/* Left Image */}
-        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto">
+        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto py-10">
           <img
             src={img1}
             alt="About CVDS Nepal"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
         </div>
 
         {/* Right Content */}
-        <div className="lg:w-1/2 w-full flex flex-col justify-center px-8 py-12 bg-gray-50 fade-in opacity-0 translate-y-6 transition-all duration-700">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">About Us</h2>
+        <div className="lg:w-1/2 w-full flex flex-col px-8 py-8 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify rounded-lg ">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">About Us</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
             People with disability are the most vulnerable and marginalized group
             of people. They live in isolation, segregation, disparagement,
@@ -58,11 +58,11 @@ const About = () => {
       </section>
 
       {/* ========== SECTION Who We Are & Why Choose Us ========== */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 fade-in opacity-0 translate-y-6 transition-all duration-700">
+      <section className="py- bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify py-12">
           {/* Who We Are */}
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Who We Are</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Who We Are</h2>
             <p className="text-gray-700 leading-relaxed">
               We are a non-profit organization dedicated to improving the lives
               of people with disabilities and conflict victims across Nepal.
@@ -74,7 +74,7 @@ const About = () => {
 
           {/* Why Choose Us */}
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Why Choose Us</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Why Choose Us</h2>
             <p className="text-gray-700 leading-relaxed">
               Our experienced team of caregivers, therapists, and educators
               provides continuous support to help individuals gain independence
@@ -86,19 +86,19 @@ const About = () => {
       </section>
 
       {/* ========== SECTION Digital Transformation (Vision & Mission Style) ========== */}
-      <section className="flex flex-col lg:flex-row-reverse w-full min-h-[80vh] bg-gray-50">
+      <section className="flex flex-col lg:flex-row-reverse w-full min-h-screen max-w-6xl mx-auto">
         {/* Image */}
-        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto">
+        <div className="lg:w-1/2 lg:h-auto lg:mb-0">
           <img
             src={img2}
             alt="Digital Transformation"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg overflow-hidden py-20"
           />
         </div>
 
         {/* Text */}
-        <div className="lg:w-1/2 w-full flex flex-col justify-center px-8 py-12 fade-in opacity-0 translate-y-6 transition-all duration-700">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+        <div className="lg:w-1/2 w-full flex flex-col px-8 py-16 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             Digital Transformation
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -114,6 +114,7 @@ const About = () => {
           </p>
         </div>
       </section>
+
     </div>
   );
 };

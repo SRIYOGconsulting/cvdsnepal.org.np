@@ -29,7 +29,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-8 bg-white rounded-lg shadow-md mt-10 mb-10">
+    <div className="max-w-5xl mx-auto p-8 bg-white rounded-lg shadow-md mb-10">
       <form onSubmit={handleSubmit} className="space-y-8">
         <h2 className="text-3xl font-bold text-center text-[#1F2B6C]">
           CVDS Nepal Feedback Form
