@@ -175,7 +175,7 @@ const VolunteerForm = () => {
           {/* EDUCATIONAL BACKGROUND */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              EDUCATIONAL BACKGROUND
+              Educational  Background
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
@@ -205,7 +205,7 @@ const VolunteerForm = () => {
           {/* VOLUNTEER DETAILS */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              VOLUNTEER DETAILS
+              Volunteer Details
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <input
@@ -301,7 +301,7 @@ const VolunteerForm = () => {
           {/* MOTIVATION & EXPERIENCE */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              MOTIVATION & EXPERIENCE
+              Motivation and  Experience
             </h2>
             <StandardTextarea
               label="Why do you want to volunteer with our NGO? (100–200 words)"
@@ -341,7 +341,7 @@ const VolunteerForm = () => {
           {/* TECHNICAL SKILLS */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              TECHNICAL SKILLS (Optional)
+              Technical Skills (Optional)
             </h2>
             <p className="font-medium mb-2 text-gray-700">Computer Skills:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
@@ -366,7 +366,7 @@ const VolunteerForm = () => {
           {/* REFERENCES */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              REFERENCES
+              References
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
@@ -391,7 +391,7 @@ const VolunteerForm = () => {
           {/* DECLARATION */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              DECLARATION
+              Declaration
             </h2>
             <p className="mb-4 text-gray-700">
               I hereby declare that all the information provided above is true
