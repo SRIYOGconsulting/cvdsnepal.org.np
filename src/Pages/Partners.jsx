@@ -17,12 +17,12 @@ const Partners = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Top Section - BroadPress */}
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
         {/* Text Section */}
-        <div>
+        <div className="text-justify">
           <h2 className="font-bold text-lg text-black mb-4">
             The CVDS Nepal website is proudly powered by <span className="text-[#1F2B6C]">BroadPress CMS.</span>
           </h2>

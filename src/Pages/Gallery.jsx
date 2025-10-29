@@ -45,7 +45,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 max-w-7xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-white text-gray-900 max-w-6xl mx-auto px-6 py-16">
       {/* ===== Header ===== */}
       <section className="text-center mb-16">
         <h1 className="text-4xl font-semibold mb-3">Our Gallery</h1>

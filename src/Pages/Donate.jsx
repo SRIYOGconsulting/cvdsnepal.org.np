@@ -9,7 +9,7 @@ export default function DonatePage() {
   const amounts = [200000, 120000, 50000, 25000, 12000, 6000];
 
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-10 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50 px-4 py-10 sm:px-6 md:px-8 lg:px-12 max-w-6xl mx-auto">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* ===== LEFT SIDE - DONATE FORM ===== */}
         <div className="bg-white rounded-2xl shadow-lg p-6 border flex flex-col justify-between">

@@ -52,7 +52,7 @@ const Header = () => {
         </Link>
             
         {/*  Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 font-medium">
+        <ul className="hidden lg:flex items-center gap-8 font-medium">
           {navLinks.map((item, i) => {
             const active = location.pathname === item.path;
             const linkClasses = active
@@ -92,7 +92,7 @@ const Header = () => {
         {/*  Hamburger Menu Button (mobile only) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-3xl ml-3 focus:outline-none"
+          className="lg:hidden text-3xl ml-3 focus:outline-none"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -100,7 +100,7 @@ const Header = () => {
         {/*  Mobile Dropdown Menu */}
         {menuOpen && (
           <div
-            className={`absolute top-full left-0 w-full flex flex-col items-center bg-white md:hidden shadow-md transition-all duration-300 ${
+            className={`absolute top-full left-0 w-full flex flex-col items-center bg-white lg:hidden shadow-md transition-all duration-300 ${
               isHomePage && !scrolled ? "text-[#1F2B6C]" : "text-[#1F2B6C]"
             }`}
           >

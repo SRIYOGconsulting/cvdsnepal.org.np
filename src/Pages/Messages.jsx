@@ -6,7 +6,7 @@ const Message = () => {
     <div className="min-h-screen text-gray-800">
 
       {/* Gray Background Section (no image) */}
-      <div className="max-w-5xl mx-auto mt-10">
+      <div className="max-w-6xl mx-auto mt-10">
         {/* fixed the widht and height of placeholder here  */}
         <div className="relative bg-gray-300 w-full h-[430px] flex justify-end items-end p-10">
           <div className="text-right">

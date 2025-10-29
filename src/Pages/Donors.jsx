@@ -74,7 +74,7 @@ const Donars = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="max-w-6xl mx-auto px-6 py-10">
       {/* ===== Top Donors Section ===== */}
       <h2
         className="text-3xl font-extrabold text-[#1F2B6C] mb-6 text-center

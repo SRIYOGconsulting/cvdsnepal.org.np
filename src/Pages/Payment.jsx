@@ -6,12 +6,12 @@ import { appData } from "../constants";
 
 const Payment = () => {
   return (
-    <section className="min-h-screen bg-white flex flex-col justify-center items-center px-6 py-12">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section className="min-h-screen bg-white flex flex-col justify-center items-center px-4 py-8 sm:py-10">
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
         {/* ===== Left: Bank Details ===== */}
-        <div className="text-gray-800 space-y-3">
-          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-44 mb-5" />
+        <div className="text-gray-800 space-y-3 text-center lg:text-left  ">
+          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-32 sm:w-44 mb-5 mx-auto lg:mx-0 " />
 
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             Bank Account Details
@@ -19,7 +19,7 @@ const Payment = () => {
 
           <p><strong>Bank Name:</strong> CVDS Nepal</p>
           <p><strong>Account Name:</strong> {appData.organizationName}</p>
-          <p><strong>Account Number:</strong> Account Number</p>
+          <p><strong>Account Number:</strong> {appData.accountNumber}</p>
           <p><strong>Branch:</strong> Kathmandu</p>
           <p><strong>SWIFT CODE:</strong> SwiftCode</p>
           <p>
@@ -40,20 +40,20 @@ const Payment = () => {
         </div>
 
         {/* ===== Right: QR Code Section ===== */}
-        <div className="flex flex-col justify-center items-center border border-black rounded-3xl p-8 h-[600px] w-[340px] mx-auto shadow-sm">
+        <div className="flex flex-col justify-center items-center border border-black rounded-3xl p-6 sm:p-8 w-full max-w-sm mx-auto shadow-sm">
           
           {/* Bank logo above QR */}
-          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-32 mb-4" />
+          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-24 sm:w-32 mb-4" />
 
           <img
             src={qrImage}
             alt="Payment QR"
-            className="w-60 h-60 object-contain mb-6"
+            className="w-48 sm:w-60 h-auto object-contain mb-6"
           />
 
-          <div className="text-center text-black font-semibold space-y-2">
-            <p className="text-lg">CVDS Nepal</p>
-            <p>Account No: Account Number</p>
+          <div className="text-center text-black font-semibold space-y-2 text-sm sm:text-base">
+            <p className="text-lg sm:text-xl">CVDS Nepal</p>
+            <p>Account No: {appData.accountNumber}</p>
             <p>Branch: Kathmandu</p>
             <p>Bank: CVDS Nepal</p>
 
@@ -64,7 +64,7 @@ const Payment = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:info@cvdsnepal.com">info@cvdsnepal.com</a>
+                <a href="mailto:info@cvdsnepal.org.np">info@cvdsnepal.org.np</a>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ const Payment = () => {
               rel="noreferrer"
               className="text-black underline block pt-2 font-medium"
             >
-              www.cvdsnepal.com
+              www.cvdsnepal.org.np
             </a>
           </div>
         </div>

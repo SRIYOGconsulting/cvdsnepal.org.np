@@ -81,8 +81,8 @@ const Testimonials = () => {
   return (
     <div className="min-h-screen bg-white text-black max-w-6xl mx-auto px-4">
       {/*  Keep original heading and paragraphs */}
-      <section className="max-w-5xl mx-auto px-6 text-center py-12">
-        <h2 className="text-xl font-semibold mb-4">{"CVDS Nepal"} Testimonials</h2>
+      <section className="max-w-6xl mx-auto px-6 text-justify py-12">
+        <h2 className="text-xl font-semibold mb-4 text-center">{"CVDS Nepal"} Testimonials</h2>
         <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
           Recreational activities include hobbies such as painting, gardening,
           reading, or gaming, which provide relaxation and enjoyment. Physical
