@@ -63,7 +63,7 @@ const Footer = () => {
       <div>
         <h3 className="font-bold mb-4 text-[16px] tracking-wide">Resources</h3>
         <ul className="space-y-[12px] text-[15px]">
-          <li>Appeal</li>
+          <li><Link to="/appeal">Appeal</Link></li>
           <li><Link to="/partners">Partners</Link></li>
           <li><Link to="/messages">Message</Link></li>
           <li><Link to="/payment">Payment</Link></li>
@@ -79,7 +79,7 @@ const Footer = () => {
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/trelloboard">TrelloBoard</Link></li>
           <li><Link to="/impact">Social Impact</Link></li>
-          <li><Link to="/activities">Activities</Link></li>
+          <li><Link to="/timeline">Timeline</Link></li>
         </ul>
       </div>
 
@@ -90,8 +90,8 @@ const Footer = () => {
           <li><Link to="donate">Donate Now</Link></li>
           <li><Link to="/case-studies">Case Studies</Link></li>
           <li><Link to="/projects">Our Projects</Link></li>
-          <li><Link to="/donars">Donors</Link></li>
-          <li><Link to="/volunter">Volunteer</Link></li>
+          <li><Link to="/donors">Donors</Link></li>
+          <li><Link to="/volunteer">Volunteer</Link></li>
         </ul>
       </div>
     </div>

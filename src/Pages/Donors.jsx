@@ -153,10 +153,10 @@ const Donars = () => {
                 <tr>
                   <th className="p-3 font-semibold">Donor Name</th>
                   <th className="p-3 font-semibold">City</th>
-                  <th className="p-3 font-semibold text-right">Donation Type</th>
+                  <th className="p-3 font-semibold text-center">Donation Type</th>
                   <th className="p-3 font-semibold text-right">Date of Donation</th>
                   <th className="p-3 font-semibold text-center">Amount</th>
-                  <th className="p-3 font-semibold text-center">Giving Style</th>
+                
                 </tr>
               </thead>
               <tbody>
@@ -171,16 +171,14 @@ const Donars = () => {
                     {/*  replaced “Assign ID” → donor.city */}
                     <td className="p-3 text-gray-700">{donor.city}</td>
                     {/*  Added donationType column */}
-                    <td className="p-3 text-gray-700">{donor.donationType}</td>
+                    <td className="p-3 text-gray-700 text-center">{donor.donationType}</td>
                     <td className="p-3 text-gray-700 text-right">
                       {donor.date}
                     </td>
                     <td className="p-3 text-gray-800 font-semibold text-right">
                       {donor.amount}
                     </td>
-                    <td className="p-3 text-gray-700 text-center">
-                      {donor.style}
-                    </td>
+                   
                   </tr>
                 ))}
               </tbody>

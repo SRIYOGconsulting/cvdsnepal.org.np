@@ -34,6 +34,7 @@ import Donors from "./Pages/Donors.jsx";
 import TrelloBoard from "./Pages/TrelloBoard.jsx";
 import VolunteerForm from "./Pages/VolunteerForm.jsx";
 import Appeal from "./Pages/Appeal.jsx";
+import Timeline from "./Pages/Timeline.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -147,6 +148,12 @@ const router = createBrowserRouter([
         path: "Appeal",
         element: <Appeal/>,
         handle: { title: "Appeal" },
+      },
+
+      {
+        path: "Timeline",
+        element: <Timeline/>,
+        handle: { title: "Timeline" },
       },
     ],
   },
