@@ -1,13 +1,9 @@
 import React from "react";
   
-import rehabImage from "../assets/rehabilation.jpg";
-import psychologicalImage from "../assets/psychologica.jpg";
-import vocationalImage from "../assets/vocational.jpg";
-import educationImage from "../assets/education.jpg";
-import communityImage from "../assets/community.jpg";
-import advocacyImage from "../assets/advocacy.jpg";
-import healthImage from "../assets/health.jpg";
-import futureImage from "../assets/future.jpg";
+
+
+
+import img from "../assets/placeholder2.png";
 
 const Activities = () => {
   const activities = [
@@ -15,63 +11,63 @@ const Activities = () => {
       title: "Rehabilitation Services",
       description:
         "Providing physical therapy and prosthetic support for conflict-injured individuals to regain mobility and independence.",
-      image: rehabImage,
+      image: img,
       alt: "Rehabilitation image",
     },
     {
       title: "Psychological Support",
       description:
         "Counseling and trauma therapy programs to help victims process PTSD and rebuild emotional resilience.",
-      image: psychologicalImage,
+      image: img,
       alt: "Psychological support image",
     },
     {
       title: "Vocational Training",
       description:
         "Skill-building workshops (e.g., crafts, IT) tailored for disabled youth, leading to employment opportunities.",
-      image: vocationalImage,
+      image: img,
       alt: "Vocational training image",
     },
     {
       title: "Education Access",
       description:
         "Inclusive schooling and literacy programs for disabled children from conflict zones, bridging educational gaps.",
-      image: educationImage,
+      image: img,
       alt: "Education access image",
     },
     {
       title: "Community Integration",
       description:
         "Social events and awareness campaigns to reduce stigma and foster inclusive communities.",
-      image: communityImage,
+      image: img,
       alt: "Community integration image",
     },
     {
       title: "Advocacy & Rights",
       description:
         "Legal aid and policy advocacy to secure rights and government support for disabled conflict victims.",
-      image: advocacyImage,
+      image: img,
       alt: "Advocacy and rights image",
     },
     {
       title: "Health & Nutrition",
       description:
         "Medical check-ups and nutrition drives to address secondary health issues from disabilities and displacement.",
-      image: healthImage,
+      image: img,
       alt: "Health and nutrition image",
     },
     {
       title: "Infrastructure Development",
       description:
         "We plan to acquire our own facility to provide children with disabilities a safe and fully equipped environment for learning and living.",
-      image: futureImage,
+      image: img,
       alt: "Infrastructure development image",
     },
     {
       title: "Community Outreach Expansion",
       description:
         "We aim to extend our outreach programs to more rural areas, ensuring children with disabilities receive proper care, education, and social support.",
-      image: communityImage,
+      image: img,
       alt: "Community outreach expansion image",
     },
   ];

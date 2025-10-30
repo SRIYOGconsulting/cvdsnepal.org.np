@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
-import earlyLifeImage from "../assets/project.jpg";
-import image2 from "../assets/project.jpg";
-import image3 from "../assets/images8.jpg";
-import image4 from "../assets/images9.jpg";
-import image5 from "../assets/home3.jpg";
-import image7 from "../assets/projecta.png";
-import image6 from "../assets/rehabilation.jpg";
-import image9 from "../assets/vocational.jpg";
-import image10 from "../assets/psychologica.jpg";
-import image11 from "../assets/slide3.jpg";
 
+
+import img from "../assets/placeholder2.png";
 
 const projects = [
   {
     id: 1,
     title: "National Child Right Council",
-    image: image11,
+    image: img,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
     members: ["John Doe", "Jane Smith", "Sita Rai"],
@@ -28,7 +20,7 @@ const projects = [
   {
     id: 2,
     title: "Local Government",
-    image: image10,
+    image: img,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
     members: ["Ram Thapa", "Sita Lama"],
@@ -39,7 +31,7 @@ const projects = [
   {
     id: 3,
     title: "Individual Donors",
-    image: image3,
+    image: img,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
@@ -51,7 +43,7 @@ const projects = [
   {
     id: 4,
     title: "Education for All",
-    image: image4,
+    image: img,
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
@@ -62,7 +54,7 @@ const projects = [
   {
     id: 5,
     title: "Women Empowerment",
-    image: image5,
+    image:img,
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -73,8 +65,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Clean Energy Program",
-    image: image7,
+    title: img,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -85,7 +76,7 @@ const projects = [
   {
     id: 7,
     title: "Community Health",
-    image: earlyLifeImage,
+    image: img,
     startDate: "Apr 2024",
     endDate: "Ongoing",
     members: ["Anita KC", "Ramesh Shrestha"],
@@ -96,7 +87,7 @@ const projects = [
   {
     id: 8,
     title: "Youth Entrepreneurship",
-    image: image6,
+    image: img,
     startDate: "Jun 2024",
     endDate: "Ongoing",
     members: ["Ram Shrestha", "Sita KC"],
@@ -107,7 +98,7 @@ const projects = [
   {
     id: 9,
     title: "Sustainable Agriculture",
-    image: image9,
+    image: img,
     startDate: "Jul 2024",
     endDate: "Ongoing",
     members: ["Bishal Rana", "Pooja Sharma"],

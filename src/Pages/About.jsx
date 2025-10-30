@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { appData } from "../constants";
-import img1 from "../assets/vocational.jpg"; 
-import img2 from "../assets/home1.jpg";
+
+
+import img from "../assets/placeholder2.png";
 
 const About = () => {
 
@@ -28,7 +29,7 @@ const About = () => {
         {/* Left Image */}
         <div className="lg:w-1/2 w-full h-[300px] lg:h-auto py-10">
           <img
-            src={img1}
+            src={img}
             alt="About CVDS Nepal"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -90,7 +91,7 @@ const About = () => {
         {/* Image */}
         <div className="lg:w-1/2 lg:h-auto lg:mb-0">
           <img
-            src={img2}
+            src={img}
             alt="Digital Transformation"
             className="w-full h-full object-cover rounded-lg overflow-hidden py-20"
           />

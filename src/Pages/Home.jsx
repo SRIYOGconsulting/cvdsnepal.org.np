@@ -18,9 +18,8 @@ import childM from "../assets/male-child.png";
 import childF from "../assets/female-child.png"
 import Header from "../Components/Header";
 import newHeroImage from "../assets/homepageherobanner.jpg";
-import img3 from "../assets/blog1.jpg";
-import img5 from "../assets/home1.jpg";
-import img6 from "../assets/home2.jpg";
+// Added new placeholder image
+import  img from "../assets/placeholder2.png";
 
 
 // ScrollToTop Component (Fixed Scroll Restoration Issue)
@@ -239,21 +238,21 @@ const NewsSection = () => {
     {
       title: "Empowering Children with Special Needs",
       desc: "CVDS works to support children with disabilities by providing inclusive education and resources.",
-      img: img3,
+      img: img,
       link: "/about",
       date: "Oct 10, 2025",
     },
     {
       title: "Community Outreach: Chepang Network",
       desc: "CVDS engages local communities to empower marginalized groups and ensure child rights.",
-      img: img5,
+      img: img,
       link: "/activities",
       date: "Sep 20, 2025",
     },
     {
       title: "Art for Awareness: Eak Abhiyan",
       desc: "An initiative by CVDS to promote creativity among children and raise awareness on social issues.",
-      img: img6,
+      img: img,
       link: "/support",
       date: "Aug 15, 2025",
     },
