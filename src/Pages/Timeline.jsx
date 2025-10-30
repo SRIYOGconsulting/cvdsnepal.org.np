@@ -1,9 +1,9 @@
 import React from "react";
 import { Building } from "lucide-react";
-import journey1 from "../assets/gallery16.jpg";
-import journey2 from "../assets/gallery17.jpg";
-import journey3 from "../assets/gallery18.jpg";
-import journey4 from "../assets/gallery19.jpg";
+import journey1 from "/assets/images/gallery/gallery16.jpg";
+import journey2 from "/assets/images/gallery/gallery17.jpg";
+import journey3 from "/assets/images/gallery/gallery18.jpg";
+import journey4 from "/assets/images/gallery/gallery19.jpg";
 
 const timelineData = [
   {

@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { appData } from "../constants";
-
-
 import img from "../assets/placeholder2.png";
 
 const About = () => {
-
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll(".fade-in");
@@ -22,27 +19,29 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col px-4 sm:px-8 md:px-12">
-
-      {/* ========== SECTION About Us ========== */}
-      <section className="flex flex-col lg:flex-row w-full min-h-screen max-w-6xl mx-auto">
+    <div className="w-full flex flex-col px-4 sm:px-8 md:px-12 ">
+      {/*About Us  */}
+      <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center gap-10 lg:gap-16 py-10">
         {/* Left Image */}
-        <div className="lg:w-1/2 w-full h-[300px] lg:h-auto py-10">
+        <div className="lg:w-1/2 w-full flex items-stretch">
           <img
             src={img}
             alt="About CVDS Nepal"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-lg shadow-md"
           />
         </div>
 
         {/* Right Content */}
-        <div className="lg:w-1/2 w-full flex flex-col px-8 py-8 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify rounded-lg ">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">About Us</h2>
+        <div className="lg:w-1/2 w-full flex flex-col justify-center px-2 sm:px-6 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+            About Us
+          </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            People with disability are the most vulnerable and marginalized group
-            of people. They live in isolation, segregation, disparagement,
-            poverty, and dependence on charity. They are victims of community
-            misconceptions and stigmas denying them their basic rights.
+            People with disability are the most vulnerable and marginalized
+            group of people. They live in isolation, segregation,
+            disparagement, poverty, and dependence on charity. They are victims
+            of community misconceptions and stigmas denying them their basic
+            rights.
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
             Conflict Victim and Disable Society ({appData.organizationName}) is
@@ -52,18 +51,20 @@ const About = () => {
             since {appData.established}, providing food, clothes, shelter, and
             rehabilitation services.
           </p>
-          <button className="bg-[#1F2B6C] hover:bg-blue-500  text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg">
+          <button className="bg-[#1F2B6C] hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg">
             Join with us
           </button>
         </div>
       </section>
 
-      {/* ========== SECTION Who We Are & Why Choose Us ========== */}
-      <section className="py- bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify py-12">
+      {/* Who We Are & Why Choose Us */}
+      <section className="bg-white py-10">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify">
           {/* Who We Are */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Who We Are</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+              Who We Are
+            </h2>
             <p className="text-gray-700 leading-relaxed">
               We are a non-profit organization dedicated to improving the lives
               of people with disabilities and conflict victims across Nepal.
@@ -75,30 +76,32 @@ const About = () => {
 
           {/* Why Choose Us */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Why Choose Us</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+              Why Choose Us
+            </h2>
             <p className="text-gray-700 leading-relaxed">
               Our experienced team of caregivers, therapists, and educators
               provides continuous support to help individuals gain independence
-              and dignity. We are driven by compassion, equality, and a belief in
-              the power of inclusive growth.
+              and dignity. We are driven by compassion, equality, and a belief
+              in the power of inclusive growth.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ========== SECTION Digital Transformation (Vision & Mission Style) ========== */}
-      <section className="flex flex-col lg:flex-row-reverse w-full min-h-screen max-w-6xl mx-auto">
+      {/* Digital Transformation */}
+      <section className="flex flex-col lg:flex-row-reverse w-full max-w-6xl mx-auto items-center gap-10 lg:gap-16 py-10">
         {/* Image */}
-        <div className="lg:w-1/2 lg:h-auto lg:mb-0">
+        <div className="lg:w-1/2 w-full flex items-stretch">
           <img
             src={img}
             alt="Digital Transformation"
-            className="w-full h-full object-cover rounded-lg overflow-hidden py-20"
+            className="w-full h-full object-cover rounded-lg shadow-md"
           />
         </div>
 
         {/* Text */}
-        <div className="lg:w-1/2 w-full flex flex-col px-8 py-16 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify">
+        <div className="lg:w-1/2 w-full flex flex-col justify-center px-2 sm:px-6 fade-in opacity-0 translate-y-6 transition-all duration-700 text-justify">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             Digital Transformation
           </h2>
@@ -115,7 +118,6 @@ const About = () => {
           </p>
         </div>
       </section>
-
     </div>
   );
 };

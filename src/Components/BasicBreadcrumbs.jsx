@@ -25,6 +25,9 @@ const BasicBreadcrumbs = () => {
     donate: "Donations",
     socialimpact: "Social Impact",
     casestudies: "Case Studies",
+    tos: "Terms of Service",
+    privacy: "Privacy Policy",
+    disclaimer: "Disclaimer",
   };
 
   const formatName = (name) => {

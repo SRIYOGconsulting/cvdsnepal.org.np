@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
 
+import img1 from "/assets/images/projects/placeholder2.png";
 
-import img from "../assets/placeholder2.png";
 
 const projects = [
   {
     id: 1,
     title: "National Child Right Council",
-    image: img,
+    image: img1,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
     members: ["John Doe", "Jane Smith", "Sita Rai"],
@@ -20,7 +20,7 @@ const projects = [
   {
     id: 2,
     title: "Local Government",
-    image: img,
+    image: img1,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
     members: ["Ram Thapa", "Sita Lama"],
@@ -31,7 +31,7 @@ const projects = [
   {
     id: 3,
     title: "Individual Donors",
-    image: img,
+    image: img1,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
@@ -43,7 +43,7 @@ const projects = [
   {
     id: 4,
     title: "Education for All",
-    image: img,
+    image: img1,
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
@@ -54,7 +54,7 @@ const projects = [
   {
     id: 5,
     title: "Women Empowerment",
-    image:img,
+    image:img1,
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -65,7 +65,7 @@ const projects = [
   },
   {
     id: 6,
-    title: img,
+    title: img1,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -76,7 +76,7 @@ const projects = [
   {
     id: 7,
     title: "Community Health",
-    image: img,
+    image: img1,
     startDate: "Apr 2024",
     endDate: "Ongoing",
     members: ["Anita KC", "Ramesh Shrestha"],
@@ -87,7 +87,7 @@ const projects = [
   {
     id: 8,
     title: "Youth Entrepreneurship",
-    image: img,
+    image: img1,
     startDate: "Jun 2024",
     endDate: "Ongoing",
     members: ["Ram Shrestha", "Sita KC"],
@@ -98,7 +98,7 @@ const projects = [
   {
     id: 9,
     title: "Sustainable Agriculture",
-    image: img,
+    image: img1,
     startDate: "Jul 2024",
     endDate: "Ongoing",
     members: ["Bishal Rana", "Pooja Sharma"],

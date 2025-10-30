@@ -6,7 +6,7 @@ const Appeal = () => {
   return (
     <div className="bg-gray-100 py-12 px-4 md:px-8 lg:px-16">
       {/* White Card Container */}
-      <div className="bg-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto shadow-md">
+      <div className="bg-white rounded-2xl p-8 md:p-12 max-w-6xl mx-auto shadow-md min-h-screen">
         
         {/* Logo Section */}
         <div className="flex justify-center mb-8">

@@ -129,11 +129,11 @@ const Footer = () => {
       <a href="https://broadpress.org" target="_blank" className="text-[#0B5D5E] font-semibold cursor-pointer hover:underline"> BroadPress</a>
     </p>
     <div className="flex flex-wrap justify-center gap-2">
-      <span className="hover:underline cursor-pointer">Terms of Service</span>
+      <span className="hover:underline cursor-pointer"><Link to="/tos">Terms of Service</Link></span>
       <span>|</span>
-      <span className="hover:underline cursor-pointer">Privacy Policy</span>
+      <span className="hover:underline cursor-pointer"><Link to="/privacy">Privacy Policy</Link></span>
       <span>|</span>
-      <span className="hover:underline cursor-pointer">Disclaimer</span>
+      <span className="hover:underline cursor-pointer"><Link to="/disclaimer">Disclaimer</Link></span>
     </div>
   </div>
 </footer>

@@ -1,22 +1,12 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
-import earlyLifeImage from "../assets/project.jpg";
-import image2 from "../assets/project.jpg";
-import image3 from "../assets/images8.jpg";
-import image4 from "../assets/images9.jpg";
-import image5 from "../assets/home3.jpg";
-import image7 from "../assets/projecta.png";
-import image6 from "../assets/rehabilation.jpg";
-import image9 from "../assets/vocational.jpg";
-import image10 from "../assets/psychologica.jpg";
-import image11 from "../assets/slide3.jpg";
-
+import img from "../assets/placeholder2.png";
 
 const casestudies = [
   {
     id: 1,
     title: "Child Rights",
-    image: image11,
+    image: img,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
     members: ["John Doe", "Jane Smith", "Sita Rai"],
@@ -28,7 +18,7 @@ const casestudies = [
   {
     id: 2,
     title: "Governance",
-    image: image10,
+    image: img,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
     members: ["Ram Thapa", "Sita Lama"],
@@ -39,7 +29,7 @@ const casestudies = [
   {
     id: 3,
     title: "Enterpreneurship",
-    image: image3,
+    image: img,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
@@ -51,7 +41,7 @@ const casestudies = [
   {
     id: 4,
     title: "Education",
-    image: image4,
+    image: img,
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
@@ -62,7 +52,7 @@ const casestudies = [
   {
     id: 5,
     title: "Gender Equality",
-    image: image5,
+    image: img,
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -74,7 +64,7 @@ const casestudies = [
   {
     id: 6,
     title: "Environment",
-    image: image7,
+    image: img,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -85,7 +75,7 @@ const casestudies = [
   {
     id: 7,
     title: "Health",
-    image: earlyLifeImage,
+    image: img,
     startDate: "Apr 2024",
     endDate: "Ongoing",
     members: ["Anita KC", "Ramesh Shrestha"],
@@ -96,7 +86,7 @@ const casestudies = [
   {
     id: 8,
     title: "Enterpreneurship",
-    image: image6,
+    image: img,
     startDate: "Jun 2024",
     endDate: "Ongoing",
     members: ["Ram Shrestha", "Sita KC"],
@@ -107,7 +97,7 @@ const casestudies = [
   {
     id: 9,
     title: "Agriculture",
-    image: image9,
+    image: img,
     startDate: "Jul 2024",
     endDate: "Ongoing",
     members: ["Bishal Rana", "Pooja Sharma"],

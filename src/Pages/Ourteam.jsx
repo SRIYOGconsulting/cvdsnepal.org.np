@@ -1,62 +1,104 @@
-import React, {  useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { appData } from '../constants';
+import React from "react";
+import { appData } from "../constants";
 
-// ===== fixed Imported images from src/assets (directly, no /images folder) =====
+// Imported images
 import maleImage from "../assets/male.png";
 import femaleImage from "../assets/female.png";
 import twitterIcon from "../assets/twitter.png";
 import linkedinIcon from "../assets/linkedin.png";
+
 const OurTeam = () => {
   const teamMembers = [
-  { name: 'Full Name', role: 'Vice President', image: femaleImage },
-    { name: 'Full Name', role: 'Secretary', image: maleImage },
-    { name: 'Full Name', role: 'Joint Secretary', image: femaleImage },
-    { name: 'Full Name', role: 'Treasurer', image: maleImage },
-    { name: 'Full Name', role: 'Executive Member', image: maleImage },
-    { name: 'Full Name', role: 'Executive Member', image: femaleImage },
-    { name: 'Full Name', role: 'Executive Member', image: maleImage },
-    { name: 'Full Name', role: 'Executive Member', image: maleImage },
-    // Add more members as needed
+    { name: "Full Name", role: "Vice President", image: femaleImage },
+    { name: "Full Name", role: "Secretary", image: maleImage },
+    { name: "Full Name", role: "Joint Secretary", image: femaleImage },
+    { name: "Full Name", role: "Treasurer", image: maleImage },
+    { name: "Full Name", role: "Executive Member", image: maleImage },
+    { name: "Full Name", role: "Executive Member", image: femaleImage },
+    { name: "Full Name", role: "Executive Member", image: maleImage },
+    { name: "Full Name", role: "Executive Member", image: maleImage },
   ];
-  return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
-      <div className="rounded-lg mb-10" style={{ border: '1px solid #d1d5dc', backgroundColor: 'oklch(0.95 0 0)' }}>
-        <div className="flex flex-col sm:flex-row w-full h-full md:px-10 py-5 items-center">
-          <div className=" h-[390px] flex flex-col items-center justify-center  md:p-0 basis-full w-full sm:basis-[30%] ">
-            <div className=" w-[65%] md:h-56 md:w-full lg:h-64 lg:w-[75%] py-12">
-              {/* ===== fixed Use imported maleImage for President ===== */}
-              <img src={maleImage} alt="President" className="w-48 h-48 rounded-full mb-3 object-cover" />
-            </div>
-            <div>
-            </div>
-            <h2 className="text-2xl text-center">Full Name</h2>
-            <p className="text-2xl text-center ">President</p>
-          </div>
-          <div className="flex-1 flex flex-col justify-start basis-[70%] text-justify">
-            <h1 style={{ fontSize: '30px' }}>About CDVS Nepal</h1><br />
-            <p className=" text-gray-900 ">
-              People with disability are the most vulnerable and marginalized group of people. They live in isolation, segregation, disparagement, poverty and virtual dependence on charity and even pity. They are the victim of the community misconception and stigmas denying them of their inalienable and recognized rights.
-              <br />
-              Conflict Victim and Disable Society ({appData.organizationName}) is located at {appData.municipality} Municipality-{appData.wardno}, {appData.address1}, {appData.address2}, {appData.city}. This organization has been supporting people with disability in Nepal since {appData.established}, providing food, clothes, shelter, and basic care through the Rehabilitation Center for Children with disability due to Cerebral Palsy (CP) project.
-            </p>
-            <br />
-            <p>Follow CDVS Nepal on social media</p><br/>
-            <div>
-              {/* ===== fixed Use imported social icon images ===== */}
-              <img src={twitterIcon} alt="Twitter" className="w-6 h-6 mb-3 object-cover inline mr-2" style={{ marginRight:'10px' }} />
-              <img src={linkedinIcon} alt="Linkedin" className="w-6 h-6 mb-3 object-cover inline mr-2" />
-            </div>
-          </div></div></div>
 
-      {/* Team members grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-xl">
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* President Section */}
+      <div className="rounded-lg mb-10 border border-gray-300 bg-gray-50 p-6 sm:p-10">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* President Image and Info */}
+          <div className="flex flex-col items-center justify-center w-full md:w-1/3">
+            <img
+              src={maleImage}
+              alt="President"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full mb-4 object-cover"
+            />
+            <h2 className="text-xl sm:text-2xl font-semibold text-center">
+              Full Name
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-700 text-center">
+              President
+            </p>
+          </div>
+
+          {/* About Section */}
+          <div className="flex-1 text-justify">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center md:text-left">
+              About CDVS Nepal
+            </h1>
+            <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
+              People with disability are the most vulnerable and marginalized
+              group of people. They live in isolation, segregation,
+              disparagement, poverty and virtual dependence on charity and even
+              pity. They are the victim of the community misconception and
+              stigmas denying them of their inalienable and recognized rights.
+              <br />
+              <br />
+              Conflict Victim and Disable Society ({appData.organizationName}) is
+              located at {appData.municipality} Municipality-{appData.wardno},{" "}
+              {appData.address1}, {appData.address2}, {appData.city}. This
+              organization has been supporting people with disability in Nepal
+              since {appData.established}, providing food, clothes, shelter, and
+              basic care through the Rehabilitation Center for Children with
+              disability due to Cerebral Palsy (CP) project.
+            </p>
+
+            {/* Social Media */}
+            <div className="mt-6 flex flex-wrap items-center gap-4 justify-center md:justify-start">
+              <p className="text-gray-900 font-medium">
+                Follow CDVS Nepal on social media:
+              </p>
+              <div className="flex gap-3">
+                <img
+                  src={twitterIcon}
+                  alt="Twitter"
+                  className="w-6 h-6 hover:opacity-80 transition"
+                />
+                <img
+                  src={linkedinIcon}
+                  alt="LinkedIn"
+                  className="w-6 h-6 hover:opacity-80 transition"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Members Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {teamMembers.map((member, index) => (
-          <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[280px] " style={{ border: '1px solid #d1d5dc', backgroundColor: 'oklch(0.95 0 0)' }}>
-           {/* ===== Fixed Use member.image imported variable ===== */}
-            <img src={member.image} alt={member.name} className="w-48 h-48 rounded-full mb-3 object-cover" />
-            <h2 style={{ fontSize: '18px' }}>{member.name}</h2>
-            <p className='text-gray-700 ' style={{ fontSize: '14px' }}>{member.role}</p>
+          <div
+            key={index}
+            className="bg-gray-50 border border-gray-300 rounded-lg shadow-sm p-4 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md"
+          >
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full mb-3 object-cover"
+            />
+            <h2 className="text-base sm:text-lg font-semibold">
+              {member.name}
+            </h2>
+            <p className="text-gray-700 text-sm sm:text-base">{member.role}</p>
           </div>
         ))}
       </div>
@@ -65,8 +107,3 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
-
-
-
-
-

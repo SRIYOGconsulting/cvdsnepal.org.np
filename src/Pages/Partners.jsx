@@ -2,6 +2,8 @@ import { useState } from "react";
 
 
 // designed according to the desin provided in issue
+import  img2 from "../assets/placeholder2.png";
+import  img1 from "../assets/placeholder1.png";
 
 const Partners = () => {
   const partners = [
@@ -44,15 +46,15 @@ const Partners = () => {
         </div>
 
         {/* Image Placeholder */}
-        <div className="w-full h-64 bg-gray-300 rounded-md"></div>
+        <div><img src={img2} alt="placeholder2.png" className=" rounded-md"/></div>
       </div>
 
       {/* Partners Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {partners.map((partner, index) => (
           <div key={index} className="text-center">
             {/* changed h-40 to h-52 */}
-            <div className="w-full h-52 bg-gray-300 rounded-md mb-4"></div>
+            <div><img src={img1} alt="placeholder1.png" className="rounded-md mb-4"/></div>
             <h3 className="text-gray-800 text-sm mb-3">{partner.name}</h3>
             <a
               href={partner.link}

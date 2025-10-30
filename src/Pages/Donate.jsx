@@ -1,8 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Heart, Search } from "lucide-react";
-
-
-
 import img from "../assets/placeholder2.png";
 
 export default function DonatePage() {
@@ -11,10 +8,42 @@ export default function DonatePage() {
 
   const amounts = [200000, 120000, 50000, 25000, 12000, 6000];
 
+//  Donors Data
+  const donors = [
+    {
+      name: "Alexis Thomas",
+      phone: "9801234567",
+      address: "Kamalpokhari",
+      city: "Kathmandu",
+      amount: 5000,
+      date: "Mar 01, 2025",
+    },
+    {
+      name: "Sophia Lawson",
+      phone: "9812345678",
+      address: "Baneshwor",
+      city: "Kathmandu",
+      amount: 1000,
+      date: "Feb 27, 2025",
+    },
+    {
+      name: "Abdur Young",
+      phone: "9823456789",
+      address: "Pokhara",
+      city: "Kaski",
+      amount: 500,
+      date: "Feb 25, 2025",
+    },
+  ];
+
+  // Calculate Totals
+  const totalDonors = donors.length;
+  const totalDonation = donors.reduce((sum, donor) => sum + donor.amount, 0);
+
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-10 sm:px-6 md:px-8 lg:px-12 max-w-6xl mx-auto">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* ===== LEFT SIDE - DONATE FORM ===== */}
+        {/*LEFT SIDE - DONATE FORM */}
         <div className="bg-white rounded-2xl shadow-lg p-6 border flex flex-col justify-between">
           <div>
             {/* Frequency Toggle */}
@@ -46,12 +75,12 @@ export default function DonatePage() {
             <p className="text-gray-600 mb-3 text-sm sm:text-base">
               Your generous donation
             </p>
-            <div className="grid grid--2 sm:grid-cols-3 gap-2 mb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
               {amounts.map((amt) => (
                 <button
                   key={amt}
                   onClick={() => setSelectedAmount(amt)}
-                  className={`border rounded-lg py-2 text-sm sm:text-base  ${
+                  className={`border rounded-lg py-2 text-sm sm:text-base ${
                     selectedAmount === amt
                       ? "bg-indigo-100 border-indigo-600 text-indigo-600 font-semibold"
                       : "bg-white text-gray-700"
@@ -64,9 +93,7 @@ export default function DonatePage() {
 
             {/* Custom Amount Input */}
             <div className="flex items-center border rounded-lg mb-4 overflow-hidden">
-              <span className="px-2 text-gray-500 text-sm sm:text-base">
-                Rs
-              </span>
+              <span className="px-2 text-gray-500 text-sm sm:text-base">Rs</span>
               <input
                 type="number"
                 className="flex-1 p-2 outline-none text-sm sm:text-base"
@@ -94,7 +121,7 @@ export default function DonatePage() {
           </button>
         </div>
 
-        {/* ===== RIGHT SIDE - IMAGE (Equal size) ===== */}
+        {/*RIGHT SIDE - IMAGE & INFO*/}
         <div className="flex flex-col">
           <img
             src={img}
@@ -102,7 +129,6 @@ export default function DonatePage() {
             className="w-full h-52 sm:h-64 md:h-80 object-cover rounded-xl shadow mb-6"
           />
 
-          {/* Subheading */}
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">
             Support CVDS-Nepal and Empower Lives
           </h2>
@@ -127,7 +153,7 @@ export default function DonatePage() {
           </p>
         </div>
 
-        {/* donors list section */}
+        {/* DONORS LIST SECTION */}
         <div className="w-full col-span-full bg-white py-10 mt-12 rounded-lg shadow-sm">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
             {/* Header */}
@@ -155,7 +181,6 @@ export default function DonatePage() {
             </div>
 
             {/* Desktop Table View */}
-            {/*  Visible only on md and larger screens */}
             <div className="hidden md:block overflow-x-auto border border-gray-100 rounded-lg">
               <table className="w-full text-xs sm:text-sm text-left min-w-[600px]">
                 <thead className="bg-[#1F2B6C] text-white">
@@ -174,32 +199,7 @@ export default function DonatePage() {
                 </thead>
 
                 <tbody>
-                  {[
-                    {
-                      name: "Alexis Thomas",
-                      phone: "9801234567",
-                      address: "Kamalpokhari",
-                      city: "Kathmandu",
-                      amount: 5000,
-                      date: "Mar 01, 2025",
-                    },
-                    {
-                      name: "Sophia Lawson",
-                      phone: "9812345678",
-                      address: "Baneshwor",
-                      city: "Kathmandu",
-                      amount: 1000,
-                      date: "Feb 27, 2025",
-                    },
-                    {
-                      name: "Abdur Young",
-                      phone: "9823456789",
-                      address: "Pokhara",
-                      city: "Kaski",
-                      amount: 500,
-                      date: "Feb 25, 2025",
-                    },
-                  ].map((donor, i) => (
+                  {donors.map((donor, i) => (
                     <tr
                       key={i}
                       className={`border-t border-gray-100 ${
@@ -213,7 +213,7 @@ export default function DonatePage() {
                       <td className="p-3 text-gray-700">{donor.address}</td>
                       <td className="p-3 text-gray-700">{donor.city}</td>
                       <td className="p-3 text-right text-gray-700">
-                        NPR {donor.amount}
+                        NPR {donor.amount.toLocaleString()}
                       </td>
                       <td className="p-3 text-center text-gray-700">
                         {donor.date}
@@ -225,35 +225,8 @@ export default function DonatePage() {
             </div>
 
             {/* Mobile Card View */}
-            {/* Visible only on small screens */}
             <div className="grid gap-4 md:hidden">
-              {/* Added md:hidden to show only below md breakpoint */}
-              {[
-                {
-                  name: "Alexis Thomas",
-                  phone: "9801234567",
-                  address: "Kamalpokhari",
-                  city: "Kathmandu",
-                  amount: 5000,
-                  date: "Mar 01, 2025",
-                },
-                {
-                  name: "Sophia Lawson",
-                  phone: "9812345678",
-                  address: "Baneshwor",
-                  city: "Kathmandu",
-                  amount: 1000,
-                  date: "Feb 27, 2025",
-                },
-                {
-                  name: "Abdur Young",
-                  phone: "9823456789",
-                  address: "Pokhara",
-                  city: "Kaski",
-                  amount: 500,
-                  date: "Feb 25, 2025",
-                },
-              ].map((donor, i) => (
+              {donors.map((donor, i) => (
                 <div
                   key={i}
                   className="border border-gray-200 rounded-lg shadow-sm bg-gray-50 p-4"
@@ -273,7 +246,7 @@ export default function DonatePage() {
                   </p>
                   <p className="text-sm text-gray-700">
                     <span className="font-medium">Amount:</span> NPR{" "}
-                    {donor.amount}
+                    {donor.amount.toLocaleString()}
                   </p>
                   <p className="text-sm text-gray-700">
                     <span className="font-medium">Date:</span> {donor.date}
@@ -282,10 +255,13 @@ export default function DonatePage() {
               ))}
             </div>
 
-            {/* Total Donors Counter */}
-            <div className="mt-6 text-center md:text-right">
-              <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full text-sm font-semibold">
-                Total donors: 3
+            {/* Totals Summary */}
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center sm:justify-end gap-3 text-sm font-semibold">
+              <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full">
+                Total donors: {totalDonors}
+              </span>
+              <span className="bg-green-100 text-green-700 px-4 py-1.5 rounded-full">
+                Total donation: NPR {totalDonation.toLocaleString()}
               </span>
             </div>
           </div>

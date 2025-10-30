@@ -1,22 +1,13 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
-import earlyLifeImage from "../assets/project.jpg";
-import image2 from "../assets/project.jpg";
-import image3 from "../assets/images8.jpg";
-import image4 from "../assets/images9.jpg";
-import image5 from "../assets/home3.jpg";
-import image7 from "../assets/projecta.png";
-import image6 from "../assets/rehabilation.jpg";
-import image9 from "../assets/vocational.jpg";
-import image10 from "../assets/psychologica.jpg";
-import image11 from "../assets/slide3.jpg";
+import img from "../assets/placeholder2.png";
 
 
 const socials = [
   {
     id: 1,
     title: "Social Impact",
-    image: image11,
+    image: img,
     startDate: "Jan 2023",
     endDate: "Dec 2023",
     members: ["John Doe", "Jane Smith", "Sita Rai"],
@@ -28,7 +19,7 @@ const socials = [
   {
     id: 2,
     title: "Social Impact",
-    image: image10,
+    image: img,
     startDate: "Feb 2023",
     endDate: "Nov 2023",
     members: ["Ram Thapa", "Sita Lama"],
@@ -39,7 +30,7 @@ const socials = [
   {
     id: 3,
     title: "Social Impact",
-    image: image3,
+    image: img,
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
@@ -51,7 +42,7 @@ const socials = [
   {
     id: 4,
     title: "Social Impact",
-    image: image4,
+    image: img,
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
@@ -62,7 +53,7 @@ const socials = [
   {
     id: 5,
     title: "Social Impact",
-    image: image5,
+    image: img,
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -74,7 +65,7 @@ const socials = [
   {
     id: 6,
     title: "Social Impact",
-    image: image7,
+    image: img,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -85,7 +76,7 @@ const socials = [
   {
     id: 7,
     title: "Social Impact",
-    image: earlyLifeImage,
+    image: img,
     startDate: "Apr 2024",
     endDate: "Ongoing",
     members: ["Anita KC", "Ramesh Shrestha"],
@@ -96,7 +87,7 @@ const socials = [
   {
     id: 8,
     title: "Social Impact",
-    image: image6,
+    image: img,
     startDate: "Jun 2024",
     endDate: "Ongoing",
     members: ["Ram Shrestha", "Sita KC"],
@@ -107,7 +98,7 @@ const socials = [
   {
     id: 9,
     title: "Social Impact",
-    image: image9,
+    image: img,
     startDate: "Jul 2024",
     endDate: "Ongoing",
     members: ["Bishal Rana", "Pooja Sharma"],

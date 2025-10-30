@@ -35,6 +35,9 @@ import TrelloBoard from "./Pages/TrelloBoard.jsx";
 import VolunteerForm from "./Pages/VolunteerForm.jsx";
 import Appeal from "./Pages/Appeal.jsx";
 import Timeline from "./Pages/Timeline.jsx";
+import TOS from "./Pages/TOS.jsx";
+import Privacy from "./Pages/Privacy.jsx";
+import Disclaimer from "./Pages/Disclaimer.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -154,6 +157,21 @@ const router = createBrowserRouter([
         path: "Timeline",
         element: <Timeline/>,
         handle: { title: "Timeline" },
+      },
+      {
+        path: "tos",
+        element: <TOS/>,
+        handle: { title: "Terms of Service" },
+      },
+      {
+        path: "privacy",
+        element: <Privacy/>,
+        handle: { title: "Privacy Policy" },
+      },
+      {
+        path: "disclaimer",
+        element: <Disclaimer/>,
+        handle: { title: "Disclaimer" },
       },
     ],
   },
