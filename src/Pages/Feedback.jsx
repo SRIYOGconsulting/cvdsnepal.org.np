@@ -24,6 +24,17 @@ const Feedback = () => {
     });
   };
 
+  //  Changed safe email input handler
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    // Allow only letters, numbers, ., _, +, -, and @
+    const filteredValue = value.replace(/[^a-zA-Z0-9@._+-]/g, ""); // blocks invalid characters
+    setFormData({
+      ...formdata,
+      email: filteredValue,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -118,7 +129,7 @@ const Feedback = () => {
                 />
               </div>
 
-              {/* Email */}
+             {/* Email */}
               <div>
                 <label className="font-medium block mb-2 text-gray-700">
                   Email *
@@ -127,7 +138,7 @@ const Feedback = () => {
                   type="email"
                   name="email"
                   value={formdata.email}
-                  onChange={handleChange}
+                  onChange={handleEmailChange}  //chnaged the  safe email inputs
                   required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1F2B6C] focus:outline-none"
                 />
@@ -278,3 +289,11 @@ const Feedback = () => {
 };
 
 export default Feedback;
+
+
+
+
+
+
+
+

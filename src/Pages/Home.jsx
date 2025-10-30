@@ -166,7 +166,7 @@ const SponsorSection = () => (
       </div>
       <div className="space-x-4">
         <Link to="/gallery">
-          <button className="border border-black px-6 py-2 rounded hover:bg-black hover:text-white transition">
+          <button className="border border-black px-6 py-2 rounded hover:bg-blue-500  hover:text-white transition">
             Donate Now
           </button>
         </Link>
@@ -325,7 +325,7 @@ const ActionSection = () => (
             </div>
             <Link
               to="/objectives"
-              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-blue-500 transition"
             >
               See Why
             </Link>
@@ -349,7 +349,7 @@ const ActionSection = () => (
             </div>
             <Link
               to="/activities"
-              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-blue-500  transition"
             >
               Join Now
             </Link>
@@ -373,7 +373,7 @@ const ActionSection = () => (
             </div>
             <Link
               to="/donate"
-              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-black transition"
+              className="font-semibold text-white bg-[#1F2B6C] px-6 py-2 rounded hover:bg-blue-500  transition"
             >
               Donate
             </Link>
