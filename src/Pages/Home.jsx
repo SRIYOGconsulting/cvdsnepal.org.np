@@ -154,7 +154,7 @@ const SponsorSection = () => (
               <h3 className="font-semibold text-lg">{child.name}</h3>
               <p className="text-sm text-gray-600 mb-4">Nepal</p>
               <Link
-                to="/gallery"
+                to="/donors"
                 className="inline-block w-full text-center border border-black py-2 rounded hover:bg-black hover:text-white transition"
               >
                 View Donors

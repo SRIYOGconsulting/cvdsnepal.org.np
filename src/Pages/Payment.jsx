@@ -1,6 +1,6 @@
 import React from "react";
 import { Phone, Mail } from "lucide-react";  
-import bankLogo from "../assets/bank.jpg";    
+import bankLogo from "../assets/bank.png";    
 import qrImage from "../assets/qr.jpg";  
 import { appData } from "../constants";
 
@@ -11,17 +11,17 @@ const Payment = () => {
 
         {/* ===== Left: Bank Details ===== */}
         <div className="text-gray-800 space-y-3 text-center lg:text-left  ">
-          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-32 sm:w-44 mb-5 mx-auto lg:mx-0 " />
+          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-48 sm:w-60 mb-5 mx-auto lg:mx-0 " />
 
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
             Bank Account Details
           </h2>
-
-          <p><strong>Bank Name:</strong> CVDS Nepal</p>
-          <p><strong>Account Name:</strong> {appData.organizationName}</p>
-          <p><strong>Account Number:</strong> {appData.accountNumber}</p>
-          <p><strong>Branch:</strong> Kathmandu</p>
-          <p><strong>SWIFT CODE:</strong> SwiftCode</p>
+ {/* Updated bank details below */}
+          <p><strong>Bank Name:</strong> Global IME Bank Ltd.</p>
+          <p><strong>Account Name:</strong> Conflict Victim and Disable Society Nepal</p>
+          <p><strong>Account Number:</strong> 30107010011377</p>
+          <p><strong>Branch:</strong> Sankhu Branch, Kathmandu, Nepal</p>
+          <p><strong>SWIFT CODE:</strong> GLBBNPKA</p>
           <p>
             <strong>Website:</strong>{" "}
             <a
@@ -43,7 +43,7 @@ const Payment = () => {
         <div className="flex flex-col justify-center items-center border border-black rounded-3xl p-6 sm:p-8 w-full max-w-sm mx-auto shadow-sm">
           
           {/* Bank logo above QR */}
-          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-24 sm:w-32 mb-4" />
+          <img src={bankLogo} alt="CVDS Nepal Logo" className="w-48 sm:w-60 mb-4 object-contain" />
 
           <img
             src={qrImage}
@@ -52,10 +52,11 @@ const Payment = () => {
           />
 
           <div className="text-center text-black font-semibold space-y-2 text-sm sm:text-base">
-            <p className="text-lg sm:text-xl">CVDS Nepal</p>
-            <p>Account No: {appData.accountNumber}</p>
-            <p>Branch: Kathmandu</p>
-            <p>Bank: CVDS Nepal</p>
+           {/*  Updated bank info below */}
+            <p className="text-lg sm:text-xl">Conflict Victim and Disable Society Nepal</p>
+            <p>Account No: 30107010011377</p>
+            <p>Branch: Sankhu Branch, Kathmandu</p>
+            <p>Bank: Global IME Bank Ltd.</p>
 
             <div className="flex flex-col items-center gap-1 pt-3">
               <div className="flex items-center gap-2">
