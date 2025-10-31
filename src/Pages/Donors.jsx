@@ -73,6 +73,13 @@ const Donars = () => {
       donor.date.includes(yearFilter)
   );
 
+
+  // NEW: Calculate total amount from filtered donors
+  const totalAmount = filteredDonors.reduce((sum, donor) => {
+    const numeric = parseFloat(donor.amount.replace(/[^\d.-]/g, ""));
+    return sum + numeric;
+  }, 0);
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
       {/* ===== Top Donors Section ===== */}
@@ -218,10 +225,11 @@ const Donars = () => {
             ))}
           </div>
 
-          {/* Total Donors */}
+         
+          {/*  CHANGED: Display total amount instead of total donors */}
           <div className="mt-6 text-right">
             <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full text-sm font-semibold">
-              Total donors: {filteredDonors.length}
+              Total amount: Rs {totalAmount.toLocaleString()}
             </span>
           </div>
         </div>

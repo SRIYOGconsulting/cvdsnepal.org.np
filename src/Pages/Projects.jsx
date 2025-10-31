@@ -65,7 +65,8 @@ const projects = [
   },
   {
     id: 6,
-    title: img1,
+    title: "Environment",
+    image:img1,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],

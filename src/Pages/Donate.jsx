@@ -260,7 +260,7 @@ export default function DonatePage() {
               <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full">
                 Total donors: {totalDonors}
               </span>
-              <span className="bg-green-100 text-green-700 px-4 py-1.5 rounded-full">
+              <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full">
                 Total donation: NPR {totalDonation.toLocaleString()}
               </span>
             </div>

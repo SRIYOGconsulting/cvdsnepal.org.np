@@ -1,14 +1,6 @@
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import image1 from "../assets/project.jpg";
-import image2 from "../assets/project.jpg";
-import image3 from "../assets/images8.jpg";
-import image4 from "../assets/images9.jpg";
-import image5 from "../assets/home3.jpg";
-import image7 from "../assets/projecta.png";
-
-import image9 from "../assets/vocational.jpg";
-
+import img from "../assets/placeholder2.png";
 
 const pastActivities = [
   {
@@ -16,42 +8,42 @@ const pastActivities = [
     title: "Medical Relief Camp",
     description:
       "Organized a nationwide medical relief campaign for individuals injured during the civil conflict, offering free check-ups, medicines, and mobility aids.",
-    image: image1,
+    image: img,
   },
   {
     year: "2017",
     title: "Women Empowerment Workshop",
     description:
       "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
-    image: image9,
+    image:img,
   },
   {
     year: "2018",
     title: "Inclusive Education Program",
     description:
       "Partnered with local schools to enroll children with disabilities, ensuring they received equal educational opportunities.",
-    image: image3,
+    image: img,
   },
   {
     year: "2020",
     title: "COVID-19 Emergency Support",
     description:
       "Distributed food, medicines, and hygiene kits to families of disabled individuals severely affected by the lockdown.",
-    image: image4,
+    image: img,
   },
   {
     year: "2021",
     title: "Employment Partnership Drive",
     description:
       "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
-    image: image5,
+    image:img,
   },
   {
     year: "2023",
     title: "Community Awareness Campaign",
     description:
       "Launched a campaign to raise awareness about disability rights and social inclusion.",
-    image: image7,
+    image:img,
   },
   
  

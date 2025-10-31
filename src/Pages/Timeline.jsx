@@ -1,9 +1,9 @@
 import React from "react";
 import { Building } from "lucide-react";
-import journey1 from "/assets/images/gallery/gallery16.jpg";
-import journey2 from "/assets/images/gallery/gallery17.jpg";
-import journey3 from "/assets/images/gallery/gallery18.jpg";
-import journey4 from "/assets/images/gallery/gallery19.jpg";
+
+
+// Added new placeholder image
+import  img from "../assets/placeholder2.png";
 
 const timelineData = [
   {
@@ -11,28 +11,28 @@ const timelineData = [
     title: "Started in a Small Office, Kathmandu",
     description:
       "Conflict Victims Disabled Society (CVDS Nepal) began its journey to support individuals affected by conflict, focusing on inclusion and empowerment.",
-    image: journey1,
+    image: img,
   },
   {
     year: "2005",
     title: "Expanding Community Rehabilitation",
     description:
       "Initiated rehabilitation programs in rural areas to improve access to healthcare and education for persons with disabilities.",
-    image: journey2,
+    image: img,
   },
   {
     year: "2012",
     title: "Recognized as a Leading NGO",
     description:
       "CVDS Nepal was recognized nationally for its impactful work and collaboration with multiple social welfare organizations.",
-    image: journey3,
+    image: img,
   },
   {
     year: "2020",
     title: "Digital Empowerment Programs",
     description:
       "Launched skill-based training and awareness campaigns across Nepal to strengthen sustainable livelihoods for conflict victims.",
-    image: journey4,
+    image: img,
   },
 ];
 
