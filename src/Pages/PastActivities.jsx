@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
 
 const pastActivities = [
   {
@@ -15,7 +14,7 @@ const pastActivities = [
     title: "Women Empowerment Workshop",
     description:
       "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
   },
   {
     year: "2018",
@@ -36,17 +35,15 @@ const pastActivities = [
     title: "Employment Partnership Drive",
     description:
       "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
   },
   {
     year: "2023",
     title: "Community Awareness Campaign",
     description:
       "Launched a campaign to raise awareness about disability rights and social inclusion.",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
   },
-  
- 
 ];
 
 const PastActivities = () => {
@@ -61,14 +58,14 @@ const PastActivities = () => {
   return (
     <div className="bg-white min-h-screen py-10">
       {/* Header Section */}
-      <div className="max-w-5xl mx-auto flex justify-between items-center mb-10">
-        <h1 className="md:text-4xl font-bold text-gray-900">
+      <div className="max-w-5xl mx-auto flex justify-between items-center mb-10 px-4 sm:px-6 md:px-8">
+        <h1 className="md:text-4xl font-bold text-gray-900 text-lg sm:text-3xl">
           Our Past Activities
         </h1>
 
         {/* Year Filter */}
-        <div className="flex items-center gap-2">
-          <label className="text-gray-600 text-sm">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <label className="text-gray-600 text-sm md:text-base">
             Select Year
           </label>
           <select
@@ -86,9 +83,10 @@ const PastActivities = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl mb-10 mx-auto flex">
+      {/* Activity Grid */}
+      <div className="max-w-5xl mb-10 mx-auto px-4 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((pastactivities,index) => (
+          {filtered.map((pastactivities, index) => (
             <div
               key={index}
               className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all overflow-hidden"
@@ -96,16 +94,16 @@ const PastActivities = () => {
               <img
                 src={pastactivities.image}
                 alt={pastactivities.title}
-                className="w-full h-56 object-cover"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
               <div className="p-6">
-                <h3 className=" font-semibold mb-2 text-[#1F2B6C]">
+                <h3 className="font-semibold mb-2 text-[#1F2B6C] text-sm sm:text-base">
                   {pastactivities.year}
                 </h3>
                 <h4 className="text-xl font-semibold mb-2 text-[#1F2B6C]">
                   {pastactivities.title}
                 </h4>
-                <p className="text-sm text-gray-600 mb-4 line-clamp-3 text-justify">
+                <p className="text-sm text-gray-600 mb-4 line-clamp-3 text-justify sm:text-base">
                   {pastactivities.description}
                 </p>
               </div>
