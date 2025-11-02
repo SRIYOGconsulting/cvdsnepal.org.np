@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Heart, Search } from "lucide-react";
-import img from "../assets/placeholder2.png";
+
 
 export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState(25000);
@@ -124,7 +124,7 @@ export default function DonatePage() {
         {/*RIGHT SIDE - IMAGE & INFO*/}
         <div className="flex flex-col">
           <img
-            src={img}
+            src="/assets/images/projects/placeholder2.png"
             alt="Donate visual"
             className="w-full h-52 sm:h-64 md:h-80 object-cover rounded-xl shadow mb-6"
           />

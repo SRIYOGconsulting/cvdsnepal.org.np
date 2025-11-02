@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img from "../assets/placeholder2.png";
+
 
 const pastActivities = [
   {
@@ -8,42 +8,42 @@ const pastActivities = [
     title: "Medical Relief Camp",
     description:
       "Organized a nationwide medical relief campaign for individuals injured during the civil conflict, offering free check-ups, medicines, and mobility aids.",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
   },
   {
     year: "2017",
     title: "Women Empowerment Workshop",
     description:
       "Conducted skill-based training for women with disabilities to promote self-employment through handicrafts and tailoring.",
-    image:img,
+    image:"/assets/images/projects/placeholder2.png",
   },
   {
     year: "2018",
     title: "Inclusive Education Program",
     description:
       "Partnered with local schools to enroll children with disabilities, ensuring they received equal educational opportunities.",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
   },
   {
     year: "2020",
     title: "COVID-19 Emergency Support",
     description:
       "Distributed food, medicines, and hygiene kits to families of disabled individuals severely affected by the lockdown.",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
   },
   {
     year: "2021",
     title: "Employment Partnership Drive",
     description:
       "Collaborated with local businesses to provide employment opportunities for skilled individuals with physical disabilities.",
-    image:img,
+    image:"/assets/images/projects/placeholder2.png",
   },
   {
     year: "2023",
     title: "Community Awareness Campaign",
     description:
       "Launched a campaign to raise awareness about disability rights and social inclusion.",
-    image:img,
+    image:"/assets/images/projects/placeholder2.png",
   },
   
  

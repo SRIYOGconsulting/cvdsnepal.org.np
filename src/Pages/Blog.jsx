@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Heart, MessageSquare, Eye } from "lucide-react";
-import img from "../assets/placeholder2.png";
+
 
 const posts = [
   {
@@ -9,7 +9,7 @@ const posts = [
     title: "Playing With Patterns",
     date: "Mar 21, 2023",
     readTime: "1 min read",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     excerpt:
       "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
     likes: 15,
@@ -21,7 +21,7 @@ const posts = [
     title: "Natalia’s Apartment Makeover",
     date: "Mar 21, 2023",
     readTime: "2 min read",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     excerpt:
       "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
     likes: 12,
@@ -33,7 +33,7 @@ const posts = [
     title: "Open House Staging",
     date: "Mar 21, 2023",
     readTime: "1 min read",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     excerpt:
       "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
     likes: 5,
@@ -45,7 +45,7 @@ const posts = [
     title: "Minimal Living Spaces",
     date: "Mar 22, 2023",
     readTime: "2 min read",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     excerpt:
       "Explore minimalist design ideas that balance comfort, simplicity, and function — creating peaceful interiors that inspire calm and clarity....",
     likes: 8,
@@ -57,7 +57,7 @@ const posts = [
     title: "Decorating with Contrast",
     date: "Mar 23, 2023",
     readTime: "3 min read",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     excerpt:
       "Learn how to combine light and dark elements to make your spaces stand out with depth, energy, and elegant balance....",
     likes: 10,

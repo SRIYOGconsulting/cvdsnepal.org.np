@@ -1,22 +1,18 @@
 import React from "react";
 import { appData } from "../constants";
 
-// Imported images
-import maleImage from "../assets/male.png";
-import femaleImage from "../assets/female.png";
-import twitterIcon from "../assets/twitter.png";
-import linkedinIcon from "../assets/linkedin.png";
+
 
 const OurTeam = () => {
   const teamMembers = [
-    { name: "Full Name", role: "Vice President", image: femaleImage },
-    { name: "Full Name", role: "Secretary", image: maleImage },
-    { name: "Full Name", role: "Joint Secretary", image: femaleImage },
-    { name: "Full Name", role: "Treasurer", image: maleImage },
-    { name: "Full Name", role: "Executive Member", image: maleImage },
-    { name: "Full Name", role: "Executive Member", image: femaleImage },
-    { name: "Full Name", role: "Executive Member", image: maleImage },
-    { name: "Full Name", role: "Executive Member", image: maleImage },
+     { name: "Full Name", role: "Vice President", image: "/assets/images/projects/female.png" },
+  { name: "Full Name", role: "Secretary", image: "/assets/images/projects/male.png" },
+  { name: "Full Name", role: "Joint Secretary", image: "/assets/images/projects/female.png" },
+  { name: "Full Name", role: "Treasurer", image: "/assets/images/projects/male.png" },
+  { name: "Full Name", role: "Executive Member", image: "/assets/images/projects/male.png" },
+  { name: "Full Name", role: "Executive Member", image: "/assets/images/projects/female.png" },
+  { name: "Full Name", role: "Executive Member", image: "/assets/images/projects/male.png" },
+  { name: "Full Name", role: "Executive Member", image: "/assets/images/projects/male.png" },
   ];
 
   return (
@@ -27,7 +23,7 @@ const OurTeam = () => {
           {/* President Image and Info */}
           <div className="flex flex-col items-center justify-center w-full md:w-1/3">
             <img
-              src={maleImage}
+              src="/assets/images/projects/male.png"
               alt="President"
               className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full mb-4 object-cover"
             />
@@ -68,12 +64,12 @@ const OurTeam = () => {
               </p>
               <div className="flex gap-3">
                 <img
-                  src={twitterIcon}
+                  src="/assets/images/projects/twitter.png"
                   alt="Twitter"
                   className="w-6 h-6 hover:opacity-80 transition"
                 />
                 <img
-                  src={linkedinIcon}
+                  src="/assets/images/projects/linkedin.png"
                   alt="LinkedIn"
                   className="w-6 h-6 hover:opacity-80 transition"
                 />

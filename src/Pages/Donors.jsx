@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 
-// Sample donor images
-import maleImage from "../assets/male.png";
-import femaleImage from "../assets/female.png";
+
+
+
+
+
 
 // Sample top donors data
 const topDonors = [
-  { name: "Alexis Thomas", total: "Rs52,000", image: maleImage },
-  { name: "Mario Garcia", total: "Rs25,000", image: maleImage },
-  { name: "Sophia Lawson", total: "Rs551,000", image: femaleImage },
-  { name: "Abdur Young", total: "Rs20,000", image: maleImage },
-  { name: "Maya Nolan", total: "Rs41,000", image: femaleImage },
-  { name: "John Doe", total: "Rs30,000", image: maleImage },
-  { name: "Jane Smith", total: "Rs15,000", image: femaleImage },
-  { name: "Sita Rai", total: "Rs50,900", image: femaleImage },
+  
+  { name: "Alexis Thomas", total: "Rs52,000", image: "/assets/images/projects/male.png" },
+  { name: "Mario Garcia", total: "Rs25,000", image: "/assets/images/projects/male.png" },
+  { name: "Sophia Lawson", total: "Rs551,000", image: "/assets/images/projects/female.png" },
+  { name: "Abdur Young", total: "Rs20,000", image: "/assets/images/projects/male.png" },
+  { name: "Maya Nolan", total: "Rs41,000", image: "/assets/images/projects/female.png" },
+  { name: "John Doe", total: "Rs30,000", image: "/assets/images/projects/male.png" },
+  { name: "Jane Smith", total: "Rs15,000", image: "/assets/images/projects/female.png" },
+  { name: "Sita Rai", total: "Rs50,900", image: "/assets/images/projects/female.png" },
 ];
 
 // Full donor list (for table)

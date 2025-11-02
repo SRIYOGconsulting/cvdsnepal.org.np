@@ -1,6 +1,6 @@
 import React from "react";
-import male from "../assets/male.png";
-import logo from "../assets/cvdslogo.png"; 
+
+
 
 const Appeal = () => {
   return (
@@ -11,7 +11,7 @@ const Appeal = () => {
         {/* Logo Section */}
         <div className="flex justify-center mb-8">
           <img
-            src={logo}
+            src="/assets/images/projects/cvdslogo.png"
             alt="CVDS Logo"
             className="w-32 sm:w-40 md:w-48 object-contain"
           />
@@ -84,7 +84,7 @@ const Appeal = () => {
           {/* Image Section */}
           <div className="w-full md:w-2/5 flex justify-end">
             <img
-              src={male}
+             src="/assets/images/projects/male.png"
               alt="Appeal"
               className="rounded-2xl w-36 sm:w-44 md:w-52 lg:w-60 object-cover"
             />

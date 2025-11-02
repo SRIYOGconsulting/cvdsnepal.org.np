@@ -1,6 +1,7 @@
 import React from "react";
-import img1 from "../assets/female.png";
-import img2 from "../assets/male.png";
+
+
+
 
 const Testimonials = () => {
   const testimonials = [
@@ -8,7 +9,7 @@ const Testimonials = () => {
       fullName: "Yub Raj Thapa",
       description:
         "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. I’m forever grateful.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "A Mother from Sankhu",
     },
@@ -16,7 +17,7 @@ const Testimonials = () => {
       fullName: "Sita Rai",
       description:
         "When I visited CVDS, I saw not just an organization, but a family. The children are cared for with love, and the dedication of the staff is truly inspiring. This is where hope lives.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Kriti Sharma, Donor from Kathmandu",
     },
@@ -24,7 +25,7 @@ const Testimonials = () => {
       fullName: "Anil Gurung",
       description:
         "I was abandoned as a child and had nowhere to go. CVDS gave me food, education, and a home. Today, I work as a computer technician. Without CVDS, I wouldn’t be here.",
-      image: img2,
+      image: "/assets/images/projects/male.png",
       alt: "",
       testimony: "Former Beneficiary",
     },
@@ -32,7 +33,7 @@ const Testimonials = () => {
       fullName: "Maya KC",
       description:
         "The physiotherapy sessions at CVDS have made a huge difference in my daughter’s mobility. She couldn’t even sit before, and now she can stand with support. The team is a blessing.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Parent of a Child with Cerebral Palsy",
     },
@@ -40,7 +41,7 @@ const Testimonials = () => {
       fullName: "Rita Sharma",
       description:
         "Volunteering at CVDS changed my life. These children have faced so much yet remain full of joy and resilience. It was an honor to be part of their journey, even for a short time.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Nina Patel, Volunteer from UK",
     },
@@ -48,7 +49,7 @@ const Testimonials = () => {
       fullName: "Bikram Rana",
       description:
         "I’ve donated to many organizations, but CVDS stands out. They are transparent, accountable, and truly passionate about their mission. I trust them completely with my support.",
-      image: img2,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Ramesh Adhikari, Supporter",
     },
@@ -56,7 +57,7 @@ const Testimonials = () => {
       fullName: "Sita KC",
       description:
         "My brother, who has a disability, was always left behind. At CVDS, he was treated with dignity and given the chance to learn and grow. It changed our entire family’s life.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Sibling of a Beneficiary",
     },
@@ -64,7 +65,7 @@ const Testimonials = () => {
       fullName: "Ramesh Shrestha",
       description:
         "I met the founder, Yub Raj Thapa, and was moved by his personal story. He turned his pain into purpose. That spirit flows through every corner of CVDS.",
-      image: img2,
+      image:"/assets/images/projects/male.png",
       alt: "",
       testimony: "Michael Lee, International NGO Representative",
     },
@@ -72,7 +73,7 @@ const Testimonials = () => {
       fullName: "Pooja Sharma",
       description:
         "As a doctor, I’ve worked with many organizations, but CVDS is special. They don’t just treat medical issues—they restore self-worth and dignity to children who need it most.",
-      image: img1,
+      image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Dr. Anjana Shrestha, Pediatric Specialist",
     },

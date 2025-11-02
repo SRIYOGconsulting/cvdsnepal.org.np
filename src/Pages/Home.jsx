@@ -12,14 +12,10 @@ import {
   Megaphone,
   HeartHandshake,
 } from "lucide-react";
-import img1 from "../assets/female.png";
-import img2 from "../assets/male.png";
-import childM from "../assets/male-child.png";
-import childF from "../assets/female-child.png"
-import Header from "../Components/Header";
-import newHeroImage from "../assets/homepageherobanner.jpg";
-// Added new placeholder image
-import  img from "../assets/placeholder2.png";
+
+
+import Header from "../components/Header.jsx"; // adjust the path to where your Header.jsx is
+
 
 
 // ScrollToTop Component (Fixed Scroll Restoration Issue)
@@ -35,7 +31,8 @@ const ScrollToTop = () => {
 // FIXED Home page sections Latest Update, Hero Section, and Support layout
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [img1, img2];
+  const slides = [ "/assets/images/projects/homepageherobanner.jpg",
+  "/assets/images/projects/placeholder2.png"];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
@@ -44,7 +41,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
       <img
-        src={newHeroImage}
+        src="assets/images/projects/homepageherobanner.jpg"
         alt={`Slide ${currentSlide + 1}`}
         className="w-full h-full object-cover "
       />
@@ -136,10 +133,10 @@ const SponsorSection = () => (
       </p>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {[
-          { img: childF, name: "Aarati Lama" },
-          { img: childM, name: "Bishal Thapa" },
-          { img: childF, name: "Sita Magar" },
-          { img: childM, name: "Ramesh Shrestha" },
+          { img: "/assets/images/projects/female-child.png", name: "Aarati Lama" },
+  { img: "/assets/images/projects/male-child.png", name: "Bishal Thapa" },
+  { img: "/assets/images/projects/female-child.png", name: "Sita Magar" },
+  { img: "/assets/images/projects/male-child.png", name: "Ramesh Shrestha" },
         ].map((child, i) => (
           <div
             key={i}
@@ -223,7 +220,7 @@ const ConfidenceSection = () => (
       {/* Right: Smaller Image */}
       <div className="flex justify-center md:justify-end">
         <img
-          src={img2}
+          src="/assets/images/projects/placeholder2.png"
           alt="Confidence"
           className="rounded-lg w-[80%] md:w-full"
         />
@@ -238,21 +235,21 @@ const NewsSection = () => {
     {
       title: "Empowering Children with Special Needs",
       desc: "CVDS works to support children with disabilities by providing inclusive education and resources.",
-      img: img,
+      img: "/assets/images/projects/placeholder2.png",
       link: "/about",
       date: "Oct 10, 2025",
     },
     {
       title: "Community Outreach: Chepang Network",
       desc: "CVDS engages local communities to empower marginalized groups and ensure child rights.",
-      img: img,
+      img: "/assets/images/projects/placeholder2.png",
       link: "/activities",
       date: "Sep 20, 2025",
     },
     {
       title: "Art for Awareness: Eak Abhiyan",
       desc: "An initiative by CVDS to promote creativity among children and raise awareness on social issues.",
-      img: img,
+      img: "/assets/images/projects/placeholder2.png",
       link: "/support",
       date: "Aug 15, 2025",
     },

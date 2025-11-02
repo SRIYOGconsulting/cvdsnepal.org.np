@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-import img from "../assets/placeholder2.png";
+
 
 const Activities = () => {
   const activities = [
@@ -11,63 +11,63 @@ const Activities = () => {
       title: "Rehabilitation Services",
       description:
         "Providing physical therapy and prosthetic support for conflict-injured individuals to regain mobility and independence.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Rehabilitation image",
     },
     {
       title: "Psychological Support",
       description:
         "Counseling and trauma therapy programs to help victims process PTSD and rebuild emotional resilience.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Psychological support image",
     },
     {
       title: "Vocational Training",
       description:
         "Skill-building workshops (e.g., crafts, IT) tailored for disabled youth, leading to employment opportunities.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Vocational training image",
     },
     {
       title: "Education Access",
       description:
         "Inclusive schooling and literacy programs for disabled children from conflict zones, bridging educational gaps.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Education access image",
     },
     {
       title: "Community Integration",
       description:
         "Social events and awareness campaigns to reduce stigma and foster inclusive communities.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Community integration image",
     },
     {
       title: "Advocacy & Rights",
       description:
         "Legal aid and policy advocacy to secure rights and government support for disabled conflict victims.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Advocacy and rights image",
     },
     {
       title: "Health & Nutrition",
       description:
         "Medical check-ups and nutrition drives to address secondary health issues from disabilities and displacement.",
-      image: img,
+      image:"/assets/images/projects/placeholder2.png",
       alt: "Health and nutrition image",
     },
     {
       title: "Infrastructure Development",
       description:
         "We plan to acquire our own facility to provide children with disabilities a safe and fully equipped environment for learning and living.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Infrastructure development image",
     },
     {
       title: "Community Outreach Expansion",
       description:
         "We aim to extend our outreach programs to more rural areas, ensuring children with disabilities receive proper care, education, and social support.",
-      image: img,
+      image: "/assets/images/projects/placeholder2.png",
       alt: "Community outreach expansion image",
     },
   ];

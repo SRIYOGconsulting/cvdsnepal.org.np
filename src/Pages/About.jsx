@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { appData } from "../constants";
-import img from "../assets/placeholder2.png";
 
 const About = () => {
   useEffect(() => {
@@ -25,7 +24,7 @@ const About = () => {
         {/* Left Image */}
         <div className="lg:w-1/2 w-full flex items-stretch">
           <img
-            src={img}
+            src="/assets/images/projects/placeholder2.png"
             alt="About CVDS Nepal"
             className="w-full h-full object-cover rounded-lg shadow-md"
           />
@@ -38,10 +37,9 @@ const About = () => {
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
             People with disability are the most vulnerable and marginalized
-            group of people. They live in isolation, segregation,
-            disparagement, poverty, and dependence on charity. They are victims
-            of community misconceptions and stigmas denying them their basic
-            rights.
+            group of people. They live in isolation, segregation, disparagement,
+            poverty, and dependence on charity. They are victims of community
+            misconceptions and stigmas denying them their basic rights.
           </p>
           <p className="text-gray-700 leading-relaxed mb-6">
             Conflict Victim and Disable Society ({appData.organizationName}) is
@@ -94,7 +92,7 @@ const About = () => {
         {/* Image */}
         <div className="lg:w-1/2 w-full flex items-stretch">
           <img
-            src={img}
+            src="/assets/images/projects/placeholder2.png"
             alt="Digital Transformation"
             className="w-full h-full object-cover rounded-lg shadow-md"
           />

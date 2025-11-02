@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/cvdslogo.png";
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Header = () => {
           className="flex items-center gap-2 sm:gap-3"
         >
           <img
-            src={logo}
+         src="/assets/images/projects/cvdslogo.png"
             alt="CVDS Logo"
             className={`h-10 sm:h-12 md:h-[63px] ml-2 sm:ml-4 rounded-lg cursor-pointer ${
               isHomePage && !scrolled ? "brightness-200" : ""

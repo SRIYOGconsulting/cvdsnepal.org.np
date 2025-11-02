@@ -8,7 +8,6 @@ import {
   Twitter,
   Github,
 } from "lucide-react";
-import logo from "../assets/Broad-Press-Logo.png";
 
 const Footer = () => {
   return (
@@ -20,7 +19,7 @@ const Footer = () => {
       {/* Logo and Title */}
       <div className="flex items-center gap-3 mb-4">
         <img
-          src={logo}
+          src="/assets/images/projects/Broad-Press-Logo.png"
           alt="BroadPress Logo"
           className="h-14 w-auto object-contain"
         />

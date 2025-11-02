@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
-import img from "../assets/placeholder2.png";
+
 
 const casestudies = [
   {
     id: 1,
     title: "Child Rights",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Jan 2023",
     endDate: "Dec 2023",
     members: ["John Doe", "Jane Smith", "Sita Rai"],
@@ -18,7 +18,7 @@ const casestudies = [
   {
     id: 2,
     title: "Governance",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Feb 2023",
     endDate: "Nov 2023",
     members: ["Ram Thapa", "Sita Lama"],
@@ -29,7 +29,7 @@ const casestudies = [
   {
     id: 3,
     title: "Enterpreneurship",
-    image: img,
+    image:"/assets/images/projects/placeholder2.png",
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
@@ -41,7 +41,7 @@ const casestudies = [
   {
     id: 4,
     title: "Education",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
@@ -52,7 +52,7 @@ const casestudies = [
   {
     id: 5,
     title: "Gender Equality",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -64,7 +64,7 @@ const casestudies = [
   {
     id: 6,
     title: "Environment",
-    image: img,
+    image:"/assets/images/projects/placeholder2.png",
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -75,7 +75,7 @@ const casestudies = [
   {
     id: 7,
     title: "Health",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Apr 2024",
     endDate: "Ongoing",
     members: ["Anita KC", "Ramesh Shrestha"],
@@ -86,7 +86,7 @@ const casestudies = [
   {
     id: 8,
     title: "Enterpreneurship",
-    image: img,
+    image:"/assets/images/projects/placeholder2.png",
     startDate: "Jun 2024",
     endDate: "Ongoing",
     members: ["Ram Shrestha", "Sita KC"],
@@ -97,7 +97,7 @@ const casestudies = [
   {
     id: 9,
     title: "Agriculture",
-    image: img,
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Jul 2024",
     endDate: "Ongoing",
     members: ["Bishal Rana", "Pooja Sharma"],
