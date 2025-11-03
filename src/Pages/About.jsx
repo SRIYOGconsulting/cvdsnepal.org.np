@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { appData } from "../constants";
+import { useNavigate } from "react-router-dom"; // Added navigation 
 
 const About = () => {
+  const navigate = useNavigate(); // Hook for navigation
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll(".fade-in");
@@ -49,8 +51,12 @@ const About = () => {
             since {appData.established}, providing food, clothes, shelter, and
             rehabilitation services.
           </p>
-          <button className="bg-[#1F2B6C] hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg">
-            Join with us
+           {/* Updated button text + navigation */}
+          <button
+            onClick={() => navigate("/videos")}
+            className="bg-[#1F2B6C] hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg"
+          >
+            Watch Our Impact
           </button>
         </div>
       </section>
@@ -93,7 +99,7 @@ const About = () => {
         <div className="lg:w-1/2 w-full flex items-stretch">
           <img
             src="/assets/images/projects/placeholder2.png"
-            alt="Digital Transformation"
+            alt="placeholder image of about us"
             className="w-full h-full object-cover rounded-lg shadow-md"
           />
         </div>

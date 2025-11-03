@@ -161,7 +161,7 @@ const SponsorSection = () => (
         ))}
       </div>
       <div className="space-x-4">
-        <Link to="/gallery">
+        <Link to="/donate">
           <button className="border border-black px-6 py-2 rounded hover:bg-blue-500  hover:text-white transition">
             Donate Now
           </button>
