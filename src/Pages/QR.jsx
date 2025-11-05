@@ -95,7 +95,7 @@ const QR = () => {
             variants={fadeInUp}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-80 h-96 mx-auto"
+            className="flex flex-col items-center text-center justify-between bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-96 h-[28rem] mx-auto"
           >
             <div className="pt-8 flex flex-col items-center">
               
@@ -103,7 +103,7 @@ const QR = () => {
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-32 h-32 object-contain mb-4 rounded-md shadow-sm"
+                  className="w-64 h-64 object-contain mb-4 rounded-md shadow-sm"
                 />
               )}
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">

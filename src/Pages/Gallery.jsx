@@ -35,6 +35,7 @@ import gallery30 from"/assets/images/gallery/gallery30.jpg";
 
 const Gallery = () => {
   
+   const [selectedImage, setSelectedImage] = useState(null); // for lightbox
   const galleryImages = [
     gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
     gallery7, gallery8, gallery9, gallery10, gallery11, gallery12,
@@ -58,7 +59,8 @@ const Gallery = () => {
         {galleryImages.map((image, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-2xl group"
+            className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
+             onClick={() => setSelectedImage(image)} // open lightbox
           >
             <img
               src={image}
@@ -73,14 +75,31 @@ const Gallery = () => {
           </div>
         ))}
       </section>
+{/* ===== Lightbox Overlay ===== */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Enlarged view"
+            className="max-w-3xl w-full h-auto rounded-lg shadow-lg transition-transform transform scale-100 hover:scale-105"
+          />
+          <button
+            className="absolute top-6 right-8 text-white text-3xl font-bold"
+            onClick={() => setSelectedImage(null)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
     </div>
   );
 };
 
 export default Gallery;
-
-
-
 
 
 

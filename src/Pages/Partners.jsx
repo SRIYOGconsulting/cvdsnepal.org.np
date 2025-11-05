@@ -10,15 +10,15 @@ import { useState } from "react";
 
 const Partners = () => {
   const partners = [
-    { name: "SRIYOG Consulting", link: "#" },
-    { name: "Aramex", link: "#" },
-    { name: "WiFi Nepal", link: "https://wifinepal.com.np/" },
-    { name: "Aqua World", link: "#" },
-    { name: "Oho Cake", link: "https://ohocake.com/" },
-    { name: "Daraz", link: "#" },
-    { name: "SNG Solution", link: "#" },
-    { name: "Ghaila Oil", link: "https://www.facebook.com/GhailaOil/" },
-    { name: "BK Masala", link: "https://www.bkmasala.com.np/" },
+    { name: "SRIYOG Consulting", heading: "Expert IT Solutions Provider", link: "#" }, // Professional heading added
+    { name: "Aramex", heading: "Global Logistics & Shipping Partner", link: "#" }, 
+    { name: "Internet Nepal", heading: "Reliable Internet Services", link: "https://wifinepal.com.np/" }, 
+    { name: "Aqua World", heading: "Premium Water Solutions & Services", link: "#" },
+    { name: "Oho Cake", heading: "Artisan Cakes & Bakery Delights", link: "https://ohocake.com/" },
+    { name: "Daraz", heading: "Leading E-commerce Marketplace", link: "#" },
+    { name: "SNG Solution", heading: "Innovative Tech Solutions", link: "#" },
+    { name: "Ghaila Oil", heading: "Trusted Fuel & Lubricant Provider", link: "https://www.facebook.com/GhailaOil/" },
+    { name: "BK Masala", heading: "Authentic Spices & Flavors", link: "https://www.bkmasala.com.np/" },
   ];
 
   return (
@@ -57,8 +57,12 @@ const Partners = () => {
         {partners.map((partner, index) => (
           <div key={index} className="text-center">
             {/* changed h-40 to h-52 */}
-            <div><img src="/assets/images/projects/placeholder1.png"  alt="placeholder1.png" className="rounded-md mb-4"/></div>
+            <div><img src="/assets/images/projects/placeholder1.png"  alt="placeholder1.png" className="rounded-md mb-4"
+             style={{ width: "80%", height: "auto" }} // Reduced logo size to 80%
+            /></div>
+
             <h3 className="text-gray-800 text-sm mb-3">{partner.name}</h3>
+            <p className="text-gray-600 text-xs mb-3">{partner.heading}</p> {/* Professional heading displayed */}
             <a
               href={partner.link}
               target="_blank"
@@ -75,3 +79,4 @@ const Partners = () => {
 };
 
 export default Partners;
+

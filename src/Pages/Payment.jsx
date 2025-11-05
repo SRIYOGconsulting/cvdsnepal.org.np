@@ -12,7 +12,7 @@ const Payment = () => {
           <img
             src="/assets/images/Qr/bank.png"
             alt="CVDS Nepal Logo"
-            className="w-48 sm:w-60 mb-5 mx-auto lg:mx-0 "
+             className="w-96 sm:w-[120] mb-5 mx-auto lg:mx-0" // Increased width twice
           />
 
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -58,7 +58,7 @@ const Payment = () => {
           <img
             src="/assets/images/Qr/bank.png"
             alt="CVDS Nepal Logo"
-            className="w-48 sm:w-60 mb-4 object-contain"
+           className="w-96 sm:w-[120] mb-4 object-contain" // Increased width twice
           />
 
           <img

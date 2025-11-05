@@ -72,7 +72,7 @@ const Feedback = () => {
           {/* Header */}
           <header className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#1F2B6C]">
-              CVDS Nepal Feedback Form
+               Feedback Form 
             </h1>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Your feedback helps us improve our services and strengthen our
@@ -102,7 +102,7 @@ const Feedback = () => {
               {/* Organization */}
               <div>
                 <label className="font-medium block mb-2 text-gray-700">
-                  Organization *
+                  Organization 
                 </label>
                 <input
                   type="text"
@@ -117,7 +117,7 @@ const Feedback = () => {
               {/* Position */}
               <div>
                 <label className="font-medium block mb-2 text-gray-700">
-                  Position *
+                  Position 
                 </label>
                 <input
                   type="text"
@@ -144,22 +144,39 @@ const Feedback = () => {
                 />
               </div>
 
-              {/* Phone */}
-              <div>
-                <label className="font-medium block mb-2 text-gray-700">
-                  Phone *
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formdata.phone}
-                  onChange={handleChange}
-                  required
-                  pattern="[0-9]{10}"
-                  placeholder="10-digit number"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1F2B6C] focus:outline-none"
-                />
-              </div>
+             {/* Phone with country code selection */}
+<div>
+  <label className="font-medium block mb-2 text-gray-700">
+    Phone {/* CHANGED: Removed * */}
+  </label>
+  <div className="flex">
+    {/* Country Code Selector */}
+    <select
+      name="countryCode"
+      value={formdata.countryCode || "+977"} // default +977
+      onChange={(e) => setFormData({ ...formdata, countryCode: e.target.value })}
+      className="px-3 py-2 border border-r-0 border-gray-300 rounded-l-md bg-gray-100 text-gray-700 focus:ring-2 focus:ring-[#1F2B6C] focus:outline-none"
+    >
+      <option value="+977">+977 Nepal</option>
+      <option value="+1">+1 USA</option>
+      <option value="+44">+44 UK</option>
+      <option value="+91">+91 India</option>
+      <option value="+61">+61 Australia</option>
+      {/* Add more country codes as needed */}
+    </select>
+
+    {/* Phone Number Input */}
+    <input
+      type="tel"
+      name="phone"
+      value={formdata.phone}
+      onChange={handleChange}
+      placeholder="Enter number"
+      className="w-full px-3 py-2 border border-gray-300 rounded-r-md focus:ring-2 focus:ring-[#1F2B6C] focus:outline-none"
+    />
+  </div>
+</div>
+
             </div>
           </section>
 
@@ -170,7 +187,7 @@ const Feedback = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="font-medium block mb-2 text-gray-700">
-                  Rate your overall experience *
+                  Rate your overall experience 
                 </label>
                 <select
                   name="rating"
@@ -190,7 +207,7 @@ const Feedback = () => {
 
               <div>
                 <label className="font-medium block mb-2 text-gray-700">
-                  Level of satisfaction *
+                  Level of satisfaction 
                 </label>
                 <select
                   name="satisfaction"
@@ -211,7 +228,7 @@ const Feedback = () => {
             {/* Experience Textarea */}
             <div className="mb-6">
               <label className="font-medium block mb-2 text-gray-700">
-                Describe your experience with CVDS Nepal *
+                Describe your experience with CVDS Nepal 
               </label>
               <textarea
                 name="experience"
@@ -227,7 +244,7 @@ const Feedback = () => {
             {/* Recommend */}
             <div className="mb-6">
               <label className="font-medium block mb-2 text-gray-700">
-                Would you recommend CVDS Nepal to others? *
+                Would you recommend CVDS Nepal to others? 
               </label>
               <div className="flex gap-6 mt-2">
                 <label className="flex items-center gap-2 cursor-pointer">

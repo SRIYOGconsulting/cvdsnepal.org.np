@@ -11,7 +11,7 @@ const Testimonials = () => {
         "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. I’m forever grateful.",
       image: "/assets/images/projects/female.png",
       alt: "",
-      testimony: "A Mother from Sankhu",
+      testimony: "Sita Thapa, Mother from Sankhu",
     },
     {
       fullName: "Sita Rai",
@@ -27,7 +27,7 @@ const Testimonials = () => {
         "I was abandoned as a child and had nowhere to go. CVDS gave me food, education, and a home. Today, I work as a computer technician. Without CVDS, I wouldn’t be here.",
       image: "/assets/images/projects/male.png",
       alt: "",
-      testimony: "Former Beneficiary",
+      testimony: "Ramesh Gurung, Beneficiary from Pokhara",
     },
     {
       fullName: "Maya KC",
@@ -35,7 +35,7 @@ const Testimonials = () => {
         "The physiotherapy sessions at CVDS have made a huge difference in my daughter’s mobility. She couldn’t even sit before, and now she can stand with support. The team is a blessing.",
       image: "/assets/images/projects/female.png",
       alt: "",
-      testimony: "Parent of a Child with Cerebral Palsy",
+      testimony: "Sushma KC, Parent from Lalitpur",
     },
     {
       fullName: "Rita Sharma",
@@ -51,7 +51,7 @@ const Testimonials = () => {
         "I’ve donated to many organizations, but CVDS stands out. They are transparent, accountable, and truly passionate about their mission. I trust them completely with my support.",
       image: "/assets/images/projects/female.png",
       alt: "",
-      testimony: "Ramesh Adhikari, Supporter",
+      testimony: "Ramesh Adhikari, Supporter from Kathmandu",
     },
     {
       fullName: "Sita KC",
@@ -59,7 +59,7 @@ const Testimonials = () => {
         "My brother, who has a disability, was always left behind. At CVDS, he was treated with dignity and given the chance to learn and grow. It changed our entire family’s life.",
       image: "/assets/images/projects/female.png",
       alt: "",
-      testimony: "Sibling of a Beneficiary",
+      testimony: "Pooja KC, Sibling from Bhaktapur",
     },
     {
       fullName: "Ramesh Shrestha",
@@ -75,7 +75,7 @@ const Testimonials = () => {
         "As a doctor, I’ve worked with many organizations, but CVDS is special. They don’t just treat medical issues—they restore self-worth and dignity to children who need it most.",
       image: "/assets/images/projects/female.png",
       alt: "",
-      testimony: "Dr. Anjana Shrestha, Pediatric Specialist",
+      testimony: "Dr. Anjana Shrestha, Pediatric Specialist from kathmandu ",
     },
   ];
 
@@ -115,17 +115,24 @@ const Testimonials = () => {
               alt={item.alt}
               className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg object-contain"
             />
+
             <div className="p-4">
-              <h3 className="font-semibold text-lg mb-1 text-blue-800 text-center">
+
+              {/*  Full name */}
+              <h3 className="font-semibold text-[18px] mb-2 text-blue-800 text-center">
                 {item.fullName}
               </h3>
-              
-              <p className="text-sm text-gray-700 text-justify">
+              {/*  Description */}
+              <p className="text-[14px] text-gray-700 text-justify mb-4">
                 {item.description}
               </p>
-              <p className="text-sm text-gray-700 text-center pt-4 italic">
-                – {item.testimony}
-              </p>
+              {/*  Testimony split into name and role/address */}
+              {item.testimony && (
+                <div className="text-center">
+                  <p className="text-[16px] font-semibold">{item.testimony.split(',')[0]}</p>
+                  <p className="text-[16px] text-gray-800">{item.testimony.split(',').slice(1).join(',')}</p>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -135,3 +142,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
