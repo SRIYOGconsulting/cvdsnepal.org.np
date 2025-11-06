@@ -1,68 +1,110 @@
-
 import React from "react";
 import { Heart, MessageSquare, Eye } from "lucide-react";
-
 
 const posts = [
   {
     id: 1,
-    title: "Playing With Patterns",
-    date: "Mar 21, 2023",
-    readTime: "1 min read",
+    title: "Establishment of CVDS Nepal",
+    date: "March 15, 2005", // updated full date
+    readTime: "2 min read", // updated
     image: "/assets/images/projects/placeholder2.png",
     excerpt:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    likes: 15,
-    views: 123,
-    comments: 4,
+      "Conflict Victim and Disable Society-Nepal (CVDS-Nepal) was founded with the mission to uplift lives of conflict victims and children with disabilities across Nepal. The organization began with limited resources but strong determination to create social change and provide essential support to marginalized communities.",
+    likes: 25,
+    views: 300,
+    comments: 10,
+    author: "Yub Raj Thapa", // updated author
   },
   {
     id: 2,
-    title: "Natalia’s Apartment Makeover",
-    date: "Mar 21, 2023",
-    readTime: "2 min read",
-    image: "/assets/images/projects/placeholder2.png",
-    excerpt:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    likes: 12,
-    views: 96,
-    comments: 2,
-  },
-  {
-    id: 3,
-    title: "Open House Staging",
-    date: "Mar 21, 2023",
-    readTime: "1 min read",
-    image: "/assets/images/projects/placeholder2.png",
-    excerpt:
-      "Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....",
-    likes: 5,
-    views: 80,
-    comments: 1,
-  },
-  {
-    id: 4,
-    title: "Minimal Living Spaces",
-    date: "Mar 22, 2023",
-    readTime: "2 min read",
-    image: "/assets/images/projects/placeholder2.png",
-    excerpt:
-      "Explore minimalist design ideas that balance comfort, simplicity, and function — creating peaceful interiors that inspire calm and clarity....",
-    likes: 8,
-    views: 110,
-    comments: 3,
-  },
-  {
-    id: 5,
-    title: "Decorating with Contrast",
-    date: "Mar 23, 2023",
+    title: "First Rehabilitation Initiative",
+    date: "June 12, 2007",
     readTime: "3 min read",
     image: "/assets/images/projects/placeholder2.png",
     excerpt:
-      "Learn how to combine light and dark elements to make your spaces stand out with depth, energy, and elegant balance....",
-    likes: 10,
-    views: 150,
+      "CVDS began providing food, shelter, and medical care to children with physical and mental disabilities. Early rehabilitation efforts focused on creating a safe environment and raising awareness about disability inclusion in Kathmandu and surrounding areas.",
+    likes: 18,
+    views: 250,
+    comments: 6,
+    author: "Rehabilitation Team",
+  },
+  {
+    id: 3,
+    title: "Cerebral Palsy Support Center",
+    date: "September 5, 2010",
+    readTime: "4 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "Established the ‘Rehabilitation Center for Children with Disability due to Cerebral Palsy (CP)’ project. The center offers physiotherapy, educational support, and personalized care for children, helping them gain independence and improve quality of life.",
+    likes: 20,
+    views: 280,
+    comments: 8,
+    author: "Physiotherapy Department",
+  },
+  {
+    id: 4,
+    title: "Partnership with Social Welfare Council",
+    date: "January 20, 2013",
+    readTime: "2 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "CVDS Nepal registered and affiliated with the Social Welfare Council, strengthening its governance, transparency, and credibility. This milestone enabled collaboration with national and international NGOs and opened doors for program expansion.",
+    likes: 15,
+    views: 220,
     comments: 5,
+    author: "CVDS Admin Team",
+  },
+  {
+    id: 5,
+    title: "Community Outreach & Awareness",
+    date: "July 18, 2016",
+    readTime: "3 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "Expanded programs to rural municipalities, promoting education, inclusion, and awareness for persons with disabilities. Field surveys, workshops, and community engagement helped reduce stigma and provided essential support to marginalized individuals.",
+    likes: 22,
+    views: 260,
+    comments: 7,
+    author: "Community Outreach Team",
+  },
+  {
+    id: 6,
+    title: "Educational & Therapeutic Expansion",
+    date: "October 30, 2019",
+    readTime: "4 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "Introduced special education classes, physiotherapy sessions, and vocational workshops. Programs aimed to foster independence and life skills among children with disabilities, while also providing counseling for parents and caregivers.",
+    likes: 19,
+    views: 240,
+    comments: 6,
+    author: "Special Education Dept",
+  },
+  {
+    id: 7,
+    title: "Digital Empowerment & Advocacy",
+    date: "March 22, 2022",
+    readTime: "5 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "Launched campaigns to raise awareness through online platforms, empowering individuals with disabilities using technology. Digital literacy programs and webinars connected communities and provided learning opportunities nationwide.",
+    likes: 21,
+    views: 270,
+    comments: 9,
+    author: "Digital Empowerment Team",
+  },
+  {
+    id: 8,
+    title: "Vocational & Livelihood Initiatives",
+    date: "February 10, 2024",
+    readTime: "5 min read",
+    image: "/assets/images/projects/placeholder2.png",
+    excerpt:
+      "Started a long-term project to establish a vocational school supporting 1,000 persons with disabilities and marginalized groups. Training in tailoring, handicrafts, computer literacy, and entrepreneurship aims to promote independence and economic empowerment.",
+    likes: 24,
+    views: 310,
+    comments: 11,
+    author: "Vocational Training Dept",
   },
 ];
 
@@ -89,11 +131,11 @@ const Blog = () => {
             {/* Text Content */}
             <div className="md:w-1/2 w-full space-y-4">
               <div className="flex items-center text-sm text-gray-500 space-x-2">
-                <span>Admin</span>
+                <span>{post.author}</span> {/* updated author */}
                 <span>•</span>
-                <span>{post.date}</span>
+                <span>{post.date}</span> {/* full date */}
                 <span>•</span>
-                <span>{post.readTime}</span>
+                <span>{post.readTime}</span> {/* different minute read */}
               </div>
 
               <h2 className="text-3xl font-semibold tracking-tight">
@@ -133,4 +175,6 @@ const Blog = () => {
 };
 
 export default Blog;
+
+
 

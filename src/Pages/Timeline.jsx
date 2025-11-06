@@ -6,36 +6,63 @@ import { Building } from "lucide-react";
 
 
 const timelineData = [
-  {
-    year: "1993",
-    title: "Started in a Small Office, Kathmandu",
-    description:
-      "Conflict Victims Disabled Society (CVDS Nepal) began its journey to support individuals affected by conflict, focusing on inclusion and empowerment.",
-    image: "/assets/images/projects/placeholder2.png",
-  },
-  {
-    year: "2005",
-    title: "Expanding Community Rehabilitation",
-    description:
-      "Initiated rehabilitation programs in rural areas to improve access to healthcare and education for persons with disabilities.",
-    image: "/assets/images/projects/placeholder2.png",
-  },
-  {
-    year: "2012",
-    title: "Recognized as a Leading NGO",
-    description:
-      "CVDS Nepal was recognized nationally for its impactful work and collaboration with multiple social welfare organizations.",
-      image: "/assets/images/projects/placeholder2.png",
-  },
-  {
-    year: "2020",
-    title: "Digital Empowerment Programs",
-    description:
-      "Launched skill-based training and awareness campaigns across Nepal to strengthen sustainable livelihoods for conflict victims.",
-      image: "/assets/images/projects/placeholder2.png",
-  },
-];
-
+{
+      year: "2005", // updated content
+      title: "Establishment of CVDS Nepal", // updated content
+      description:
+        "Conflict Victim and Disable Society-Nepal (CVDS-Nepal) was founded with the mission to uplift the lives of conflict victims and children with disabilities across Nepal.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2007", // updated content
+      title: "First Rehabilitation Initiative", // updated content
+      description:
+        "Began providing food, shelter, and medical care to children with physical and mental disabilities through early rehabilitation efforts in Kathmandu.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2010", // updated content
+      title: "Cerebral Palsy Support Center", // updated content
+      description:
+        "Established the ‘Rehabilitation Center for Children with Disability due to Cerebral Palsy (CP)’ project, offering physiotherapy and educational support.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2013", // updated content
+      title: "Partnership with Social Welfare Council", // updated content
+      description:
+        "Officially registered and affiliated with the Social Welfare Council of Nepal, strengthening its organizational framework and transparency.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2016", // updated content
+      title: "Community Outreach & Awareness", // updated content
+      description:
+        "Expanded programs to rural municipalities, promoting awareness, education, and inclusion of persons with disabilities.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2019", // updated content
+      title: "Educational & Therapeutic Expansion", // updated content
+      description:
+        "Introduced special education classes, physiotherapy sessions, and skills-based workshops to foster independence among children.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2022", // updated content
+      title: "Digital Empowerment & Advocacy", // updated content
+      description:
+        "Initiated campaigns to raise awareness through online platforms, empowering individuals with disabilities through technology.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+    {
+      year: "2024", // updated content
+      title: "Vocational and Livelihood Initiatives", // updated content
+      description:
+        "Launched a long-term project to establish a vocational school aimed at supporting 1,000 persons with disabilities and marginalized individuals within 10 years.", // updated content
+          image: "/assets/images/projects/placeholder2.png",
+    },
+  ];
 const Timeline = () => {
   return (
     <div className="bg-white text-gray-900 py-20 px-6 md:px-16 font-sans">
@@ -122,3 +149,16 @@ const Timeline = () => {
 };
 
 export default Timeline;
+
+
+
+
+
+
+
+
+
+
+
+
+

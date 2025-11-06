@@ -115,6 +115,48 @@ export default function DonatePage() {
             </div>
           </div>
 
+
+
+          {/* Dedicate Checkbox */}
+
+{/* Payment Methods Section - updated with title, larger logos, and 2x3 grid */}
+<div className="mb-8">
+  <h3 className="text-center text-gray-700 font-semibold mb-4 text-base sm:text-lg">
+    Choose Payment Method
+  </h3>
+
+  <div className="grid grid-cols-3 gap-6 justify-items-center">
+    <img
+      src="/assets/images/Qr/esewa.png"
+      alt="eSewa"
+      className="h-16 sm:h-20 object-contain"
+    />
+    <img
+      src="/assets/images/Qr/khalti.png"
+      alt="Khalti"
+      className="h-16 sm:h-20 object-contain"
+    />
+    <img
+      src="/assets/images/Qr/paypal.png"
+      alt="PayPal"
+      className="h-16 sm:h-20 object-contain"
+    />
+    <img
+      src="/assets/images/Qr/bank.png"
+      alt="Online Bank"
+      className="h-50 sm:h-25 object-contain"
+    />
+    <img
+      src="/assets/images/Qr/stripe.png"
+      alt="Stripe"
+      className="h-16 sm:h-20 object-contain"
+    />
+  </div>
+</div>
+{/* End of Payment Methods Section */}
+
+
+
           {/* Donate Button */}
           <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold mt-4 text-sm sm:text-base">
             Donate {frequency === "monthly" ? "Monthly" : "Now"}
@@ -152,120 +194,117 @@ export default function DonatePage() {
             future.
           </p>
         </div>
+{/* DONORS LIST SECTION */}
+<div className="w-full col-span-full bg-white py-10 mt-12 rounded-lg shadow-sm">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    {/* Header */}
+    <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1F2B6C] tracking-wide text-center md:text-left">
+        Top Donor List
+      </h2>
 
-        {/* DONORS LIST SECTION */}
-        <div className="w-full col-span-full bg-white py-10 mt-12 rounded-lg shadow-sm">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-            {/* Header */}
-            <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1F2B6C] tracking-wide text-center md:text-left">
-                Donor List
-              </h2>
+      <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 w-full md:w-auto">
+        <select className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto">
+          <option>This Year: 2025</option>
+          <option>2024</option>
+          <option>2023</option>
+        </select>
 
-              <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 w-full md:w-auto">
-                <select className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto">
-                  <option>This Year: 2025</option>
-                  <option>2024</option>
-                  <option>2023</option>
-                </select>
-
-                <div className="relative w-full sm:w-64">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search by donor name"
-                    className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-full focus:outline-none focus:border-[#1F2B6C]"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Desktop Table View */}
-            <div className="hidden md:block overflow-x-auto border border-gray-100 rounded-lg">
-              <table className="w-full text-xs sm:text-sm text-left min-w-[600px]">
-                <thead className="bg-[#1F2B6C] text-white">
-                  <tr>
-                    <th className="p-3 font-semibold">Full Name</th>
-                    <th className="p-3 font-semibold">Phone Number</th>
-                    <th className="p-3 font-semibold">Address</th>
-                    <th className="p-3 font-semibold">City</th>
-                    <th className="p-3 font-semibold text-right">
-                      Donation Amount
-                    </th>
-                    <th className="p-3 font-semibold text-center">
-                      Donation Date
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {donors.map((donor, i) => (
-                    <tr
-                      key={i}
-                      className={`border-t border-gray-100 ${
-                        i % 2 === 0 ? "bg-gray-50" : "bg-white"
-                      } hover:bg-[#E8ECF5]/50 transition-colors`}
-                    >
-                      <td className="p-3 font-medium text-gray-800">
-                        {donor.name}
-                      </td>
-                      <td className="p-3 text-gray-700">{donor.phone}</td>
-                      <td className="p-3 text-gray-700">{donor.address}</td>
-                      <td className="p-3 text-gray-700">{donor.city}</td>
-                      <td className="p-3 text-right text-gray-700">
-                        NPR {donor.amount.toLocaleString()}
-                      </td>
-                      <td className="p-3 text-center text-gray-700">
-                        {donor.date}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Mobile Card View */}
-            <div className="grid gap-4 md:hidden">
-              {donors.map((donor, i) => (
-                <div
-                  key={i}
-                  className="border border-gray-200 rounded-lg shadow-sm bg-gray-50 p-4"
-                >
-                  <h3 className="text-lg font-semibold text-[#1F2B6C] mb-2">
-                    {donor.name}
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Phone:</span> {donor.phone}
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Address:</span>{" "}
-                    {donor.address}
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">City:</span> {donor.city}
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Amount:</span> NPR{" "}
-                    {donor.amount.toLocaleString()}
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Date:</span> {donor.date}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Totals Summary */}
-            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center sm:justify-end gap-3 text-sm font-semibold">
-              <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full">
-                Total donors: {totalDonors}
-              </span>
-              <span className="bg-[#E8ECF5] text-[#1F2B6C] px-4 py-1.5 rounded-full">
-                Total donation: NPR {totalDonation.toLocaleString()}
-              </span>
-            </div>
-          </div>
+        <div className="relative w-full sm:w-64">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <input
+            type="text"
+            placeholder="Search by donor name"
+            className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-full focus:outline-none focus:border-[#1F2B6C]"
+          />
         </div>
+      </div>
+    </div>
+
+    {/* Desktop Table View */}
+    <div className="hidden md:block overflow-x-auto border border-gray-100 rounded-lg">
+      <table className="w-full text-xs sm:text-sm text-left min-w-[600px]">
+        <thead className="bg-[#1F2B6C] text-white">
+          <tr>
+            {/*  Changed header names and added S.N */}
+            <th className="p-3 font-semibold">S.N</th>
+            <th className="p-3 font-semibold">Full Name</th>
+            <th className="p-3 font-semibold">Address</th>
+            <th className="p-3 font-semibold">City</th>
+            <th className="p-3 font-semibold text-center">Donation Date</th>
+            <th className="p-3 font-semibold text-right">Donation Amount</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {donors.map((donor, i) => (
+            <tr
+              key={i}
+              className={`border-t border-gray-100 ${
+                i % 2 === 0 ? "bg-gray-50" : "bg-white"
+              } hover:bg-[#E8ECF5]/50 transition-colors`}
+            >
+              {/* Added S.N column */}
+              <td className="p-3 font-medium text-gray-800">{i + 1}</td>
+              <td className="p-3 font-medium text-gray-800">{donor.name}</td>
+              <td className="p-3 text-gray-700">{donor.address}</td>
+              <td className="p-3 text-gray-700">{donor.city}</td>
+              <td className="p-3 text-center text-gray-700">{donor.date}</td>
+              <td className="p-3 text-right text-gray-700">
+                NPR {donor.amount.toLocaleString()}
+              </td>
+            </tr>
+          ))}
+
+          {/*  Added Total Donation Amount row */}
+          <tr className="bg-[#E8ECF5]/70 border-t border-gray-200 font-semibold">
+            <td colSpan="5" className="p-3 text-right text-[#1F2B6C]">
+              Total Donation Amount:
+            </td>
+            <td className="p-3 text-right text-[#1F2B6C]">
+              NPR {totalDonation.toLocaleString()}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Mobile Card View (unchanged) */}
+    <div className="grid gap-4 md:hidden">
+      {donors.map((donor, i) => (
+        <div
+          key={i}
+          className="border border-gray-200 rounded-lg shadow-sm bg-gray-50 p-4"
+        >
+          <h3 className="text-lg font-semibold text-[#1F2B6C] mb-2">
+            {i + 1}. {donor.name}
+          </h3>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Address:</span> {donor.address}
+          </p>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">City:</span> {donor.city}
+          </p>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Date:</span> {donor.date}
+          </p>
+          <p className="text-sm text-gray-700">
+            <span className="font-medium">Amount:</span> NPR{" "}
+            {donor.amount.toLocaleString()}
+          </p>
+        </div>
+      ))}
+
+      {/* Added total amount at end for mobile too */}
+      <div className="border border-gray-200 rounded-lg shadow-sm bg-[#E8ECF5]/50 p-4 text-sm font-semibold text-[#1F2B6C] text-right">
+        Total Donation Amount: NPR {totalDonation.toLocaleString()}
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const casestudies = [
     description:
       "Supporting entrepreneurship training for socially marginalized.",
     country: "Nepal",
-    theme: "Child Rights",
+    
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const casestudies = [
     members: ["Ram Thapa", "Sita Lama"],
     description: "Collaborating with local development programs.",
     country: "Nepal",
-    theme: "Governance",
+   
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const casestudies = [
     description:
       "Private donors supporting community entrepreneurship initiatives.",
     country: "Nepal",
-    theme: "Entrepreneurship",
+   
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const casestudies = [
     members: ["Rita Sharma", "Bishal Khadka"],
     description: "Ensuring access to quality education for marginalized children.",
     country: "Nepal",
-    theme: "Education",
+    
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const casestudies = [
     description:
       "Providing vocational training and microfinance support to women.",
     country: "Nepal",
-    theme: "Gender Equality",
+    
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const casestudies = [
     members: ["Bikram Rana", "Sita Rai"],
     description: "Promoting renewable energy solutions in rural areas.",
     country: "Nepal",
-    theme: "Environment",
+ 
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const casestudies = [
     members: ["Anita KC", "Ramesh Shrestha"],
     description: "Improving access to healthcare in remote communities.",
     country: "Nepal",
-    theme: "Health",
+   
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const casestudies = [
     members: ["Ram Shrestha", "Sita KC"],
     description: "Supporting young entrepreneurs with training and funding.",
     country: "Nepal",
-    theme: "Entrepreneurship",
+   
   },
   {
     id: 9,
@@ -103,7 +103,7 @@ const casestudies = [
     members: ["Bishal Rana", "Pooja Sharma"],
     description: "Promoting organic and sustainable farming practices.",
     country: "Nepal",
-    theme: "Agriculture",
+    
   },
 ];
 
@@ -150,12 +150,7 @@ const CaseStudies = () => {
                 alt={cases.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              {/* Theme badge - same color for all */}
-              <span
-                className="absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold bg-[#1F2B6C]"
-              >
-                {cases.theme}
-              </span>
+              
             </div>
             <div className="p-6">
               <h4 className="text-xl font-bold text-gray-800 mb-2">
