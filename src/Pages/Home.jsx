@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 
 
-import Header from "../components/Header.jsx"; // adjust the path to where your Header.jsx is
+import Header from "../Components/Header.jsx";
+
 
 
 
