@@ -43,7 +43,7 @@ const Payment = () => {
               rel="noreferrer"
               className="text-black underline"
             >
-              www.cvdsnepal.com
+              www.cvdsnepal.com.np
             </a>
           </p>
 
