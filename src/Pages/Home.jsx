@@ -28,27 +28,36 @@ const ScrollToTop = () => {
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    "/assets/images/projects/homepageherobanner.jpg",
-    "/assets/images/projects/placeholder2.png",
-  ];
+  "/assets/images/projects/homepageherobanner.jpg",
+  "/assets/images/projects/Homepageherobanner2.jpg",
+  "/assets/images/projects/Homepageherobanner3.jpg",
+];
+
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
+   useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   return (
-    <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
+   <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
       <img
-        src="assets/images/projects/homepageherobanner.jpg"
+        src={slides[currentSlide]}
         alt={`Slide ${currentSlide + 1}`}
-        className="w-full h-full object-cover "
+        className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
         <h1 className="text-xl lg:text-4xl font-bold mb-4 px-20">
           Empowering Lives, <br /> Restoring Hope
-          <br />
         </h1>
         <h3
           className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-4 sm:px-10 lg:px-20"
@@ -56,29 +65,14 @@ const HeroSection = () => {
         >
           Together, we create opportunities for conflict victims and persons
           with disabilities to live with dignity.
-          {/* changed content */}
         </h3>
-        <br />
-        <br />
+
         <Link to="/donate">
           <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw] mx-20">
             Donate Now
           </button>
         </Link>
       </div>
-      {/* Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 shadow"
-      >
-        <ChevronLeft size={28} className="text-gray-800" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 shadow"
-      >
-        <ChevronRight size={28} className="text-gray-800" />
-      </button>
     </div>
   );
 };
