@@ -28,8 +28,6 @@ const VolunteerForm = () => {
     "Google Docs/Sheets/Drive",
   ];
 
-
-
   // Country codes for phone - Fixed: Added comprehensive list of country codes for scrollable dropdown
   const countryCodes = [
     { name: "Afghanistan", code: "+93" },
@@ -268,7 +266,7 @@ const VolunteerForm = () => {
     { name: "Wallis and Futuna", code: "+681" },
     { name: "Yemen", code: "+967" },
     { name: "Zambia", code: "+260" },
-    { name: "Zimbabwe", code: "+263" }
+    { name: "Zimbabwe", code: "+263" },
   ];
   const socialMedia = ["Facebook", "Instagram", "Twitter", "LinkedIn"];
 
@@ -394,7 +392,7 @@ const VolunteerForm = () => {
           <header className="text-center mb-8">
             {/* Corrected spelling and modern styling */}
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#1F2B6C]">
-          Volunteer Application Form
+              Volunteer Application Form
             </h1>
 
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -402,7 +400,7 @@ const VolunteerForm = () => {
               We will get back to you with updates upon receiving this form.
             </p>
           </header>
-{/* PERSONAL INFORMATION - Fixed: Removed Date of Birth field entirely; Replaced Gender with dropdown; Replaced Phone with country code dropdown + input (scrollable); Marked Full Name and Email Address as required with * */}
+          {/* PERSONAL INFORMATION - Fixed: Removed Date of Birth field entirely; Replaced Gender with dropdown; Replaced Phone with country code dropdown + input (scrollable); Marked Full Name and Email Address as required with * */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Full Name - Fixed: Added label, required indicator, and placeholder using StandardInput */}
             <StandardInput
@@ -413,46 +411,48 @@ const VolunteerForm = () => {
               required
             />
             {/* Gender - Fixed: Replaced input with StandardSelect dropdown containing Male, Female, Other */}
-            <StandardSelect
-              label="Gender"
-              id="gender"
-              name="gender"
-            >
+            <StandardSelect label="Gender" id="gender" name="gender">
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
             </StandardSelect>
             {/* Phone Number - Fixed: Replaced single input with combined country code dropdown (scrollable, visually user-friendly with max-h and overflow) and phone input; Spans full width on medium screens */}
-            <div className="md:col-span-2">
+            {/* Responsive Phone Number with Country Code */}
+            <div className="mb-4">
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-gray-700 font-medium mb-2"
               >
-                Phone Number
+                Phone Number <span className="text-red-500">*</span>
               </label>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                {/* Country Code Dropdown */}
                 <select
                   id="countryCode"
-                  name="countryCode"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1F2B6C] focus:border-[#1F2B6C] transition-colors min-h-[42px] overflow-y-auto max-h-40"
-                  defaultValue="+1"
+                  className="border border-gray-300 rounded-md px-3 py-2 w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-[#1F2B6C]"
+                  defaultValue="+977"
+                  required
                 >
-                  {countryCodes.map((country, index) => (
-                    <option key={index} value={country.code}>
-                      {country.name} ({country.code})
-                    </option>
-                  ))}
+                  <option value="+977">🇳🇵 +977 (Nepal)</option>
+                  <option value="+91">🇮🇳 +91 (India)</option>
+                  <option value="+1">🇺🇸 +1 (USA)</option>
+                  <option value="+44">🇬🇧 +44 (UK)</option>
+                  <option value="+81">🇯🇵 +81 (Japan)</option>
+                  <option value="+61">🇦🇺 +61 (Australia)</option>
                 </select>
+
+                {/* Phone Number Input */}
                 <input
-                  type="tel"
                   id="phone"
-                  name="phone"
-                  placeholder="Enter phone number"
-                  className="flex-2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#1F2B6C] focus:border-[#1F2B6C] transition-colors"
+                  type="tel"
+                  className="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#1F2B6C]"
+                  placeholder="Enter your phone number"
+                  required
                 />
               </div>
             </div>
+
             {/* Email Address - Fixed: Added label, required indicator, and placeholder using StandardInput */}
             <StandardInput
               label="Email Address"
@@ -486,11 +486,11 @@ const VolunteerForm = () => {
               placeholder="Enter emergency contact number"
             />
           </div>
-          
+
           {/* EDUCATIONAL BACKGROUND */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              Educational  Background
+              Educational Background
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
@@ -523,7 +523,6 @@ const VolunteerForm = () => {
               Volunteer Details
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-             
               <input
                 className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-[#1F2B6C]"
                 placeholder="Preferred Duration (e.g., 4 weeks, 2 months)"
@@ -612,7 +611,7 @@ const VolunteerForm = () => {
           {/* MOTIVATION & EXPERIENCE */}
           <section className="p-6 rounded-lg shadow-sm">
             <h2 className="text-xl font-semibold mb-6 text-[#1F2B6C] border-b-2 border-[#1F2B6C]/20 pb-2">
-              Motivation and  Experience
+              Motivation and Experience
             </h2>
             <StandardTextarea
               label="Why do you want to volunteer with our NGO? (100–200 words)"
@@ -728,7 +727,6 @@ const VolunteerForm = () => {
                 id="upload_signature"
                 type="file"
               />
-             
             </div>
           </section>
           {/* Submit Button */}
@@ -746,9 +744,3 @@ const VolunteerForm = () => {
   );
 };
 export default VolunteerForm;
-
-
-
-
-
-

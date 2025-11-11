@@ -13,11 +13,7 @@ import {
   HeartHandshake,
 } from "lucide-react";
 
-
 import Header from "../Components/Header.jsx";
-
-
-
 
 // ScrollToTop Component (Fixed Scroll Restoration Issue)
 const ScrollToTop = () => {
@@ -28,12 +24,13 @@ const ScrollToTop = () => {
   return null;
 };
 
-
 // FIXED Home page sections Latest Update, Hero Section, and Support layout
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [ "/assets/images/projects/homepageherobanner.jpg",
-  "/assets/images/projects/placeholder2.png"];
+  const slides = [
+    "/assets/images/projects/homepageherobanner.jpg",
+    "/assets/images/projects/placeholder2.png",
+  ];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
@@ -50,14 +47,16 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start  px-6 md:px-16 lg:px-24 text-white">
         <h1 className="text-xl lg:text-4xl font-bold mb-4 px-20">
-          Turning Challenges into <br /> Opportunities for All
+          Empowering Lives, <br /> Restoring Hope
           <br />
         </h1>
         <h3
           className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-4 sm:px-10 lg:px-20"
           style={{ fontSize: "18px" }}
         >
-          Adding the Wheel in Wheelchair, Restoring Dignity
+          Together, we create opportunities for conflict victims and persons
+          with disabilities to live with dignity.
+          {/* changed content */}
         </h3>
         <br />
         <br />
@@ -94,17 +93,20 @@ const ImpactSection = () => (
         {[
           {
             stat: "40%",
-            desc: "Children in our programs are up to 40% more likely to finish secondary education",
+            desc: "Individuals with disabilities supported through rehabilitation and skill-building programs.",
+            // changed content
             icon: <Star />,
           },
           {
             stat: "4,000",
-            desc: "Assisted children spend an average of 4,000 hours in nurturing programs",
+            desc: "Districts reached with community inclusion and advocacy initiatives.",
+            // changed content
             icon: <Heart />,
           },
           {
             stat: "75%",
-            desc: "Children are 75% more likely to become leaders in their communities",
+            desc: "Committed to creating inclusive opportunities across Nepal.",
+            // changed content
             icon: <Users />,
           },
         ].map((item, i) => (
@@ -134,10 +136,22 @@ const SponsorSection = () => (
       </p>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         {[
-          { img: "/assets/images/projects/female-child.png", name: "Aarati Lama" },
-  { img: "/assets/images/projects/male-child.png", name: "Bishal Thapa" },
-  { img: "/assets/images/projects/female-child.png", name: "Sita Magar" },
-  { img: "/assets/images/projects/male-child.png", name: "Ramesh Shrestha" },
+          {
+            img: "/assets/images/projects/female-child.png",
+            name: "Aarati Lama",
+          },
+          {
+            img: "/assets/images/projects/male-child.png",
+            name: "Bishal Thapa",
+          },
+          {
+            img: "/assets/images/projects/female-child.png",
+            name: "Sita Magar",
+          },
+          {
+            img: "/assets/images/projects/male-child.png",
+            name: "Ramesh Shrestha",
+          },
         ].map((child, i) => (
           <div
             key={i}
@@ -172,26 +186,24 @@ const SponsorSection = () => (
   </div>
 );
 
-
-
 const ConfidenceSection = () => (
   <div className="bg-white text-black py-16 px-4">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
-      
       {/* Left: Text Content */}
       <div>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
           Give With Confidence
         </h2>
         <p className="text-sm text-gray-700 mb-6">
-          With CVDS-Nepal, your support is used wisely to help children and
-          victims across Nepal.
+          Every donation directly contributes to rehabilitation, education, and
+          empowerment of conflict victims and persons with disabilities.
+          {/* changed content */}
         </p>
 
-        {[ 
+        {[
           {
             title: "Secure Donations",
-            desc: "We use industry-standard encryption to protect your data.",
+            desc: "We ensure every rupee is used responsibly with clear financial reporting and real community outcomes.",
             icon: <Lock />,
           },
           {
@@ -226,7 +238,6 @@ const ConfidenceSection = () => (
           className="rounded-lg w-[80%] md:w-full"
         />
       </div>
-      
     </div>
   </div>
 );
@@ -234,22 +245,22 @@ const ConfidenceSection = () => (
 const NewsSection = () => {
   const posts = [
     {
-      title: "Empowering Children with Special Needs",
-      desc: "CVDS works to support children with disabilities by providing inclusive education and resources.",
+      title: "Inclusive Education for Children with Disabilities",
+      desc: "CVDS Nepal continues its mission to provide access to quality education for children with disabilities through special education classes, physiotherapy, and personalized learning support.",
       img: "/assets/images/projects/placeholder2.png",
       link: "/about",
       date: "Oct 10, 2025",
     },
     {
-      title: "Community Outreach: Chepang Network",
-      desc: "CVDS engages local communities to empower marginalized groups and ensure child rights.",
+      title: "Empowering Marginalized Communities in Rural Nepal",
+      desc: "Through our Chepang Network initiative, CVDS reaches remote communities to support persons with disabilities and promote awareness about rights, inclusion, and livelihood opportunities.",
       img: "/assets/images/projects/placeholder2.png",
       link: "/activities",
       date: "Sep 20, 2025",
     },
     {
       title: "Art for Awareness: Eak Abhiyan",
-      desc: "An initiative by CVDS to promote creativity among children and raise awareness on social issues.",
+      desc: "CVDS organized 'Eak Abhiyan' a platform encouraging children with disabilities to express themselves through art while spreading messages of hope, equality, and social inclusion.",
       img: "/assets/images/projects/placeholder2.png",
       link: "/support",
       date: "Aug 15, 2025",
@@ -317,7 +328,7 @@ const ActionSection = () => (
               </h3>
               <p className="text-sm text-black mb-6 max-w-xs">
                 Learn how disability and conflict exclusion remain key causes of
-                poverty — and what we can do together.
+                poverty and what we can do together.
               </p>
             </div>
             <Link
@@ -398,7 +409,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
