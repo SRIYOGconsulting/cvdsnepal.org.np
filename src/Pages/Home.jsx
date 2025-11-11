@@ -25,20 +25,23 @@ const ScrollToTop = () => {
 };
 
 // FIXED Home page sections Latest Update, Hero Section, and Support layout
+
+
+
+//made responsive
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-  "/assets/images/projects/homepageherobanner.jpg",
-  "/assets/images/projects/Homepageherobanner2.jpg",
-  "/assets/images/projects/Homepageherobanner3.jpg",
-];
-
+    "/assets/images/projects/homepageherobanner.jpg",
+    "/assets/images/projects/Homepageherobanner2.jpg",
+    "/assets/images/projects/Homepageherobanner3.jpg",
+  ];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
-   useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
@@ -47,7 +50,8 @@ const HeroSection = () => {
   }, [slides.length]);
 
   return (
-   <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
+    <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
+      {/* Slide Image */}
       <img
         src={slides[currentSlide]}
         alt={`Slide ${currentSlide + 1}`}
@@ -55,24 +59,22 @@ const HeroSection = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
-        <h1 className="text-xl lg:text-4xl font-bold mb-4 px-20">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-4 sm:px-6 md:px-16 lg:px-24 text-white">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
           Empowering Lives, <br /> Restoring Hope
         </h1>
-        <h3
-          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-4 sm:px-10 lg:px-20"
-          style={{ fontSize: "18px" }}
-        >
-          Together, we create opportunities for conflict victims and persons
-          with disabilities to live with dignity.
+        <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl mb-4 sm:mb-6 max-w-full sm:max-w-xl lg:max-w-2xl text-[#f2eeec]">
+          Together, we create opportunities for conflict victims and persons with disabilities to live with dignity.
         </h3>
 
         <Link to="/donate">
-          <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw] mx-20">
+          <button className="bg-[#d9d9d9] text-black font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-500 transition">
             Donate Now
           </button>
         </Link>
       </div>
+
+      
     </div>
   );
 };
