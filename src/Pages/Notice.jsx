@@ -79,7 +79,8 @@ const Notice = () => {
   return (
      //  Fixed page height with min-h-[90vh] (slightly less than full screen)
     //  Added py-12 (top and bottom padding) for consistent vertical spacing
-    <div className='overflow-x-auto max-w-6xl mx-auto min-h-[90vh] py-12 px-4'>
+  
+    <div className='overflow-x-auto max-w-6xl mx-auto h-full py-12 px-4'> {/* x changed: min-h-[90vh] to h-full for full height section as per feedback */}
       
        {/* Intro paragraph to increase page height and provide context */}
       <p className='mb-6 text-gray-700 text-[16px] leading-relaxed'>
