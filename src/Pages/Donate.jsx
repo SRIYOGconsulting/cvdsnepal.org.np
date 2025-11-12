@@ -40,6 +40,12 @@ export default function DonatePage() {
   const totalDonors = donors.length;
   const totalDonation = donors.reduce((sum, donor) => sum + donor.amount, 0);
 
+    // ===== Add state for filtering/search like Donars page =====
+  const [searchTerm, setSearchTerm] = useState("");
+  const [yearFilter, setYearFilter] = useState("2025");
+  const [styleFilter, setStyleFilter] = useState("All");
+
+
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-10 sm:px-6 md:px-8 lg:px-12 max-w-6xl mx-auto">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -194,32 +200,49 @@ export default function DonatePage() {
             future.
           </p>
         </div>
-{/* DONORS LIST SECTION */}
-<div className="w-full col-span-full bg-white py-10 mt-12 rounded-lg shadow-sm">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-    {/* Header */}
-    <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1F2B6C] tracking-wide text-center md:text-left">
-        Top Donor List
-      </h2>
+{/* DONORS LIST SECTION - updated to match Donars page */}
+          <div className="w-full col-span-full bg-white py-10 mt-12 rounded-lg shadow-sm">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+              {/* Header & Filters */}
+              <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1F2B6C] tracking-wide text-center md:text-left">
+                  Top Donor List
+                </h2>
 
-      <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 w-full md:w-auto">
-        <select className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto">
-          <option>This Year: 2025</option>
-          <option>2024</option>
-          <option>2023</option>
-        </select>
+                {/* ===== Filters like Donars page ===== */}
+                <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 w-full md:w-auto">
+                  <select
+                    className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto"
+                    value={yearFilter}
+                    onChange={(e) => setYearFilter(e.target.value)}
+                  >
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                  </select>
 
-        <div className="relative w-full sm:w-64">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input
-            type="text"
-            placeholder="Search by donor name"
-            className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-full focus:outline-none focus:border-[#1F2B6C]"
-          />
-        </div>
-      </div>
-    </div>
+                  <select
+                    className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto"
+                    value={styleFilter}
+                    onChange={(e) => setStyleFilter(e.target.value)}
+                  >
+                    <option>All</option>
+                    <option>Occasional</option>
+                    <option>Monthly</option>
+                  </select>
+
+                  <div className="relative w-full sm:w-64">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="text"
+                      placeholder="Search by donor name"
+                      className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-full focus:outline-none focus:border-[#1F2B6C]"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
 
     {/* Desktop Table View */}
     <div className="hidden md:block overflow-x-auto border border-gray-100 rounded-lg">
