@@ -92,35 +92,77 @@ const Notice = () => {
         to find relevant information quickly. We encourage everyone to stay engaged and review these notices regularly 
         to stay up to date with our ongoing projects and initiatives.
       </p>
-      <table className='min-w-full border border-gray-200 divide-y divide-gray-200'>
-        <thead className='bg-gray-100 '>
-          <tr>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>S.N</th>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Title</th>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Publish Date</th>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Type</th>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>File Type</th>
-            <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Uploaded By</th>
-          </tr>
-        </thead>
-        <tbody className='divide-y divide-gray-200 bg-white'>
-          {notices.map((notice,index)=>(
-            <tr key={index}>
-              <td className='px-4 py-2 text-[16px] text-gray-600'>{index+1}.</td>
-              <td className='px-4 py-2 text-[16px] text-blue-600 underline hover:text-blue-800'>
-                <a href={notice.link} target='_blank'>{notice.title}</a>
-              </td>
-              <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.date}</td>
-              <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.type}</td>
-              <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.fileType}</td>
-              <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.uploadedBy}</td>
+
+      {/* Responsive Table for md+ screens and Card view for small screens */}
+      <div className="hidden md:block"> {/* Added wrapper to show table only on medium+ screens */}
+        <table className='min-w-full border border-gray-200 divide-y divide-gray-200'>
+          <thead className='bg-gray-100'>
+            <tr>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>S.N</th>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Title</th>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Publish Date</th>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Type</th>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>File Type</th>
+              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Uploaded By</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className='bg-white'>
+            {notices.map((notice, index) => (
+              <tr key={index}>
+                <td className='px-4 py-2 text-[16px] text-gray-600'>{index + 1}.</td>
+
+                {/* Removed underline from title and kept hover effect */}
+                <td className='px-4 py-2 text-[16px] text-black hover:text-blue-800'> 
+                  <a href={notice.link} target='_blank' rel='noopener noreferrer'>{notice.title}</a> {/* underline removed */}
+                </td>
+
+                <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.date}</td>
+                <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.type}</td>
+                <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.fileType}</td>
+                <td className='px-4 py-2 text-[16px] text-gray-600'>{notice.uploadedBy}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile Card View */}
+      <div className="grid grid-cols-1 gap-4 md:hidden mt-6"> {/* Added responsive card layout for mobile */}
+        {notices.map((notice, index) => (
+          <div key={index} className="border border-gray-200 rounded-lg shadow-sm p-4 bg-white">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-semibold text-gray-700">#{index + 1}</span>
+              <span className="text-sm text-gray-500">{notice.date}</span>
+            </div>
+            <a 
+              href={notice.link} 
+              target='_blank' 
+              rel='noopener noreferrer'
+              className="block text-[16px] font-medium text-black hover:text-blue-800" // underline removed
+            >
+              {notice.title}
+            </a>
+            <div className="mt-2 text-sm text-gray-600">
+              <p><span className="font-semibold">Type:</span> {notice.type}</p>
+              <p><span className="font-semibold">File:</span> {notice.fileType}</p>
+              <p><span className="font-semibold">Uploaded By:</span> {notice.uploadedBy}</p>
+            </div>
+          </div>
+        ))}
       
+      </div>
     </div>
+
   )
 }
 
 export default Notice
+
+
+
+
+
+
+
+
+

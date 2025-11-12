@@ -36,45 +36,141 @@ import gallery30 from"/assets/images/gallery/gallery30.jpg";
 const Gallery = () => {
   
    const [selectedImage, setSelectedImage] = useState(null); // for lightbox
-  const galleryImages = [
-    gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
-    gallery7, gallery8, gallery9, gallery10, gallery11, gallery12,
-    gallery13, gallery14, gallery15, gallery16, gallery17, gallery18,
-    gallery19, gallery20, gallery21, gallery22,gallery23,gallery24,
-    gallery25,gallery26,gallery27, gallery28, gallery29, gallery30,
+   const [selectedDesc, setSelectedDesc] = useState("");
+
+   // ===== 3 Organized Sections =====
+  const section1 = [
+    { img: gallery1, desc: "Community awareness event in Kathmandu Valley." },
+    { img: gallery2, desc: "Our volunteers conducting door-to-door visits." },
+    { img: gallery3, desc: "Health outreach program at a local school." },
+    { img: gallery4, desc: "Women empowerment discussion session." },
+    { img: gallery5, desc: "Community meeting to plan rural initiatives." },
+    { img: gallery6, desc: "Distribution of educational materials." },
   ];
+
+  const section2 = [
+    { img: gallery7, desc: "Volunteer training and briefing session." },
+    { img: gallery8, desc: "Group of youth leaders at a leadership camp." },
+    { img: gallery9, desc: "Volunteers supporting education drives." },
+    { img: gallery10, desc: "Tree plantation by CVDS team." },
+    { img: gallery11, desc: "Health and sanitation awareness rally." },
+    { img: gallery12, desc: "Cultural celebration during social week." },
+  ];
+
+  // Remaining 18 images for the tile gallery section
+  const tileGallery = [
+    { img: gallery13, desc: "Green Earth initiative participation." },
+    { img: gallery14, desc: "Local clean-up campaign volunteers." },
+    { img: gallery15, desc: "Village meeting discussing development goals." },
+    { img: gallery16, desc: "Children’s learning and art event." },
+    { img: gallery17, desc: "Environmental sustainability awareness." },
+    { img: gallery18, desc: "Food distribution to families in need." },
+    { img: gallery19, desc: "Climate action workshop with students." },
+    { img: gallery20, desc: "Volunteers painting awareness messages." },
+    { img: gallery21, desc: "Youth training for digital literacy." },
+    { img: gallery22, desc: "Community-driven environmental pledge." },
+    { img: gallery23, desc: "Waste segregation project in schools." },
+    { img: gallery24, desc: "Solar power awareness session." },
+    { img: gallery25, desc: "Tree planting day with local schools." },
+    { img: gallery26, desc: "Health volunteers providing care." },
+    { img: gallery27, desc: "Art competition focusing on sustainability." },
+    { img: gallery28, desc: "Children participating in nature walk." },
+    { img: gallery29, desc: "Eco-friendly campaign closing ceremony." },
+    { img: gallery30, desc: "CVDS Nepal annual event celebration." },
+  ];
+
+  
+  const handleImageClick = (image, desc) => {
+    setSelectedImage(image);
+    setSelectedDesc(desc);
+  };
+
 
   return (
     <div className="min-h-screen bg-white text-gray-900 max-w-6xl mx-auto px-6 py-16">
-      {/* ===== Header ===== */}
-      <section className="text-center mb-16">
-        <h1 className="text-4xl font-semibold mb-3">Our Gallery</h1>
-        <p className="text-gray-600 text-lg">
-          A collection of moments that tell our story clear, beautiful, and real.
-        </p>
+     
+
+       {/* ===== Section 1 ===== */}
+      <section className="mb-20">
+        <h2 className="text-2xl font-extrabold mb-8 text-[#1F2B6C] text-left">
+          Community Engagement & Activities
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Changed: 3-column layout */}
+          {section1.map((item, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
+              onClick={() => handleImageClick(item.img, item.desc)}
+            >
+              {/* Increased image height for larger display */}
+              <img
+                src={item.img}
+                alt={`Section 1 - ${index + 1}`}
+                className="w-full h-72 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              {/* Description overlay on hover */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
+                <span className="text-white text-sm font-medium">{item.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* ===== Gallery Grid ===== */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {galleryImages.map((image, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
-             onClick={() => setSelectedImage(image)} // open lightbox
-          >
-            <img
-              src={image}
-              alt={`Gallery ${index + 1}`}
-              className="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white text-sm font-medium">
-                Image {index + 1}
-              </span>
+      {/* ===== Section 2 ===== */}
+      <section className="mb-20">
+        <h2 className="text-2xl font-extrabold mb-8 text-[#1F2B6C] text-left">
+          Volunteer Programs & Events
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Changed: 3-column layout */}
+          {section2.map((item, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
+              onClick={() => handleImageClick(item.img, item.desc)}
+            >
+              <img
+                src={item.img}
+                alt={`Section 2 - ${index + 1}`}
+                className="w-full h-72 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
+                <span className="text-white text-sm font-medium">{item.desc}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
+
+      {/* ===== Final Section: Environmental & Awareness Gallery ===== */}
+<section>
+  <h2 className="text-2xl font-extrabold mb-8 text-[#1F2B6C] text-left">
+    Environmental & Awareness Gallery
+  </h2>
+
+  {/* Changed layout: grid instead of columns, for even alignment */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {tileGallery.map((item, index) => (
+      <div
+        key={index}
+        className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
+        onClick={() => handleImageClick(item.img, item.desc)}
+      >
+        {/* Fixed height for equal alignment */}
+        <img
+          src={item.img}
+          alt={`Tile ${index + 1}`}
+          className="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+        />
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
+          <span className="text-white text-sm font-medium">{item.desc}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 {/* ===== Lightbox Overlay ===== */}
       {selectedImage && (
         <div
@@ -100,7 +196,5 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-
 
 

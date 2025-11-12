@@ -23,17 +23,18 @@ const Footer = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-2 sm:gap-3"
             >
-              <img
-                src="/assets/images/projects/cvdslogo.png"
-                alt="CVDS Logo"
-                className="h-10 sm:h-12 md:h-[63px] ml-2 sm:ml-4 rounded-lg cursor-pointer"
-              />
+             <img
+  src="/assets/images/projects/cvdslogo.png"
+  alt="CVDS Logo"
+  className="h-8 sm:h-10 md:h-14 -ml-1 sm:-ml-2 rounded-lg cursor-pointer"
+/>
+
             </Link>
           </div>
 
           {/* Description */}
-          <p className="font-semibold mb-3 text-[15px]">
-            Welcome to CVDS Nepal
+          <p className="font-semibold mb-3 text-[16px]">
+             Welcome to CVDS Nepal
           </p>
           <p className="text-[15px] leading-relaxed text-gray-700 mb-3 text-justify">
             We bring smiles and make life meaningful through our compassionate

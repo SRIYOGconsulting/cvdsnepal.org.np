@@ -92,25 +92,23 @@ const Donars = () => {
       >
         Top Donors
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-12">
-        {topDonors.map((donor, i) => (
-          <div
-            key={i}
-            className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[280px]"
-            style={{
-              border: "1px solid #d1d5dc",
-              backgroundColor: "oklch(0.95 0 0)",
-            }}
-          >
-            <img
-              src={donor.image}
-              alt={donor.name}
-              className="w-48 h-48 rounded-full mb-3 object-cover"
-            />
-            <h2 className="text-lg font-semibold">{donor.name}</h2>
-            {/*  replaced donor.role → donor.total */}
-            <p className="text-black font-semibold">{donor.total}</p>
-          </div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mb-12 px-4">
+  {topDonors.map((donor, i) => (
+    <div
+      key={i}
+      className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[250px] sm:min-h-[280px] transition-transform hover:scale-105"
+      style={{
+        backgroundColor: "oklch(0.95 0 0)",
+      }}
+    >
+      <img
+        src={donor.image}
+        alt={donor.name}
+        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mb-3 object-cover"
+      />
+      <h2 className="text-base sm:text-lg md:text-xl font-semibold">{donor.name}</h2>
+      <p className="text-sm sm:text-base md:text-lg text-black font-semibold">{donor.total}</p>
+    </div>
         ))}
       </div>
 
