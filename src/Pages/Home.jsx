@@ -162,7 +162,7 @@ const SponsorSection = () => (
               <h3 className="font-semibold text-lg">{child.name}</h3>
               <p className="text-sm text-gray-600 mb-4">Nepal</p>
               <Link to="/donors">
-                <button className="inline-block w-full text-center py-2 rounded hover:bg-blue-500 font-normal transition">
+                <button className="inline-block w-full text-center py-2 rounded bg-[#1F2B6C] text-white hover:bg-[#159EEC] font-normal transition">
                   View Donors
                 </button>
               </Link>
@@ -172,7 +172,7 @@ const SponsorSection = () => (
       </div>
       <div className="space-x-4">
         <Link to="/donate">
-          <button className="px-6 py-2 rounded hover:bg-blue-500 font-normal transition">
+          <button className="px-6 py-2 rounded bg-[#1F2B6C] text-white hover:bg-[#159EEC] font-normal transition">
             Donate Now
           </button>
         </Link>
@@ -180,6 +180,7 @@ const SponsorSection = () => (
     </div>
   </div>
 );
+
 
 
 

@@ -1,5 +1,8 @@
 
 import React, { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css"; // ✅ correct
+ // Import lightbox styles
 // images from zip folder
 import gallery1 from "/assets/images/gallery/gallery1.jpg";
 import gallery2 from "/assets/images/gallery/gallery2.jpg";
@@ -34,9 +37,10 @@ import gallery30 from"/assets/images/gallery/gallery30.jpg";
 
 
 const Gallery = () => {
+  const [photoIndex, setPhotoIndex] = useState(0); // used for Lightbox index
+  const [open, setOpen] = useState(false); //  Lightbox open state
   
-   const [selectedImage, setSelectedImage] = useState(null); // for lightbox
-   const [selectedDesc, setSelectedDesc] = useState("");
+   
 
    // ===== 3 Organized Sections =====
   const section1 = [
@@ -79,6 +83,11 @@ const Gallery = () => {
     { img: gallery30, desc: "CVDS Nepal annual event celebration." },
   ];
 
+    const allImages = [
+    ...section1.map((i) => ({ src: i.img })),
+    ...section2.map((i) => ({ src: i.img })),
+    ...tileGallery.map((i) => ({ src: i.img })),
+  ]; //  format required by yet-another-react-lightbox
   
   const handleImageClick = (image, desc) => {
     setSelectedImage(image);
@@ -100,7 +109,7 @@ const Gallery = () => {
             <div
               key={index}
               className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
-              onClick={() => handleImageClick(item.img, item.desc)}
+             onClick={() => { setPhotoIndex(index); setOpen(true); }} // pass index
             >
               {/* Increased image height for larger display */}
               <img
@@ -127,7 +136,7 @@ const Gallery = () => {
             <div
               key={index}
               className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
-              onClick={() => handleImageClick(item.img, item.desc)}
+               onClick={() => { setPhotoIndex(section1.length + index); setOpen(true); }} //  offset by section1.length
             >
               <img
                 src={item.img}
@@ -154,7 +163,7 @@ const Gallery = () => {
       <div
         key={index}
         className="relative overflow-hidden rounded-2xl group cursor-pointer border-4 border-transparent hover:border-[#1F2B6C] transition-all duration-300"
-        onClick={() => handleImageClick(item.img, item.desc)}
+          onClick={() => { setPhotoIndex(index); setOpen(true); }} // pass index
       >
         {/* Fixed height for equal alignment */}
         <img
@@ -171,24 +180,18 @@ const Gallery = () => {
   </div>
 </section>
 
-{/* ===== Lightbox Overlay ===== */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={selectedImage}
-            alt="Enlarged view"
-            className="max-w-3xl w-full h-auto rounded-lg shadow-lg transition-transform transform scale-100 hover:scale-105"
-          />
-          <button
-            className="absolute top-6 right-8 text-white text-3xl font-bold"
-            onClick={() => setSelectedImage(null)}
-          >
-            ✕
-          </button>
-        </div>
+
+      {/* ✅ New Lightbox for React 18 */}
+      {open && (
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          slides={allImages}
+          index={photoIndex}
+          carousel={{ finite: false }}
+        />
+      
+
       )}
 
     </div>
@@ -196,5 +199,9 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+
+
+
 
 

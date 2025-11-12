@@ -100,7 +100,7 @@ const Calendar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 px-2 md:px-10 relative">
+    <div className="min-h-[90vh] bg-gray-50 py-12 px-2 md:px-10 relative">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-3 md:gap-4 text-center md:text-left">

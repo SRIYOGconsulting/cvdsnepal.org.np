@@ -123,7 +123,17 @@ const Timeline = () => {
                   isLeft ? "md:pl-16" : "md:pr-16"
                 }`}
               >
-                <div className="relative bg-[#f5f5f5] rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 before:content-[''] before:absolute before:-left-4 before:top-6 before:w-0 before:h-0 before:border-t-[10px] before:border-t-transparent before:border-b-[10px] before:border-b-transparent before:border-r-[16px] before:border-r-[#f5f5f5]">
+                 {/* fixed dynamic arrow alignment for left/right cards */}
+                <div
+                  className={`relative bg-[#f5f5f5] rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 
+                  before:content-[''] before:absolute before:top-6 before:w-0 before:h-0 before:border-t-[10px] before:border-t-transparent 
+                  before:border-b-[10px] before:border-b-transparent 
+                  ${
+                    isLeft
+                      ? "before:-left-4 before:border-r-[16px] before:border-r-[#f5f5f5]" // arrow points right for left cards
+                      : "before:-right-4 before:border-l-[16px] before:border-l-[#f5f5f5]" // arrow points left for right cards
+                  }`}
+                >
                   <div className="p-6">
                     <img
                       src={item.image}
@@ -138,6 +148,8 @@ const Timeline = () => {
                   </div>
                 </div>
               </div>
+           
+
             </div>
           );
         })}

@@ -8,7 +8,7 @@ const Testimonials = () => {
     {
       fullName: "Yub Raj Thapa",
       description:
-        "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. I’m forever grateful.",
+        "CVDS-Nepal gave my son a new life. He couldn’t walk or speak properly, but after months of therapy and love at the rehabilitation center, he now smiles, plays, and even says a few words. ",
       image: "/assets/images/projects/female.png",
       alt: "",
       testimony: "Sita Thapa, Mother from Sankhu",

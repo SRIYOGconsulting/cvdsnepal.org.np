@@ -77,7 +77,10 @@ const notices =[
 
 const Notice = () => {
   return (
-    <div className='overflow-x-auto p-4 max-w-6xl mx-auto min-h-screen'>
+     //  Fixed page height with min-h-[90vh] (slightly less than full screen)
+    //  Added py-12 (top and bottom padding) for consistent vertical spacing
+    <div className='overflow-x-auto max-w-6xl mx-auto min-h-[90vh] py-12 px-4'>
+      
        {/* Intro paragraph to increase page height and provide context */}
       <p className='mb-6 text-gray-700 text-[16px] leading-relaxed'>
         Welcome to the official notices page of our organization. Here you can find all the latest updates, 
@@ -98,12 +101,13 @@ const Notice = () => {
         <table className='min-w-full border border-gray-200 divide-y divide-gray-200'>
           <thead className='bg-gray-100'>
             <tr>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>S.N</th>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Title</th>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Publish Date</th>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Notice Type</th>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>File Type</th>
-              <th className='px-4 py-2 text-left text-[16px] font-semibold text-gray-700'>Uploaded By</th>
+              {/*  Slightly increased vertical padding from py-2 → py-3 for better spacing */}
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>S.N</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Notice Title</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Publish Date</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Notice Type</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>File Type</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Uploaded By</th>
             </tr>
           </thead>
           <tbody className='bg-white'>
@@ -127,7 +131,8 @@ const Notice = () => {
       </div>
 
       {/* Mobile Card View */}
-      <div className="grid grid-cols-1 gap-4 md:hidden mt-6"> {/* Added responsive card layout for mobile */}
+            {/*  Added mt-8 for more space above mobile card layout */}
+      <div className="grid grid-cols-1 gap-4 md:hidden mt-8"> {/* Added responsive card layout for mobile */}
         {notices.map((notice, index) => (
           <div key={index} className="border border-gray-200 rounded-lg shadow-sm p-4 bg-white">
             <div className="flex justify-between items-center mb-2">
@@ -157,6 +162,8 @@ const Notice = () => {
 }
 
 export default Notice
+
+
 
 
 
