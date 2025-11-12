@@ -7,14 +7,14 @@ const Calendar = () => {
     "January","February","March","April","May","June","July","August","September","October","November","December"
   ];
 
-  const today = new Date(); // x added: store today's date
+  const today = new Date(); // x added  today's date
   const [selectedDate, setSelectedDate] = useState(today);
   const [selectedMonth, setSelectedMonth] = useState(today.getMonth());
   const [selectedYear, setSelectedYear] = useState(today.getFullYear());
   const [bannerEvents, setBannerEvents] = useState(null);
 
   const events = [
-    // x your events as before...
+  
       { date: new Date(2025, 0, 5), title: "Volunteer Orientation", time: "10:00", description: "Orientation for new volunteers." },
     { date: new Date(2025, 0, 15), title: "Donation Drive", time: "14:00", description: "Collecting essentials for conflict victims." },
     { date: new Date(2025, 0, 25), title: "Awareness Workshop", time: "11:00", description: "Workshop on community support and awareness." },
