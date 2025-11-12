@@ -6,7 +6,7 @@ import { Search, Users, Calendar, MapPin } from "lucide-react";
 const socials = [
   {
     id: 1,
-    title: "Social Impact",
+    title: "Entrepreneurship Training for Marginalized Groups",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "Jan 2023",
     endDate: "Dec 2023",
@@ -18,7 +18,7 @@ const socials = [
   },
   {
     id: 2,
-    title: "Social Impact",
+    title: "Local Development Collaboration",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "Feb 2023",
     endDate: "Nov 2023",
@@ -29,7 +29,7 @@ const socials = [
   },
   {
     id: 3,
-    title: "Social Impact",
+    title: "Private Donor Support for Entrepreneurship",
     image:"/assets/images/projects/placeholder2.png",
     startDate: "Mar 2023",
     endDate: "Oct 2023",
@@ -41,7 +41,7 @@ const socials = [
   },
   {
     id: 4,
-    title: "Social Impact",
+    title: "Access to Quality Educationt",
     image:"/assets/images/projects/placeholder2.png",
     startDate: "Jan 2024",
     endDate: "Ongoing",
@@ -52,7 +52,7 @@ const socials = [
   },
   {
     id: 5,
-    title: "Social Impact",
+    title: "Vocational Training & Microfinance for Women",
     image:"/assets/images/projects/placeholder2.png",
     startDate: "Mar 2024",
     endDate: "Ongoing",
@@ -64,7 +64,7 @@ const socials = [
   },
   {
     id: 6,
-    title: "Social Impact",
+    title: "Renewable Energy Promotion",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "May 2024",
     endDate: "Ongoing",
@@ -75,7 +75,7 @@ const socials = [
   },
   {
     id: 7,
-    title: "Social Impact",
+    title: "Healthcare Access in Remote Areas",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "Apr 2024",
     endDate: "Ongoing",
@@ -86,7 +86,7 @@ const socials = [
   },
   {
     id: 8,
-    title: "Social Impact",
+    title: "Youth Entrepreneurship Support",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "Jun 2024",
     endDate: "Ongoing",
@@ -97,7 +97,7 @@ const socials = [
   },
   {
     id: 9,
-    title: "Social Impact",
+    title: "Organic & Sustainable Farming",
     image: "/assets/images/projects/placeholder2.png",
     startDate: "Jul 2024",
     endDate: "Ongoing",
