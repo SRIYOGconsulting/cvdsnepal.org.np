@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { appData } from "../constants";
-import { useNavigate } from "react-router-dom"; // Added navigation 
+import { useNavigate } from "react-router-dom"; // Added navigation
 
 const About = () => {
   const navigate = useNavigate(); // Hook for navigation
@@ -51,7 +51,7 @@ const About = () => {
             since {appData.established}, providing food, clothes, shelter, and
             rehabilitation services.
           </p>
-           {/* Updated button text + navigation */}
+          {/* Updated button text + navigation */}
           <button
             onClick={() => navigate("/videos")}
             className="bg-[#1F2B6C] hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-fit transition-all duration-300 shadow-md hover:shadow-lg"

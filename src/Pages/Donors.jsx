@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 
-
-
-
-
-
-
 // Sample top donors data
 const topDonors = [
   
