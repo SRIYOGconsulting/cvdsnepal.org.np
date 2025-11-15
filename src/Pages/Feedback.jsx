@@ -157,11 +157,11 @@ const Feedback = () => {
       onChange={(e) => setFormData({ ...formdata, countryCode: e.target.value })}
       className="px-3 py-2 border border-r-0 border-gray-300 rounded-l-md bg-gray-100 text-gray-700 focus:ring-2 focus:ring-[#1F2B6C] focus:outline-none"
     >
-      <option value="+977">+977 Nepal</option>
-      <option value="+1">+1 USA</option>
-      <option value="+44">+44 UK</option>
-      <option value="+91">+91 India</option>
-      <option value="+61">+61 Australia</option>
+      <option value="+977">+977 </option>
+      <option value="+1">+1 </option>
+      <option value="+44">+44 </option>
+      <option value="+91">+91 </option>
+      <option value="+61">+61</option>
       {/* Add more country codes as needed */}
     </select>
 
@@ -296,7 +296,7 @@ const Feedback = () => {
               type="submit"
               className="bg-[#1F2B6C] hover:bg-[#162050] text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300"
             >
-              Submit Feedback
+              Submit
             </button>
           </div>
         </form>

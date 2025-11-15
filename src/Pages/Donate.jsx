@@ -122,96 +122,91 @@ export default function DonatePage() {
           </div>
 
           {/* Dedicate Checkbox */}
+{/* Payment Methods Section - with radio buttons */}
+<div className="mb-8">
+  <h3 className="text-center text-gray-700 font-semibold mb-4 text-base sm:text-lg">
+    Choose Payment Method
+  </h3>
 
-          {/* Payment Methods Section - with radio buttons */}
-          <div className="mb-8">
-            <h3 className="text-center text-gray-700 font-semibold mb-4 text-base sm:text-lg">
-              Choose Payment Method
-            </h3>
+  <div className="grid grid-cols-3 gap-6 justify-items-center">
+    {/* eSewa */}
+    <label className="flex items-center cursor-pointer space-x-2">
+      <input
+        type="radio"
+        name="paymentMethod"
+        value="esewa"
+      />
+      <img
+        src="/assets/images/Qr/esewa.png"
+        alt="eSewa"
+        className="h-16 sm:h-20 object-contain"
+      />
+      
+    </label>
 
-            <div className="grid grid-cols-3 gap-6 justify-items-center">
-              {/* eSewa */}
-              <label className="flex flex-col items-center cursor-pointer">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="esewa"
-                  className="mb-2"
-                />
-                <img
-                  src="/assets/images/Qr/esewa.png"
-                  alt="eSewa"
-                  className="h-16 sm:h-20 object-contain"
-                />
-                <span className="text-sm mt-1">eSewa</span>
-              </label>
+    {/* Khalti */}
+    <label className="flex items-center cursor-pointer space-x-2">
+      <input
+        type="radio"
+        name="paymentMethod"
+        value="khalti"
+      />
+      <img
+        src="/assets/images/Qr/khalti.png"
+        alt="Khalti"
+        className="h-16 sm:h-20 object-contain"
+      />
+    
+    </label>
 
-              {/* Khalti */}
-              <label className="flex flex-col items-center cursor-pointer">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="khalti"
-                  className="mb-2"
-                />
-                <img
-                  src="/assets/images/Qr/khalti.png"
-                  alt="Khalti"
-                  className="h-16 sm:h-20 object-contain"
-                />
-                <span className="text-sm mt-1">Khalti</span>
-              </label>
+    {/* PayPal */}
+    <label className="flex items-center cursor-pointer space-x-2">
+      <input
+        type="radio"
+        name="paymentMethod"
+        value="paypal"
+      />
+      <img
+        src="/assets/images/Qr/paypal.png"
+        alt="PayPal"
+        className="h-16 sm:h-20 object-contain"
+      />
+  
+    </label>
 
-              {/* PayPal */}
-              <label className="flex flex-col items-center cursor-pointer">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="paypal"
-                  className="mb-2"
-                />
-                <img
-                  src="/assets/images/Qr/paypal.png"
-                  alt="PayPal"
-                  className="h-16 sm:h-20 object-contain"
-                />
-                <span className="text-sm mt-1">PayPal</span>
-              </label>
+    {/* Bank */}
+    <label className="flex items-center cursor-pointer space-x-2">
+      <input
+        type="radio"
+        name="paymentMethod"
+        value="bank"
+      />
+      <img
+        src="/assets/images/Qr/bank.png"
+        alt="Online Bank"
+        className="h-16 sm:h-20 object-contain"
+      />
+     
+    </label>
 
-              {/* Bank */}
-              <label className="flex flex-col items-center cursor-pointer">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="bank"
-                  className="mb-2"
-                />
-                <img
-                  src="/assets/images/Qr/bank.png"
-                  alt="Online Bank"
-                  className="h-16 sm:h-20 object-contain"
-                />
-                <span className="text-sm mt-1">Bank</span>
-              </label>
+    {/* Stripe */}
+    <label className="flex items-center cursor-pointer space-x-2">
+      <input
+        type="radio"
+        name="paymentMethod"
+        value="stripe"
+      />
+      <img
+        src="/assets/images/Qr/stripe.png"
+        alt="Stripe"
+        className="h-16 sm:h-20 object-contain"
+      />
+  
+    </label>
+  </div>
+</div>
+{/* End of Payment Methods Section */}
 
-              {/* Stripe */}
-              <label className="flex flex-col items-center cursor-pointer">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="stripe"
-                  className="mb-2"
-                />
-                <img
-                  src="/assets/images/Qr/stripe.png"
-                  alt="Stripe"
-                  className="h-16 sm:h-20 object-contain"
-                />
-                <span className="text-sm mt-1">Stripe</span>
-              </label>
-            </div>
-          </div>
-          {/* End of Payment Methods Section */}
 
           {/* Donate Button */}
           <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold mt-4 text-sm sm:text-base">
@@ -262,7 +257,7 @@ export default function DonatePage() {
               {/* ===== Filters like Donars page ===== */}
               <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 w-full md:w-auto">
                 <select
-                  className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto"
+                  className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto md:mr-2" // added md:mr-2
                   value={yearFilter}
                   onChange={(e) => setYearFilter(e.target.value)}
                 >
@@ -271,21 +266,22 @@ export default function DonatePage() {
                   <option>2023</option>
                 </select>
 
-                <select
-                  className="border border-gray-300 rounded-lg p-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto"
-                  value={styleFilter}
-                  onChange={(e) => setStyleFilter(e.target.value)}
-                >
-                  <option>All</option>
-                  <option>Occasional</option>
-                  <option>Monthly</option>
-                </select>
+               <select
+  className="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-700 focus:outline-none focus:border-[#1F2B6C] w-full sm:w-auto md:mr-2"
+  value={styleFilter}
+  onChange={(e) => setStyleFilter(e.target.value)}
+>
+  <option>All</option>
+  <option>Occasional</option>
+  <option>Monthly</option>
+</select>
+
 
                 <div className="relative w-full sm:w-64">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
-                    placeholder="Search by donor name"
+                    placeholder="Search by donors name"
                     className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-full focus:outline-none focus:border-[#1F2B6C]"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -300,7 +296,7 @@ export default function DonatePage() {
                 <thead className="bg-[#1F2B6C] text-white">
                   <tr>
                     {/*  Changed header names and added S.N */}
-                    <th className="p-3 font-semibold">S.N</th>
+                    <th className="p-3 font-semibold">#</th>
                     <th className="p-3 font-semibold">Full Name</th>
                     <th className="p-3 font-semibold">Address</th>
                     <th className="p-3 font-semibold">City</th>
@@ -388,3 +384,8 @@ export default function DonatePage() {
     </div>
   );
 }
+
+
+
+
+

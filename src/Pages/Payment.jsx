@@ -23,7 +23,7 @@ const Payment = () => {
             <strong>Bank Name:</strong> Global IME Bank Ltd.
           </p>
           <p>
-            <strong>Account Name:</strong> Conflict Victim and Disable Society
+            <strong>Account Name:</strong> Conflict Victim and Disabled Society
             Nepal
           </p>
           <p>
@@ -43,7 +43,7 @@ const Payment = () => {
               rel="noreferrer"
               className="text-black underline"
             >
-              www.cvdsnepal.com.np
+             www.cvdsnepal.org.np
             </a>
           </p>
 
@@ -70,7 +70,7 @@ const Payment = () => {
           <div className="text-center text-black font-semibold space-y-2 text-sm sm:text-base">
             {/*  Updated bank info below */}
             <p className="text-lg sm:text-xl">
-              Conflict Victim and Disable Society Nepal
+              Conflict Victim and Disabled Society Nepal
             </p>
             <p>Account No: 30107010011377</p>
             <p>Branch: Sankhu Branch, Kathmandu</p>

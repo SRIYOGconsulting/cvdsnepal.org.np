@@ -129,12 +129,14 @@ const Calendar = () => {
               e => e.date.getDate()===day && e.date.getMonth()===selectedMonth && e.date.getFullYear()===selectedYear
             );
             return (
-              <div
+    <div
   key={index}
   onClick={() => handleDayClick(day)}
   className={`min-h-[70px] sm:min-h-[100px] p-1 sm:p-2 flex flex-col border border-gray-100 relative 
     ${day === null ? "bg-gray-50" : "bg-white cursor-pointer"} 
-    ${isToday(day) ? "bg-blue-200 font-bold border-blue-500 border-2" : ""}`} // x changed: highlight today
+    ${day === today.getDate() && selectedMonth === today.getMonth() && selectedYear === today.getFullYear()
+      ? "bg-blue-300 font-bold border-blue-500 border-2" 
+      : ""}`} // fixed: today always highlighted
 >
   {day && (
     <>
@@ -145,6 +147,7 @@ const Calendar = () => {
     </>
   )}
 </div>
+
 
             )
           })}

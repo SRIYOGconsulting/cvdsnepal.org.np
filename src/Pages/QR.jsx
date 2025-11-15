@@ -116,27 +116,7 @@ const QR = () => {
         ))}
       </div>
 
-      <motion.footer
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="mt-20 text-center text-gray-800"
-      >
-        <div className="flex justify-center gap-4 items-center mb-2 flex-wrap">
-          <Phone className="w-5 h-5" />
-          <a href="tel:9779851160868">+977 9851160868</a>
-          <Mail className="w-5 h-5" />
-          <a href="mailto:info@cvdsnepal.org.np">info@cvdsnepal.org.np</a>
-        </div>
-        <a
-          href="https://www.cvdsnepal.com"
-          target="_blank"
-          rel="noreferrer"
-          className="text-indigo-600 underline font-medium hover:text-indigo-700 transition"
-        >
-          www.cvdsnepal.org.np
-        </a>
-      </motion.footer>
+      
     </section>
   );
 };

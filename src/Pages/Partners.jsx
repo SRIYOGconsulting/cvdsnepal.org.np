@@ -2,52 +2,52 @@ import React from "react";
 
 const Partners = () => {
   const partners = [
-    {
+  {
       name: "SRIYOG Consulting",
       heading: "Expert IT Solutions Provider",
-      link: "#",
+      link: "https://sriyog.com/",
       image: "/assets/images/projects/sriyog-placeholder.png",
     },
     {
       name: "Aramex",
       heading: "Global Logistics & Shipping Partner",
-      link: "#",
+      link: "https://broadpress.org/",
       image: "/assets/images/projects/aramex-placeholder.png",
     },
     {
       name: "Internet Nepal",
       heading: "Reliable Internet Services",
-      link: "https://wifinepal.com.np/",
+      link: "https://broadpress.org/",
       image: "/assets/images/projects/internet-nepal-placeholder.png",
     },
     {
       name: "Aqua World",
       heading: "Premium Water Solutions & Services",
-      link: "#",
+      link: "https://broadpress.org/",
       image: "/assets/images/projects/aqua-world-placeholder.png",
     },
     {
       name: "Oho Cake",
       heading: "Artisan Cakes & Bakery Delights",
-      link: "https://ohocake.com/",
+      link: "https://ohocake.com/?store_locations=kathmandu",
       image: "/assets/images/projects/oho-cake-placeholder.png",
     },
     {
       name: "Daraz",
       heading: "Leading E-commerce Marketplace",
-      link: "#",
+      link: "https://broadpress.org/",
       image: "/assets/images/projects/daraz-placeholder.png",
     },
     {
       name: "SNG Solution",
       heading: "Innovative Tech Solutions",
-      link: "#",
+      link: "https://sngsolution.com/",
       image: "/assets/images/projects/sng-solution-placeholder.png",
     },
     {
       name: "Ghaila Oil",
       heading: "Trusted Fuel & Lubricant Provider",
-      link: "https://www.facebook.com/GhailaOil/",
+      link: "https://broadpress.org/",
       image: "/assets/images/projects/ghaila-oil-placeholder.png",
     },
     {
@@ -83,9 +83,15 @@ const Partners = () => {
             efficiently and effectively, on a platform built for scalability and
             impact.
           </p>
-          <button className="outline outline-1 outline-gray-400 text-[#1F2B6C] px-6 py-2 rounded-md text-sm hover:bg-gray-200 transition">
+
+          <a
+            href="https://broadpress.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="outline outline-1 outline-gray-400 text-[#1F2B6C] px-6 py-2 rounded-md text-sm hover:bg-gray-200 transition inline-block"
+          >
             Browse More
-          </button>
+          </a>
         </div>
 
         {/* Image Section */}

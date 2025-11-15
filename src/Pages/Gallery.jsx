@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css"; // ✅ correct
+import "yet-another-react-lightbox/styles.css"; //  corrected
  // Import lightbox styles
 // images from zip folder
 import gallery1 from "/assets/images/gallery/gallery1.jpg";
@@ -118,7 +118,8 @@ const Gallery = () => {
                 className="w-full h-72 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
               {/* Description overlay on hover */}
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
+              {/* Changed: description aligned top-left instead of center */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-start justify-start text-left p-4">
                 <span className="text-white text-sm font-medium">{item.desc}</span>
               </div>
             </div>
@@ -143,7 +144,8 @@ const Gallery = () => {
                 alt={`Section 2 - ${index + 1}`}
                 className="w-full h-72 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
+              {/* Changed: description aligned top-left */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-start justify-start text-left p-4">
                 <span className="text-white text-sm font-medium">{item.desc}</span>
               </div>
             </div>
@@ -172,16 +174,17 @@ const Gallery = () => {
           className="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2">
-          <span className="text-white text-sm font-medium">{item.desc}</span>
-        </div>
+         {/* Changed: description aligned top-left */}
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-start justify-start text-left p-4">
+                <span className="text-white text-sm font-medium">{item.desc}</span>
+              </div>
       </div>
     ))}
   </div>
 </section>
 
 
-      {/* ✅ New Lightbox for React 18 */}
+      {/* New Lightbox for React 18 */}
       {open && (
         <Lightbox
           open={open}

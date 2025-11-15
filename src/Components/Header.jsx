@@ -36,20 +36,14 @@ const Header = () => {
   return (
     <header className={headerClasses}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 md:py-4">
-        {/* Logo (responsive & clickable) */}
-        <Link
-          to="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-2 sm:gap-3"
-        >
-          <img
-         src="/assets/images/projects/cvdslogo.png"
-            alt="CVDS Logo"
-            className={`h-10 sm:h-12 md:h-[63px] ml-2 sm:ml-4 rounded-lg cursor-pointer ${
-              isHomePage && !scrolled ? "brightness-200" : ""
-            }`}
-          />
-        </Link>
+       <img
+  src="/assets/images/projects/cvdslogo.png"
+  alt="CVDS Logo"
+  className={`h-8 sm:h-10 md:h-14 -ml-1 sm:-ml-2 rounded-lg cursor-pointer ${
+    isHomePage && !scrolled ? "brightness-200" : ""
+  }`}
+/>
+
             
         {/*  Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-8 font-medium">

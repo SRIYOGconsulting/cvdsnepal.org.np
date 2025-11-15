@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import QR from "../Pages/QR";
 
 // Responsive Breadcrumb Header Section
 const BasicBreadcrumbs = () => {
@@ -24,6 +25,7 @@ const BasicBreadcrumbs = () => {
     tos: "Terms of Service",
     privacy: "Privacy Policy",
     disclaimer: "Disclaimer",
+      qr: "QR", //Added this line
   };
 
   const formatName = (name) => {

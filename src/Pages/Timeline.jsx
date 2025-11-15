@@ -147,12 +147,22 @@ const Timeline = () => {
                     </p>
                   </div>
                 </div>
+
+
+                
               </div>
            
 
             </div>
           );
         })}
+ {/* Final icon at the end of the vertical line */}
+        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 bottom-0 z-10">
+          <div className="bg-[#1F2B6C] text-white rounded-full p-4 shadow-md">
+            <Building size={20} />
+          </div>
+        </div>
+        
       </div>
     </div>
   );

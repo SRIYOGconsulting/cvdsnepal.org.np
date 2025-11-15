@@ -4,7 +4,7 @@ const notices =[
  {
     title: "Annual Report 2025", // fixed  title
     link:"#",
-    date:"2025-10-16", // original date
+    date:"16-10-2025", // original date
     type:"Formal", // fixed unique type
     fileType:"pdf", // fixed realistic file type
     uploadedBy:"Admin"
@@ -12,39 +12,39 @@ const notices =[
   {
     title: "Community Health Program Update", // fixed title
     link:"#",
-    date:"2025-11-05", // 20 days gap
-    type:"Academic", // unique type
-    fileType:"doc", // fixed new type
+    date:"05-11-2025", // 20 days gap
+    type:"Events", // unique type
+    fileType:"docx", // fixed new type
     uploadedBy:"Program Manager"
   },
   {
     title: "Volunteer Training Schedule", 
     link:"#",
-    date:"2025-11-20", // 15 days gap
+    date:"20-11-2025", // 15 days gap
     type:"Formal", 
-    fileType:"ppt", // fixed new type
+    fileType:"pptx", // fixed new type
     uploadedBy:"HR Department"
   },
   {
     title: "NGO Annual Fundraising Event", 
     link:"#",
-    date:"2025-12-05", // 15 days gap
-    type:"Event", 
+    date:"05-12-2025", // 15 days gap
+    type:"Events", 
     fileType:"pptx", // fixed new type
     uploadedBy:"Admin"
   },
   {
     title: "Project Proposal Submission Guidelines", 
     link:"#",
-    date:"2025-12-25", // 20 days gap
-    type:"Academic", 
+    date:"25-12-2025", // 20 days gap
+    type:"Events", 
     fileType:"xls", // fixed new type
     uploadedBy:"Project Coordinator"
   },
   {
     title: "Environmental Awareness Campaign Summary", 
     link:"#",
-    date:"2026-01-10", // 16 days gap
+    date:"10-01-2026", // 16 days gap
     type:"Report", 
     fileType:"xlsx", // fixed new type
     uploadedBy:"Admin"
@@ -52,7 +52,7 @@ const notices =[
   {
     title: "Board Meeting Minutes", 
     link:"#",
-    date:"2026-01-30", // 20 days gap
+    date:"30-01-2026", // 20 days gap
     type:"Formal", 
     fileType:"odt", // fixed new type
     uploadedBy:"Secretary"
@@ -60,7 +60,7 @@ const notices =[
   {
     title: "Donation Drive Overview", 
     link:"#",
-    date:"2026-02-15", // 16 days gap
+    date:"15-02-2026", // 16 days gap
     type:"Report", 
     fileType:"zip", // fixed new type
     uploadedBy:"Admin"
@@ -68,7 +68,7 @@ const notices =[
   {
     title: "Annual Staff Newsletter", 
     link:"#",
-    date:"2026-03-01", // 14 days gap
+    date:"01-03-2026", // 14 days gap
     type:"Newsletter", 
     fileType:"txt", // fixed new type
     uploadedBy:"Communications Team"
@@ -103,7 +103,7 @@ const Notice = () => {
           <thead className='bg-gray-100'>
             <tr>
               {/*  Slightly increased vertical padding from py-2 → py-3 for better spacing */}
-              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>S.N</th>
+              <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>#</th>
               <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Notice Title</th>
               <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Publish Date</th>
               <th className='px-4 py-3 text-left text-[16px] font-semibold text-gray-700'>Notice Type</th>

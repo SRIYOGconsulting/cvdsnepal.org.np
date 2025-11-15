@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Search, Users, Calendar, MapPin } from "lucide-react";
 
-
-
 const socials = [
   {
     id: 1,
@@ -14,7 +12,6 @@ const socials = [
     description:
       "Supporting entrepreneurship training for socially marginalized.",
     country: "Nepal",
- 
   },
   {
     id: 2,
@@ -25,42 +22,39 @@ const socials = [
     members: ["Ram Thapa", "Sita Lama"],
     description: "Collaborating with local development programs.",
     country: "Nepal",
-    
   },
   {
     id: 3,
     title: "Private Donor Support for Entrepreneurship",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Mar 2023",
     endDate: "Oct 2023",
     members: ["Anil Gurung", "Maya KC"],
     description:
       "Private donors supporting community entrepreneurship initiatives.",
     country: "Nepal",
-  
   },
   {
     id: 4,
     title: "Access to Quality Educationt",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
-    description: "Ensuring access to quality education for marginalized children.",
+    description:
+      "Ensuring access to quality education for marginalized children.",
     country: "Nepal",
-   
   },
   {
     id: 5,
     title: "Vocational Training & Microfinance for Women",
-    image:"/assets/images/projects/placeholder2.png",
+    image: "/assets/images/projects/placeholder2.png",
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
     description:
       "Providing vocational training and microfinance support to women.",
     country: "Nepal",
-  
   },
   {
     id: 6,
@@ -71,7 +65,6 @@ const socials = [
     members: ["Bikram Rana", "Sita Rai"],
     description: "Promoting renewable energy solutions in rural areas.",
     country: "Nepal",
-    
   },
   {
     id: 7,
@@ -82,7 +75,6 @@ const socials = [
     members: ["Anita KC", "Ramesh Shrestha"],
     description: "Improving access to healthcare in remote communities.",
     country: "Nepal",
-    
   },
   {
     id: 8,
@@ -93,7 +85,6 @@ const socials = [
     members: ["Ram Shrestha", "Sita KC"],
     description: "Supporting young entrepreneurs with training and funding.",
     country: "Nepal",
-    
   },
   {
     id: 9,
@@ -104,7 +95,6 @@ const socials = [
     members: ["Bishal Rana", "Pooja Sharma"],
     description: "Promoting organic and sustainable farming practices.",
     country: "Nepal",
- 
   },
 ];
 
@@ -121,7 +111,9 @@ const SocialImpact = () => {
         Social Impacts
       </h1>
       <p className="mb-10 text-center text-gray-600 max-w-2xl mx-auto">
-        CVDS-Nepal prioritizes socially marginalized, backward caste, women, and extremely poor conflict victim & PWD groups for its entrepreneurship training programs.
+        CVDS-Nepal prioritizes socially marginalized, backward caste, women, and
+        extremely poor conflict victim & PWD groups for its entrepreneurship
+        training programs.
       </p>
 
       {/* Search */}
@@ -151,23 +143,28 @@ const SocialImpact = () => {
                 alt={social.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              
             </div>
             <div className="p-6">
               <h4 className="text-xl font-bold text-gray-800 mb-2">
                 {social.title}
               </h4>
-              <p className="text-gray-600 mb-4 line-clamp-3">{social.description}</p>
-              <div className="flex items-center justify-between text-sm text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4" />
-                  <span>{social.members.length} Members</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>{social.country}</span>
-                </div>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {social.description}
+              </p>
+
+              {/* Location above members */}
+              <div className="flex items-center mb-2 text-sm text-gray-500">
+                <MapPin className="w-4 h-4 mr-1" />
+                <span>{social.country}</span>
               </div>
+
+              {/* Team members */}
+              <div className="flex items-center mb-2 text-sm text-gray-500">
+                <Users className="w-4 h-4 mr-1" />
+                <span>{social.members.length} Members</span>
+              </div>
+
+              {/* Start-End Dates */}
               <div className="mt-3 flex items-center text-sm text-gray-500">
                 <Calendar className="w-4 h-4 mr-1" />
                 <span>

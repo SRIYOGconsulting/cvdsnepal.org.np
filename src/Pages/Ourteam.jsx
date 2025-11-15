@@ -82,9 +82,10 @@ const OurTeam = () => {
       {/* Team Members Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {teamMembers.map((member, index) => (
-          <div
+         <div
             key={index}
-            className="bg-gray-50 border border-gray-300 rounded-lg shadow-sm p-4 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md"
+            className="bg-gray-50 border border-gray-300 rounded-lg shadow-sm p-6 flex flex-col items-center text-center transition-transform hover:-translate-y-1 hover:shadow-md min-h-[20rem]" 
+            //  increased height: added extra padding `p-6` and `min-h-[20rem]` to make cards taller
           >
             <img
               src={member.image}

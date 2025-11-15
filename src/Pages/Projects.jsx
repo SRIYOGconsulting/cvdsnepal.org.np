@@ -3,7 +3,6 @@ import { Search, Users, Calendar, MapPin } from "lucide-react";
 
 import img1 from "/assets/images/projects/placeholder2.png";
 
-
 const projects = [
   {
     id: 1,
@@ -47,14 +46,15 @@ const projects = [
     startDate: "Jan 2024",
     endDate: "Ongoing",
     members: ["Rita Sharma", "Bishal Khadka"],
-    description: "Ensuring access to quality education for marginalized children.",
+    description:
+      "Ensuring access to quality education for marginalized children.",
     country: "Nepal",
     theme: "Education",
   },
   {
     id: 5,
     title: "Women Empowerment",
-    image:img1,
+    image: img1,
     startDate: "Mar 2024",
     endDate: "Ongoing",
     members: ["Nirmala Gurung", "Puja BK"],
@@ -66,7 +66,7 @@ const projects = [
   {
     id: 6,
     title: "Environment",
-    image:img1,
+    image: img1,
     startDate: "May 2024",
     endDate: "Ongoing",
     members: ["Bikram Rana", "Sita Rai"],
@@ -122,7 +122,9 @@ const Projects = () => {
         Our Impactful Projects
       </h1>
       <p className="mb-10 text-center text-gray-600 max-w-2xl mx-auto">
-        CVDS-Nepal prioritizes socially marginalized, backward caste, women, and extremely poor conflict victim & PWD groups for its entrepreneurship training programs.
+        CVDS-Nepal prioritizes socially marginalized, backward caste, women, and
+        extremely poor conflict victim & PWD groups for its entrepreneurship
+        training programs.
       </p>
 
       {/* Search */}
@@ -152,7 +154,7 @@ const Projects = () => {
                 alt={project.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              {/* Theme badge - same color for all */}
+              {/* Theme badge */}
               <span
                 className="absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold bg-[#1F2B6C]"
               >
@@ -164,16 +166,20 @@ const Projects = () => {
                 {project.title}
               </h4>
               <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
-              <div className="flex items-center justify-between text-sm text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4" />
-                  <span>{project.members.length} Members</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>{project.country}</span>
-                </div>
+
+              {/*  Location moved above members */}
+              <div className="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+                <MapPin className="w-4 h-4" />
+                <span>{project.country}</span>
               </div>
+
+              {/* Members */}
+              <div className="flex items-center space-x-2 text-sm text-gray-500 mb-1">
+                <Users className="w-4 h-4" />
+                <span>{project.members.length} Members</span>
+              </div>
+
+              {/* Dates */}
               <div className="mt-3 flex items-center text-sm text-gray-500">
                 <Calendar className="w-4 h-4 mr-1" />
                 <span>

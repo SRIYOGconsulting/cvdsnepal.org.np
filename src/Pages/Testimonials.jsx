@@ -110,11 +110,13 @@ const Testimonials = () => {
             key={index}
             className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition bg-white cursor-pointer"
           >
-            <img
-              src={item.image}
-              alt={item.alt}
-              className="w-54 h-54 flex justify-center items-center px-10 py-5 rounded-t-lg object-contain"
-            />
+           <img
+  src={item.image}
+  alt={item.alt}
+  // Increased image size and centered it properly
+  className="w-[210px] h-[210px] mx-auto my-4 rounded-t-lg object-contain"
+/>
+
 
             <div className="p-4">
 

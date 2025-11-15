@@ -24,57 +24,36 @@ const ScrollToTop = () => {
   return null;
 };
 
-// FIXED Home page sections Latest Update, Hero Section, and Support layout
-
-
-
-//made responsive
 const HeroSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    "/assets/images/projects/homepageherobanner.jpg",
-    "/assets/images/projects/Homepageherobanner2.jpg",
-    "/assets/images/projects/Homepageherobanner3.jpg",
-  ];
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
-      {/* Slide Image */}
+    <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden min-h-screen">
+      {/* Single Static Image */}
       <img
-        src={slides[currentSlide]}
-        alt={`Slide ${currentSlide + 1}`}
-        className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+        src="/assets/images/projects/homepageherobanner.jpg"
+        alt="Hero Banner"
+        className="w-full h-full object-cover"
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-4 sm:px-6 md:px-16 lg:px-24 text-white">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold mb-4 px-10 sm:px-16 lg:px-20">
           Empowering Lives, <br /> Restoring Hope
         </h1>
-        <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl mb-4 sm:mb-6 max-w-full sm:max-w-xl lg:max-w-2xl text-[#f2eeec]">
-          Together, we create opportunities for conflict victims and persons with disabilities to live with dignity.
+
+        <h3
+          className="text-base md:text-xl lg:text-2xl mb-8 max-w-2xl text-[#f2eeec] px-4 sm:px-10 lg:px-20"
+          style={{ fontSize: "18px" }}
+        >
+          Together, we create opportunities for conflict victims and persons
+          with disabilities to live with dignity.
         </h3>
 
         <Link to="/donate">
-          <button className="bg-[#d9d9d9] text-black font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-500 transition">
+          <button className="bg-[#d9d9d9] px-3 py-1 text-black font-semibold hover:bg-blue-500 transition rounded-[0.5vw] mx-10 sm:mx-16 lg:mx-20">
             Donate Now
           </button>
         </Link>
       </div>
-
-      
     </div>
   );
 };
@@ -161,11 +140,12 @@ const SponsorSection = () => (
             <div className="p-4">
               <h3 className="font-semibold text-lg">{child.name}</h3>
               <p className="text-sm text-gray-600 mb-4">Nepal</p>
-              <Link to="/donors">
-                <button className="inline-block w-full text-center py-2 rounded bg-[#1F2B6C] text-white hover:bg-[#159EEC] font-normal transition">
-                  View Donors
-                </button>
-              </Link>
+             <Link to="/donors">
+  <button className="inline-block w-full text-center py-2 rounded text-[#1F2B6C] bg-transparent hover:bg-[#159EEC] hover:text-white font-normal transition">
+    View Donors
+  </button>
+</Link>
+
             </div>
           </div>
         ))}
@@ -173,15 +153,13 @@ const SponsorSection = () => (
       <div className="space-x-4">
         <Link to="/donate">
           <button className="px-6 py-2 rounded bg-[#1F2B6C] text-white hover:bg-[#159EEC] font-normal transition">
-            Donate Now
+            Donate
           </button>
         </Link>
       </div>
     </div>
   </div>
 );
-
-
 
 
 const ConfidenceSection = () => (
@@ -228,14 +206,16 @@ const ConfidenceSection = () => (
         ))}
       </div>
 
-      {/* Right: Smaller Image */}
-      <div className="flex justify-center md:justify-end">
-        <img
-          src="/assets/images/projects/placeholder2.png"
-          alt="Confidence"
-          className="rounded-lg w-[80%] md:w-full"
-        />
-      </div>
+   
+     {/* Right: Smaller Image */}
+<div className="flex justify-center md:justify-end items-start">
+  <img
+    src="/assets/images/projects/placeholder2.png"
+    alt="Confidence"
+    className="rounded-lg w-[80%] md:w-full"
+  />
+</div>
+
     </div>
   </div>
 );
@@ -257,12 +237,17 @@ const NewsSection = () => {
       date: "Sep 20, 2025",
     },
     {
-      title: "Art for Awareness: Eak Abhiyan",
-      desc: "CVDS organized 'Eak Abhiyan' a platform encouraging children with disabilities to express themselves through art while spreading messages of hope, equality, and social inclusion.",
-      img: "/assets/images/projects/placeholder2.png",
-      link: "/support",
-      date: "Aug 15, 2025",
-    },
+  title: <>Art for Awareness: <span className="italic">Eak Abhiyan</span></>,
+  desc: (
+    <>
+      CVDS organized <span className="italic">Eak Abhiyan</span>, a platform encouraging children with disabilities to express themselves through art while spreading messages of hope, equality, and social inclusion.
+    </>
+  ),
+  img: "/assets/images/projects/placeholder2.png",
+  link: "/support",
+  date: "Aug 15, 2025",
+}
+
   ];
 
   return (
@@ -291,12 +276,15 @@ const NewsSection = () => {
                   </h3>
                   <p className="text-sm text-black mb-4">{post.desc}</p>
                 </div>
-                <Link
-                  to={post.link}
-                  className="font-semibold text-[#1F2B6C] hover:underline flex items-center mt-2"
-                >
-                  Read More <span className="ml-1">→</span>
-                </Link>
+                <div className="text-center mt-2">
+  <Link
+    to={post.link}
+    className="font-semibold text-[#1F2B6C] hover:underline flex items-center justify-center"
+  >
+    Read More <span className="ml-1">→</span>
+  </Link>
+</div>
+
               </div>
             </div>
           ))}
@@ -315,7 +303,7 @@ const ActionSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Card 1 */}
-        <div className="flex flex-col items-center p-6 border border-[#1F2B6C] rounded-lg hover:shadow-md transition h-full">
+        <div className="flex flex-col items-center p-6 border border-[#1F2B6C] rounded-lg hover:shadow-md transition min-h-[450px]">
           <div className="p-3 border border-[#1F2B6C] rounded-full mb-6">
             <Users size={36} className="text-[#1F2B6C]" />
           </div>
@@ -325,8 +313,12 @@ const ActionSection = () => (
                 Why Inclusion Matters
               </h3>
               <p className="text-sm text-black mb-6 max-w-xs">
-                Learn how disability and conflict exclusion remain key causes of
-                poverty and what we can do together.
+             Learn how disability and conflict exclusion remain key causes of
+                poverty and social inequality. Discover the importance of
+                inclusive policies, community support, and equal opportunities
+                to empower every child and family to thrive. By understanding
+                these challenges, we can work together to create a more
+                inclusive society for all.
               </p>
             </div>
             <Link
@@ -349,8 +341,12 @@ const ActionSection = () => (
                 Join a Campaign
               </h3>
               <p className="text-sm text-black mb-6 max-w-xs">
-                Advocate for the rights of children and families with
-                disabilities by joining one of our active campaigns.
+                 Advocate for the rights of children and families with
+                disabilities by joining one of our active campaigns. Learn
+                practical ways to raise awareness, participate in local and
+                national initiatives, and collaborate with like-minded
+                individuals. Your voice can help influence policies and create
+                meaningful change for marginalized communities.
               </p>
             </div>
             <Link
@@ -373,8 +369,12 @@ const ActionSection = () => (
                 Donate Today
               </h3>
               <p className="text-sm text-black mb-6 max-w-xs">
-                Your contribution helps restore dignity and provide support to
-                children and families in crisis.
+                  Your contribution helps restore dignity and provide support to
+                children and families in crisis. Donations fund education,
+                healthcare, rehabilitation, and essential resources for those
+                affected by conflict or living with disabilities. Every gift,
+                big or small, makes a tangible impact and helps build stronger,
+                more resilient communities for the future.
               </p>
             </div>
             <Link

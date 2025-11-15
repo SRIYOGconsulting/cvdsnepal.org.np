@@ -4,14 +4,14 @@ import { Search } from "lucide-react";
 // Sample top donors data
 const topDonors = [
   
-  { name: "Alexis Thomas", total: "Rs52,000", image: "/assets/images/projects/male.png" },
-  { name: "Mario Garcia", total: "Rs25,000", image: "/assets/images/projects/male.png" },
-  { name: "Sophia Lawson", total: "Rs551,000", image: "/assets/images/projects/female.png" },
-  { name: "Abdur Young", total: "Rs20,000", image: "/assets/images/projects/male.png" },
-  { name: "Maya Nolan", total: "Rs41,000", image: "/assets/images/projects/female.png" },
-  { name: "John Doe", total: "Rs30,000", image: "/assets/images/projects/male.png" },
-  { name: "Jane Smith", total: "Rs15,000", image: "/assets/images/projects/female.png" },
-  { name: "Sita Rai", total: "Rs50,900", image: "/assets/images/projects/female.png" },
+  { name: "Alexis Thomas", total: "USD 52,000", image: "/assets/images/projects/male.png" },
+  { name: "Mario Garcia", total: "USD 25,000", image: "/assets/images/projects/male.png" },
+  { name: "Sophia Lawson", total: "USD 551,000", image: "/assets/images/projects/female.png" },
+  { name: "Abdur Young", total: "USD 20,000", image: "/assets/images/projects/male.png" },
+  { name: "Maya Nolan", total: "USD 41,000", image: "/assets/images/projects/female.png" },
+  { name: "John Doe", total: "USD 30,000", image: "/assets/images/projects/male.png" },
+  { name: "Jane Smith", total: "USD 15,000", image: "/assets/images/projects/female.png" },
+  { name: "Sita Rai", total: "USD 50,900", image: "/assets/images/projects/female.png" },
 ];
 
 // Full donor list (for table)
@@ -88,22 +88,23 @@ const Donars = () => {
       </h2>
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mb-12 px-4">
   {topDonors.map((donor, i) => (
-    <div
-      key={i}
-      className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[250px] sm:min-h-[280px] transition-transform hover:scale-105"
-      style={{
-        backgroundColor: "oklch(0.95 0 0)",
-      }}
-    >
-      <img
-        src={donor.image}
-        alt={donor.name}
-        className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mb-3 object-cover"
-      />
-      <h2 className="text-base sm:text-lg md:text-xl font-semibold">{donor.name}</h2>
-      <p className="text-sm sm:text-base md:text-lg text-black font-semibold">{donor.total}</p>
-    </div>
-        ))}
+  <div
+    key={i}
+    className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex flex-col items-center text-center min-h-[250px] sm:min-h-[280px] transition-transform hover:scale-105"
+    style={{ backgroundColor: "oklch(0.95 0 0)" }}
+  >
+    <img
+      src={donor.image}
+      alt={donor.name}
+      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mb-3 object-cover"
+    />
+    <h2 className="text-base sm:text-lg md:text-xl font-semibold text-[#1F2B6C]">{donor.name}</h2> {/* Name color */}
+    <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-500"> {/* Changed font color for USD amount */}
+      {donor.total}
+    </p>
+  </div>
+))}
+
       </div>
 
       {/* ===== Donor List Section ===== */}
@@ -139,7 +140,7 @@ const Donars = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input
                   type="text"
-                  placeholder="Search by donor name"
+                  placeholder="Search by donors name"
                   className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 text-sm w-52 md:w-64 focus:outline-none focus:border-[#1F2B6C]"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -234,3 +235,6 @@ const Donars = () => {
 };
 
 export default Donars;
+
+
+

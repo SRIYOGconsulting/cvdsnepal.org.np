@@ -1,13 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Linkedin,
-  Youtube,
-  Twitch,
-  Twitter,
-  Github,
-} from "lucide-react";
+import { Icon } from "@iconify/react"; //  changed Iconify for social icons
 
 const Footer = () => {
   return (
@@ -152,14 +145,15 @@ const Footer = () => {
       {/* Icons + Subscribe (Second Row) */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between mt-12 gap-6">
         {/* Social Icons */}
-        <div className="flex gap-5 text-gray-600 mb-4 md:mb-0">
-          <Twitter className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-          <Facebook className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-          <Linkedin className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-          <Youtube className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-          <Twitch className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-          <Github className="w-5 h-5 cursor-pointer hover:text-[#0B5D5E]" />
-        </div>
+        {/* Social Icons */}
+<div className="flex gap-5 mb-4 md:mb-0">
+  <Icon icon="simple-icons:x" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+  <Icon icon="mdi:facebook" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+  <Icon icon="mdi:linkedin" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+  <Icon icon="mdi:youtube" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+  <Icon icon="mdi:twitch" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+  <Icon icon="mdi:github" className="h-9 w-9 text-gray-600 hover:text-[#1F2B6C] transition" />
+</div>
 
         {/* Subscribe box aligned right */}
         <div className="flex flex-col sm:flex-row items-center justify-end gap-2 sm:gap-4 w-full">
@@ -207,3 +201,11 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
