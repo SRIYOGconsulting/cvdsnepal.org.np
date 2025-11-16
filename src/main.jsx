@@ -98,7 +98,8 @@ const router = createBrowserRouter([
         handle: { title: "Upcoming Activities" },
       },
       { path: "videos", element: <Videos />, handle: { title: "Videos" } },
-      { path: "FAQ", element: <Faq />, handle: { title: "FAQ" } },
+      { path: "faq", element: <Faq />, handle: { title: "FAQ" } },
+
       {
         path: "testimonials",
         element: <Testimonials />,
@@ -141,12 +142,7 @@ const router = createBrowserRouter([
         handle: { title: "Donors" },
       },
 
-      {
-        path: "Appeal",
-        element: <Appeal />,
-        handle: { title: "Appeal" },
-      },
-
+      { path: "appeal", element: <Appeal />, handle: { title: "Appeal" } },
       {
         path: "Timeline",
         element: <Timeline />,

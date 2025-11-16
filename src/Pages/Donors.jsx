@@ -89,7 +89,7 @@ const donors = [
   }, // Changed Rs NPR
 ];
 
-const Donars = () => {
+const Donors = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [yearFilter, setYearFilter] = useState("2025");
   const [styleFilter, setStyleFilter] = useState("All");
@@ -274,4 +274,4 @@ const Donars = () => {
   );
 };
 
-export default Donars;
+export default Donors;
