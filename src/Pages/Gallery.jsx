@@ -79,8 +79,7 @@ const Gallery = () => {
     { img: gallery30, desc: "CVDS Nepal annual event celebration." },
   ];
 
-  const [selectedImage, setSelectedImage] = useState(null);
-const [selectedDesc, setSelectedDesc] = useState("");
+
 
   const allImages = [
     ...section1.map((i) => ({ src: i.img })),
@@ -88,10 +87,6 @@ const [selectedDesc, setSelectedDesc] = useState("");
     ...tileGallery.map((i) => ({ src: i.img })),
   ]; //  format required by yet-another-react-lightbox
 
-  const handleImageClick = (image, desc) => {
-    setSelectedImage(image);
-    setSelectedDesc(desc);
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900 max-w-6xl mx-auto px-6 py-16">
