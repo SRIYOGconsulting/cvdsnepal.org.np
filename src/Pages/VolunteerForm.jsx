@@ -410,8 +410,8 @@ const VolunteerForm = () => {
               placeholder="Enter your full name"
               required
             />
-            {/* Gender - Fixed: Replaced input with StandardSelect dropdown containing Male, Female, Other */}
-            <StandardSelect label="Gender" id="gender" name="gender">
+            {/* Gender - Fixed: Replaced input with StandardSelect dropdown containing Male, Female, Other; Fixed: Made gender mandatory by adding required prop to this line, which renders the * via StandardSelect label logic */}
+            <StandardSelect label="Gender" id="gender" name="gender" required>
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -434,12 +434,18 @@ const VolunteerForm = () => {
                   defaultValue="+977"
                   required
                 >
-                  <option value="+977">🇳🇵 +977 (Nepal)</option>
-                  <option value="+91">🇮🇳 +91 (India)</option>
-                  <option value="+1">🇺🇸 +1 (USA)</option>
-                  <option value="+44">🇬🇧 +44 (UK)</option>
-                  <option value="+81">🇯🇵 +81 (Japan)</option>
-                  <option value="+61">🇦🇺 +61 (Australia)</option>
+                  {/* Fixed: Removed short code NP (flag) and any short form, write only country code */}
+                  <option value="+977">+977</option>
+                  {/* Fixed: Removed short code IN (flag) and any short form, write only country code */}
+                  <option value="+91">+91</option>
+                  {/* Fixed: Removed short code US (flag) and any short form, write only country code */}
+                  <option value="+1">+1</option>
+                  {/* Fixed: Removed short code GB (flag) and any short form, write only country code */}
+                  <option value="+44">+44</option>
+                  {/* Fixed: Removed short code JP (flag) and any short form, write only country code */}
+                  <option value="+81">+81</option>
+                  {/* Fixed: Removed short code AU (flag) and any short form, write only country code */}
+                  <option value="+61">+61</option>
                 </select>
 
                 {/* Phone Number Input */}
@@ -735,7 +741,7 @@ const VolunteerForm = () => {
               type="submit"
               className="bg-[#1F2B6C] hover:bg-[#162050] text-white font-medium px-6 py-2 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#1F2B6C]/25 transition-all duration-300 transform hover:scale-105"
             >
-              Submit Application
+              Submit 
             </button>
           </div>
         </form>
