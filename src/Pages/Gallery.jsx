@@ -79,6 +79,9 @@ const Gallery = () => {
     { img: gallery30, desc: "CVDS Nepal annual event celebration." },
   ];
 
+  const [selectedImage, setSelectedImage] = useState(null);
+const [selectedDesc, setSelectedDesc] = useState("");
+
   const allImages = [
     ...section1.map((i) => ({ src: i.img })),
     ...section2.map((i) => ({ src: i.img })),
