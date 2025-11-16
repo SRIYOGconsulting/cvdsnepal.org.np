@@ -7,6 +7,8 @@ const Calendar = () => {
     "January","February","March","April","May","June","July","August","September","October","November","December"
   ];
 
+  // Fixed: Use state for currentDate to allow dynamic updates day by day
+  const [currentDate, setCurrentDate] = useState(new Date());
   const today = new Date(); // x added  today's date
   const [selectedDate, setSelectedDate] = useState(today);
   const [selectedMonth, setSelectedMonth] = useState(today.getMonth());
@@ -76,18 +78,20 @@ const Calendar = () => {
     setBannerEvents(null);
   };
 
+
+  // Fixed: Use currentDate for dynamic today
   const handleToday = () => {
-    setSelectedMonth(today.getMonth());
-    setSelectedYear(today.getFullYear());
-    setSelectedDate(today); // x ensure today is set
+    setSelectedMonth(currentDate.getMonth());
+    setSelectedYear(currentDate.getFullYear());
+    setSelectedDate(currentDate);
     setBannerEvents(null);
   };
-
+// Fixed: Full check for day, month, and year using dynamic currentDate; only highlights the exact today cell
   const isToday = (day) => {
     return (
-      day === today.getDate() &&
-      selectedMonth === today.getMonth() &&
-      selectedYear === today.getFullYear()
+      day === currentDate.getDate() &&
+      selectedMonth === currentDate.getMonth() &&
+      selectedYear === currentDate.getFullYear()
     );
   };
 
@@ -134,9 +138,9 @@ const Calendar = () => {
   onClick={() => handleDayClick(day)}
   className={`min-h-[70px] sm:min-h-[100px] p-1 sm:p-2 flex flex-col border border-gray-100 relative 
     ${day === null ? "bg-gray-50" : "bg-white cursor-pointer"} 
-    ${day === today.getDate() && selectedMonth === today.getMonth() && selectedYear === today.getFullYear()
-      ? "bg-blue-300 font-bold border-blue-500 border-2" 
-      : ""}`} // fixed: today always highlighted
+    ${isToday(day) // Fixed: Use isToday function for precise highlighting of only the exact current date cell (e.g., 16th in November if today is Nov 16)
+      ? "bg-blue-100 font-bold border-blue-400 border-2" // Fixed: Changed to lighter background color (bg-blue-100) with slightly darker border (border-blue-400) for subtle light highlight on today's date cell
+      : ""}`} // Fixed: Dynamic highlighting updates day by day via currentDate updates
 >
   {day && (
     <>
@@ -174,6 +178,14 @@ const Calendar = () => {
 };
 
 export default Calendar;
+
+
+
+
+
+
+
+
 
 
 

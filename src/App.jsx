@@ -3,6 +3,8 @@ import Header from "./Components/Header";
 import { Outlet, useMatches } from "react-router-dom";
 import ChatModal from "./Components/ChatModel";
 import ScrollToTop from "./Components/ScrollToTop";
+import MobileFooterMenu from "./Components/MobileFooterMenu";
+
 
 
 import BasicBreadcrumbs from "./Components/BasicBreadcrumbs";
@@ -29,6 +31,7 @@ function App() {
       <Outlet context={{ organizationName, pathname: location.pathname }} />
 
       <Footer/>
+          <MobileFooterMenu /> 
     
     </div>
   );
