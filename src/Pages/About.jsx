@@ -22,6 +22,7 @@ const About = () => {
   return (
     <div className="w-full flex flex-col px-4 sm:px-8 md:px-12 ">
       {/*About Us  */}
+      
       <section className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center gap-10 lg:gap-16 py-10">
         {/* Left Image */}
         <div className="lg:w-1/2 w-full flex items-stretch">

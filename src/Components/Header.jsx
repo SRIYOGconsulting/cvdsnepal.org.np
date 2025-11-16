@@ -36,12 +36,13 @@ const Header = () => {
   return (
     <header className={headerClasses}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 md:py-4">
-       <img
+  <img
   src="/assets/images/projects/cvdslogo.png"
   alt="CVDS Logo"
   className={`h-8 sm:h-10 md:h-14 -ml-1 sm:-ml-2 rounded-lg cursor-pointer ${
     isHomePage && !scrolled ? "brightness-200" : ""
   }`}
+  onClick={() => navigate("/")} //navigate to home page on click
 />
 
             

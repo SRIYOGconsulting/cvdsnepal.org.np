@@ -47,9 +47,7 @@ const MobileFooterMenu = () => {
               <img
                 src={item.icon}
                 alt={item.label}
-                className={`h-7 w-7 ${
-                  isActive ? "opacity-100" : "opacity-60"
-                }`}
+                className={`h-7 w-7 ${isActive ? "opacity-100" : "opacity-60"}`}
               />
               <span
                 className={`text-[12px] mt-1 font-medium ${

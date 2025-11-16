@@ -31,7 +31,7 @@ import SocialImpact from "./Pages/SocialImpact.jsx";
 import CaseStudies from "./Pages/CaseStudies.jsx";
 import Blog from "./Pages/Blog.jsx";
 import Donors from "./Pages/Donors.jsx";
-import TrelloBoard from "./Pages/TrelloBoard.jsx";
+
 import VolunteerForm from "./Pages/VolunteerForm.jsx";
 import Appeal from "./Pages/Appeal.jsx";
 import Timeline from "./Pages/Timeline.jsx";
@@ -142,35 +142,29 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "trelloboard",
-        element: <TrelloBoard/>,
-        handle: { title: "TrelloBoard" },
-      },
-
-       {
         path: "Appeal",
-        element: <Appeal/>,
+        element: <Appeal />,
         handle: { title: "Appeal" },
       },
 
       {
         path: "Timeline",
-        element: <Timeline/>,
+        element: <Timeline />,
         handle: { title: "Timeline" },
       },
       {
         path: "tos",
-        element: <TOS/>,
+        element: <TOS />,
         handle: { title: "Terms of Service" },
       },
       {
         path: "privacy",
-        element: <Privacy/>,
+        element: <Privacy />,
         handle: { title: "Privacy Policy" },
       },
       {
         path: "disclaimer",
-        element: <Disclaimer/>,
+        element: <Disclaimer />,
         handle: { title: "Disclaimer" },
       },
     ],

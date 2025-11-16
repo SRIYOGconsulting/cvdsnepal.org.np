@@ -104,9 +104,16 @@ const Footer = () => {
               <li>
                 <Link to="/blog">Blog</Link>
               </li>
-              <li>
-                <Link to="/trelloboard">TrelloBoard</Link>
-              </li>
+      <li>
+  <a 
+    href="#"               // placeholder link
+    target="_blank"        // opens in new tab
+    rel="noopener noreferrer"
+  >
+    Trello Board
+  </a>
+</li>
+
               <li>
                 <Link to="/impact">Social Impact</Link>
               </li>
