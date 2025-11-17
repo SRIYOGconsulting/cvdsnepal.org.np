@@ -16,7 +16,8 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
       {/* President Section */}
       <div className="rounded-lg mb-10 border border-gray-300 bg-gray-50 p-6 sm:p-10">
         <div className="flex flex-col md:flex-row items-center gap-8">
@@ -104,3 +105,7 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
+
+
+
+
